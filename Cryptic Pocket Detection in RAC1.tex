@@ -142,14 +142,14 @@ separate page at the end of the document.
     relaxed using three cycles of minimization of 50,000 steps each.  The first 10,000 steps of minimization adopted the 
     steepest descent algorithm, and the remaining 40,000 steps used the conjugate gradient algorithm.  The cut-off for 
     evaluating non-bonded interactions was placed at 8.0 Å for the minimization phase.  The first cycle of minimization 
-    was performed with 25 kcal / (mol {\AA}^2) restraining force on the solute atoms, this force constant was reduced to 
-    5 kcal/(mol Å2) in the next cycle, and the final cycle was performed without any restraining forces on either 
-    the solute or the solvent atoms.  The system was heated from 0 K to 300 K for 1 ns with 5 kcal/(mol {\AA}^2) restraining 
-    force on the solute atoms using the Langevin dynamics, with a collisional frequency of 2 ps-1.  After heating, the 
+    was performed with $ 25 kcal / (mol {\AA}^2) $ restraining force on the solute atoms, this force constant was reduced to 
+    $ 5 kcal/(mol Å2) $  in the next cycle, and the final cycle was performed without any restraining forces on either 
+    the solute or the solvent atoms.  The system was heated from 0 K to 300 K for 1 ns with $ 5 kcal/(mol {\AA}^2) $ restraining 
+    force on the solute atoms using the Langevin dynamics, with a collisional frequency of $ 2 ps^-1 $ .  After heating, the 
     system was equilibrated by MD simulations under the NVT ensemble for six cycles of 1 ns each, where the restraining 
-    force on the solute atoms was gradually reduced from 5.0 to 0.0 kcal/(mol {\AA}^2).  The next step employed the NPT ensemble 
+    force on the solute atoms was gradually reduced from $ 5.0 to 0.0 kcal/(mol {\AA}^2) $.  The next step employed the NPT ensemble 
     for density equilibration for another six cycles of 1 ns each, with the restraining force on the solute atoms gradually 
-    decreasing from 5 to 0 kcal/(mol {\AA}^2).  In the equilibration phase, the cut-off for evaluating non-bonded interactions was
+    decreasing from $5 to 0 kcal/(mol {\AA}^2)$.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was
     placed at 9 {\AA}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, 
     amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated 
     using the Particle Mesh Ewald (PME) summation method23.  The minimization and equilibration phases of MD simulations 
@@ -161,9 +161,9 @@ separate page at the end of the document.
     Analysis of MD trajectory
     Analysis of the MD trajectory was performed with the Cpptraj26 module in AMBERTools15.  Before the analysis, all 
     solvent atoms and neutralizing ions were stripped off, and the protein conformations were aligned to the first frame. 
-    The mass-weighted C\alpha root-mean-square deviation (RMSD) for the protein was computed using the X-ray conformation 
+    The mass-weighted $C\alpha $ root-mean-square deviation (RMSD) for the protein was computed using the X-ray conformation 
     as the reference.  The convergence of MD trajectories was estimated using the root-mean-squared average correlation (RAC) 
-    with mass-weighted RMS averaging of C\alpha atoms, with the first frame of the trajectory as the reference.  
+    with mass-weighted RMS averaging of $ C\alpha $ atoms, with the first frame of the trajectory as the reference.  
     The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed from the 
     last 50 ns part of the trajectories.
     \item Protocol for POVME2 

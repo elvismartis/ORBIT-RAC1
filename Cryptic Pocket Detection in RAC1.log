@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.26)  20 MAR 2024 12:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.26)  20 MAR 2024 12:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -255,7 +255,7 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use 
 LaTeX Warning: Unused global option(s):
     [journal=jacsat,manuscript=article].
 
-No file "Cryptic Pocket Detection in RAC1".aux.
+(./Cryptic Pocket Detection in RAC1.aux)
 \openout1 = `"Cryptic Pocket Detection in RAC1.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
@@ -273,6 +273,7 @@ LaTeX Font Info:    ... okay on input line 77.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
 LaTeX Font Info:    ... okay on input line 77.
 \openout3 = `"acs-Cryptic Pocket Detection in RAC1.bib"'.
+
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -341,13 +342,8 @@ Overfull \hbox (2.62724pt too wide) in paragraph at lines 122--123
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:145: Missing $ inserted.
-<inserted text> 
-                $
-l.145     was performed with 25 kcal / (mol {\AA}^
-                                                  2) restraining force on th...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+
+LaTeX Warning: Command \r invalid in math mode on input line 145.
 
 
 LaTeX Warning: Command \r invalid in math mode on input line 146.
@@ -361,203 +357,27 @@ LaTeX Warning: Command \r invalid in math mode on input line 150.
 
 LaTeX Warning: Command \r invalid in math mode on input line 152.
 
-
-LaTeX Warning: Command \r invalid in math mode on input line 153.
-
-
-LaTeX Warning: Command \r invalid in math mode on input line 159.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 159.
-
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:169: LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169     \item
-                Protocol for POVME2
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:169: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169     \item P
-                 rotocol for POVME2
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:169: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169     \item P
-                 rotocol for POVME2
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:170: Missing $ inserted.
-<inserted text> 
-                $
-l.170         \begin{itemize}
-                             
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:170: Missing } inserted.
-<inserted text> 
-                }
-l.170         \begin{itemize}
-                             
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:170: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.170         \begin{itemize}
-                             
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (1443.80916pt too wide) in paragraph at lines 139--170
-[]\OT1/cmr/m/n/12 A$[])\OML/cmm/m/it/12 restrainingforceonthesoluteatoms; thisforceconstantwasreducedto\OT1/cmr/m/n/12 5\OML/cmm/m/it/12 kcal=\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 mol[]A\OT1/cmr/m/n/12 2)\OML/cmm/m/it/12 inthenextcycle; andthefinalcyclewasperformedwithoutanyrestrainingforcesoneitherthesoluteorthesolventatoms:Thesystemwasheatedfrom\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 Kto\OT1/cmr/m/n/12 300\OML/cmm/m/it/12 Kfor\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 nswith\OT1/cmr/m/n/12 5\OML/cmm/m/it/12 kcal=\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 mol[][]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 restrainingforceonthesoluteatomsusingtheLangevindynamics; withacollisionalfrequencyof\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ps \OMS/cmsy/m/n/12 ^^@
- []
-
-
-Overfull \hbox (1731.70789pt too wide) in paragraph at lines 139--170
-\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 :Afterheating; thesystemwasequilibratedbyMDsimulationsundertheNVTensembleforsixcyclesof\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 nseach; wheretherestrainingforceonthesoluteatomswasgraduallyreducedfrom\OT1/cmr/m/n/12 5\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 to\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 kcal=\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 mol[][]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :ThenextstepemployedtheNPTensemblefordensityequilibrationforanothersixcyclesof\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 nseach; withtherestrainingforceonthesoluteatomsgraduallydecreasingfrom\OT1/cmr/m/n/12 5\OML/cmm/m/it/12 to\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 kcal=\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 mol[][]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :Intheequilibrationphase; thecut \OMS/cmsy/m/n/12 ^^@
- []
-
-
-Overfull \hbox (635.40526pt too wide) in paragraph at lines 139--170
-\OML/cmm/m/it/12 offforevaluatingnon \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 bondedinteractionswasplacedat\OT1/cmr/m/n/12 9[]\OML/cmm/m/it/12 :IntheproductionphaseoftheMDsimulations; allsystemsweresimulatedfor\OT1/cmr/m/n/12 100\OML/cmm/m/it/12 nsintriplicate; amountingtoa\OT1/cmr/m/n/12 300\OML/cmm/m/it/12 nstrajectoryforeachsystem:Thelong \OMS/cmsy/m/n/12 ^^@
- []
-
-
-Overfull \hbox (1287.7783pt too wide) in paragraph at lines 139--170
-\OML/cmm/m/it/12 rangeelectrostaticinteractionswerecalculatedusingtheParticleMeshEwald\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 PME\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 summationmethod\OT1/cmr/m/n/12 23\OML/cmm/m/it/12 :TheminimizationandequilibrationphasesofMDsimulationswerecarriedoutwiththeMPIversionoftheSANDERandPMEMDcodesimplementedinAMBER\OT1/cmr/m/n/12 1424\OML/cmm/m/it/12 ; respectively:TheproductionphasewascarriedoutusingtheCUDA \OMS/cmsy/m/n/12 ^^@
- []
-
-
-Overfull \hbox (2734.96655pt too wide) in paragraph at lines 139--170
-\OML/cmm/m/it/12 enabledcodeofPMEMDinAMBER\OT1/cmr/m/n/12 22\OML/cmm/m/it/12 :AllsimulationswereperformedwiththeSHAKE\OT1/cmr/m/n/12 25\OML/cmm/m/it/12 algorithmtoconstrainbondstohydrogenatoms; withthetolerancesetto\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 00001[]\OML/cmm/m/it/12 :A\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 fsintegrationtimestepwasusedtosolveNewton[]sequationsofmotion:Foranalysis; theconformationsweresavedevery\OT1/cmr/m/n/12 100\OML/cmm/m/it/12 ps; amountingto\OT1/cmr/m/n/12 1000\OML/cmm/m/it/12 snapshotspertrajectory\OT1/cmr/m/n/12 (3000\OML/cmm/m/it/12 persystem\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :AnalysisofMDtrajectoryAnalysisoftheMDtrajectorywasperformedwiththeCpptraj\OT1/cmr/m/n/12 26\OML/cmm/m/it/12 moduleinAMBERTools\OT1/cmr/m/n/12 15\OML/cmm/m/it/12 :Beforetheanalysis; allsolventatomsandneutralizingionswerestrippedoff; andtheproteinconformationswerealignedtothefirstframe:Themass \OMS/cmsy/m/n/12 ^^@
- []
-
-
-Overfull \hbox (32.86392pt too wide) in paragraph at lines 139--170
-\OML/cmm/m/it/12 weightedCroot \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 mean \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 squaredeviation\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 RMSD\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 fortheproteinwascomputedusingtheX \OMS/cmsy/m/n/12 ^^@
- []
-
-
-Overfull \hbox (65.36642pt too wide) in paragraph at lines 139--170
-\OML/cmm/m/it/12 rayconformationasthereference:TheconvergenceofMDtrajectorieswasestimatedusingtheroot \OMS/cmsy/m/n/12 ^^@
- []
-
-
-Overfull \hbox (349.85191pt too wide) in paragraph at lines 139--170
-\OML/cmm/m/it/12 mean \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 squaredaveragecorrelation\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 RAC\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 withmass \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 weightedRMSaveragingofCatoms; withthefirstframeofthetrajectoryasthereference:Theroot \OMS/cmsy/m/n/12 ^^@
- []
-
-
-Overfull \hbox (391.80266pt too wide) in paragraph at lines 139--170
-\OML/cmm/m/it/12 mean \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 squarefluctuations\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 RMSF\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 perresidueforthebackboneandside \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 chainatomswerecomputedfromthelast\OT1/cmr/m/n/12 50\OML/cmm/m/it/12 nspartofthetrajectories:ProtocolforPOVME\OT1/cmr/m/n/12 2[]$ 
- []
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:170: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.170         \begin{itemize}
-                             
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[2]
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:174: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.174         \item f
-                     ragment placement and trying yo keep the pocket open to...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:178: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.178     \item A
-                 nalysis of other MD observations to support pocket volume c...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:183: LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.183 \end{itemize}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/elvismartis/Documents/Cryptic-Pocket-Detection-in-RAC1/Cryptic Pocket Detection in RAC1.tex:183: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.183 \end{itemize}
-                   
-Things are pretty mixed up, but I think the worst is over.
-
-[3]
+[2] [3] [4]
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <12> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 197.
 
 Overfull \vbox (84.86082pt too high) detected at line 197
  []
 
-[4] (./Cryptic Pocket Detection in RAC1.aux) ) 
+[5] (./Cryptic Pocket Detection in RAC1.aux) ) 
 Here is how much of TeX's memory you used:
- 6518 strings out of 476025
- 116224 string characters out of 5790017
- 1862388 words of memory out of 5000000
- 26901 multiletter control sequences out of 15000+600000
+ 6521 strings out of 476025
+ 116346 string characters out of 5790017
+ 1859388 words of memory out of 5000000
+ 26902 multiletter control sequences out of 15000+600000
  521828 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,8n,131p,426b,534s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Cryptic Pocket Detection in RAC1.pdf" (4 pages, 167603 bytes).
+Output written on "Cryptic Pocket Detection in RAC1.pdf" (5 pages, 161263 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

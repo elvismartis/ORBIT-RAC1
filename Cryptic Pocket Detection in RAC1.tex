@@ -92,8 +92,27 @@
     \item Are there any reports on cryptic pockets for RAC1 
 \end{itemize}
 \section{Methods}
+
+\begin{table}
+  \caption{Detailed system studies}
+  \label{tbl:systemsStudied}
+  \begin{tabular}{llccc}
+    \hline
+    Initial PDB & System & Size (x, y, z, nb atoms) & Simulation Time (ns) & Replicates \\
+    \hline
+    1PDB & Rac1 & 33x34x22, 29000 & 250 & 1 \\
+    2PDB & Rac1-PREX1 & 33x34x22, 29000 & 200 & 1\\
+    3PDB & Rac1-TIAM1 & 33x34x22, 29000 & 128 & 1 \\
+    4PDB & Rac1-ligand & 33x34x22, 29000 & 129 & 1 \\
+    and & others & 33x34x22, 29000 & tbc & tbc \\
+    \hline
+  \end{tabular}
+\end{table}
+
 \begin{itemize}
-    \item List of PDBS used
+    \item List of PDBS used. All systems modelled are described in Table \ref{tbl:systemsStudied}.
+
+    
     \item Protocol for AMBER MD simulations \\
          \textbf{Preparation of systems for molecular dynamics simulation:} \\
     The coordinates for the protein-ligand complexes were retrieved from the Protein Data Bank (PDB); the PDB entries used in 
@@ -152,6 +171,8 @@
 
 \section{Results and discussion}
 
+We studied how different Rac1 experimental structures were comparable to each other by computing their RMSD. This allowed to select X structes in the apo form of Rac1, then Y structures with Rac1 bound to one partner, Z structures where Rac1 was bound to a ligand, and S structures where RAc1 was both bound to a partner protein and a ligand.
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Figures/image1.png}
@@ -198,5 +219,8 @@
     \label{fig:figurePocketAnalysis}
 \end{figure}
 
+\section{Discussion}
+
+Proteins are dynamics by nature, even if RAs members are closely related, their subtle sequence differences are linked to specific 
 
 \end{document}

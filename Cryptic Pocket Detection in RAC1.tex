@@ -98,13 +98,16 @@
   \label{tbl:systemsStudied}
   \begin{tabular}{llccc}
     \hline
-   Initial PDB & System & Size (x, y, z, nb atoms) & Simulation Time (ns) & Replicates \\
+   Initial PDB & Protein & Modulator & Size (x, y, z, nb atoms \footnote{Need to confirm}) \\
     \hline
-    1PDB & Rac1 & 33x34x22, 29000 & 250 & 1 \\
-    2PDB & Rac1-PREX1 & 33x34x22, 29000 & 200 & 1\\
-    3PDB & Rac1-TIAM1 & 33x34x22, 29000 & 128 & 1 \\
-    4PDB & Rac1-ligand & 33x34x22, 29000 & 129 & 1 \\
-    and & others & 33x34x22, 29000 & tbc & tbc \\
+    1HE1 & RAC1 (ACTIVE) & --  & 33x34x22, 29000 \\
+    4YON & RAC1:PREX1    & -- & 33x34x22, 29000 \\
+    1FOE & RAC1:TIAM1     & -- & 33x34x22, 29000 \\
+    2VRW & RAC1:VAV1      & -- & 33X34X22, 29000 \\
+    4YON (docking)  & RAC1:PREX1  & NSC23766 & 33x34x22, 29000 \\
+    4YON (docking)   & RAC1:PREX1    & IA-116 & 33X34X22, 29000 \\
+    4YON (docking)   & RAC1:PREX1 & ZINC69391 & 33X34X22, 29000 \\
+    4YON (docking)   & RAC1:PREX1   & EHT1864 & 33X34X22, 29000 \\
     \hline
   \end{tabular}
 \end{table}
@@ -117,7 +120,7 @@
          \textbf{Preparation of systems for molecular dynamics simulation:} \\
     The coordinates for the protein-ligand complexes were retrieved from the Protein Data Bank (PDB); the PDB entries used in 
     this study are listed in Table S1 in the supplementary information. The X-ray structures were imported and processed in the
-     Maestro-GUI (Schrödinger suite, 2018).  All systems were prepared for MD simulations with the Leap module in AMBERtools15.
+     Maestro-GUI (Schrödinger suite, 2024).  All systems were prepared for MD simulations with the Leap module in AMBERtools23.
     Protein atoms were atom-typed according
      to the AMBER14 (ff14SB) force field. \\
     \textbf{Generating AMBER-compatible parameters for ligands:} \\
@@ -127,10 +130,10 @@
     and an appropriate number of neutralizing ions were added to maintain the neutrality of the system.  The complexes were 
     relaxed using three cycles of minimization of 50,000 steps each.  The first 10,000 steps of minimization adopted the 
     steepest descent algorithm, and the remaining 40,000 steps used the conjugate gradient algorithm.  The cut-off for 
-    evaluating non-bonded interactions was placed at 8.0 Å for the minimization phase.  The first cycle of minimization 
+    evaluating non-bonded interactions was placed at 9.0 Å for the minimization phase.  The first cycle of minimization 
     was performed with  25 $kcal/(mol {\AA}^2) $ restraining force on the solute atoms, this force constant was reduced to 
      5 $ kcal/(mol \r{A}^2) $  in the next cycle, and the final cycle was performed without any restraining forces on either 
-    the solute or the solvent atoms.  The system was heated from 0 K to 300 K for 1 ns with  5 $ kcal/(mol {\AA}^2) $ restraining 
+    the solute or the solvent atoms.  The system was heated from 0 K to 100 K for 1 ns with  5 $ kcal/(mol {\AA}^2) $ restraining 
     force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  After heating, the 
     system was equilibrated by MD simulations under the NVT ensemble for six cycles of 1 ns each, where the restraining 
     force on the solute atoms was gradually reduced from  5.0 to 0.0 $ kcal/(mol {\AA}^2) $.  The next step employed the NPT ensemble 
@@ -158,7 +161,7 @@
             \item pocket identification
              \item pocket volume measurements
         \end{itemize}
-        \item fragment placement and trying yo keep the pocket open to target drug-like molecules
+        \item fragment placement and trying to keep the pocket open to target drug-like molecules
             \begin{itemize}
                 \item Type of pocket and the type of fragment more suitable to keep it open
             \end{itemize}
@@ -171,7 +174,7 @@
 
 \section{Results and discussion}
 
-We studied how different Rac1 experimental structures were comparable to each other by computing their RMSD. This allowed to select X structes in the apo form of Rac1, then Y structures with Rac1 bound to one partner, Z structures where Rac1 was bound to a ligand, and S structures where RAc1 was both bound to a partner protein and a ligand.
+We studied how different RAC1 experimental structures were comparable to each other by computing their RMSD. This allowed to select X structes in the apo form of Rac1, then Y structures with Rac1 bound to one partner, Z structures where Rac1 was bound to a ligand, and S structures where RAc1 was both bound to a partner protein and a ligand.
 
 \begin{figure}[ht]
     \centering

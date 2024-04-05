@@ -126,36 +126,48 @@
     \textbf{Generating AMBER-compatible parameters for ligands:} \\
 
     \textbf{Molecular dynamics simulations:} \\
-    All complexes were solvated with TIP3P waters22 enclosed in a box with dimensions extending 12 {\AA} beyond any protein atom, 
+    All complexes were solvated with TIP3P waters enclosed in a box with dimensions extending 10 {\AA} beyond any protein atom, 
     and an appropriate number of neutralizing ions were added to maintain the neutrality of the system.  The complexes were 
-    relaxed using three cycles of minimization of 50,000 steps each.  The first 10,000 steps of minimization adopted the 
-    steepest descent algorithm, and the remaining 40,000 steps used the conjugate gradient algorithm.  The cut-off for 
-    evaluating non-bonded interactions was placed at 9.0 Å for the minimization phase.  The first cycle of minimization 
+    relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the 
+    steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for 
+    evaluating non-bonded interactions was placed at 8.0 Å for the minimization phase.  The first cycle of minimization 
     was performed with  25 $kcal/(mol {\AA}^2) $ restraining force on the solute atoms, this force constant was reduced to 
      5 $ kcal/(mol \r{A}^2) $  in the next cycle, and the final cycle was performed without any restraining forces on either 
-    the solute or the solvent atoms.  The system was heated from 0 K to 100 K for 1 ns with  5 $ kcal/(mol {\AA}^2) $ restraining 
-    force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  After heating, the 
-    system was equilibrated by MD simulations under the NVT ensemble for six cycles of 1 ns each, where the restraining 
-    force on the solute atoms was gradually reduced from  5.0 to 0.0 $ kcal/(mol {\AA}^2) $.  The next step employed the NPT ensemble 
-    for density equilibration for another six cycles of 1 ns each, with the restraining force on the solute atoms gradually 
+    the solute or the solvent atoms.  The system was heated in 4 stages (table 2) from 0 K to 300 K for 10 ns with  50 $ kcal/(mol {\AA}^2) $ restraining 
+    force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble 
+    for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually 
     decreasing from 5 to 0 $kcal/(mol {\AA}^2)$.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was
-    placed at 9 {\AA}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, 
+    placed at 8 {\AA}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, 
     amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated 
-    using the Particle Mesh Ewald (PME) summation method.  The minimization and equilibration phases of MD simulations 
-    were carried out with the MPI version of the SANDER and PMEMD codes implemented in AMBER22, respectively. 
-    The production phase was carried out using the CUDA-enabled code of PMEMD in AMBER22.  
-    All simulations were performed with the SHAKE25 algorithm to constrain bonds to hydrogen atoms, with the tolerance
+    using the Particle Mesh Ewald (PME) summation method. The cut-off for 
+    evaluating non-bonded interactions was placed at 9.0 Å for the production phase.
+    All the computations were carried out using the CUDA-enabled code of PMEMD in AMBER22.  
+    All simulations were performed with the SHAKE algorithm to constrain bonds to hydrogen atoms, with the tolerance
     set to 0.00001 {\AA}.  A 2 fs integration time step was used to solve Newton\textquotesingle s equations of motion.  
     For analysis, the conformations were saved every 100 ps, amounting to 1000 snapshots per trajectory (3000 per system). \\
-    
+
+    \begin{table}
+  \caption{Detailed stage of Heating using NVT Ensemble}
+  \label{tbl:systems studied}
+  \begin{tabular}{llccc}
+    \hline
+   Stage  & Temperature range (K) & Time (ns) \\
+    \hline
+    Stage 1 & 0 to 100 & 0 to 2.5 \\
+    Stage 2 & 100 to 200 & 2.5 to 5 \\
+    Stage 3 & 200 to 300 & 5 to 7.5 \\
+    stage 4 & 300 to 300 & 7.5 to 10 \\ 
+    \hline
+  \end{tabular}
+\end{table}
+
     \textbf{Analysis of MD trajectories:} \\
-    Analysis of the MD trajectory was performed with the Cpptraj module in AMBERTools23.  Before the analysis, all 
-    solvent atoms and neutralizing ions were stripped off, and the protein conformations were aligned to the first frame. 
+    Analysis of the MD trajectory was performed with the cpptraj module in AMBERTools23.  Before the analysis, all 
+    solvent atoms and neutralizing ions were stripped off, and the protein conformations were aligned to their respective X-ray conformation. 
     The mass-weighted C$\alpha$ root-mean-square deviation (RMSD) for the protein was computed using the X-ray conformation 
     as the reference.  The convergence of MD trajectories was estimated using the root-mean-squared average correlation (RAC) 
     with mass-weighted RMS averaging of  C$\alpha$ atoms, with the first frame of the trajectory as the reference.  
-    The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed from the 
-    last 50 ns part of the trajectories.
+    The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed to understand the domain-specific fluctuations. 
     \item Protocol for POVME2 
         \begin{itemize}
             \item pocket identification
@@ -167,7 +179,7 @@
             \end{itemize}
     \item Analysis of other MD observations to support pocket volume changes
         \begin{itemize}
-            \item RMSDs for switch region 1 and 2
+            \item RMSDs for switch regions 1 and 2
             \item (perhaps) PCA analysis to explain the switch region dynamics and the pocket volumes
         \end{itemize}
 \end{itemize}

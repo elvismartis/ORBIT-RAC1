@@ -13,7 +13,8 @@
 %% servers.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
-
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{References.bib} %Import the bibliography file
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If issues arise when submitting your manuscript, you may want to
 %% un-comment the next line.  This provides information on the
@@ -82,7 +83,7 @@
 \section{Introduction}
 \begin{itemize}
     \item importance of GTPases, their switch mechanism and their interactions with GEFs, GAPs and GDIs \\
-    Small GTPAses act as molecularswitches cycling between OFF and ON states. This switching mechnism thus 
+    Small GTPAses act as molecular switches cycling between OFF and ON states. This switching mechnism thus 
     controls a vast variety of processes that control cell growth and differentiation to vesicular and nuclear transport.
 
     \item structural biology information about RAC1 and protein-protein interactions with GEFs, GAPs and GDIs \\
@@ -95,15 +96,15 @@
 
 \begin{table}
   \caption{Detailed system studies}
-  \label{tbl:systems studied}
+  \label{tbl: systems studied}
   \begin{tabular}{llccc}
     \hline
    Initial PDB & Protein & Modulator & Size (x, y, z, nb atoms \footnote{Need to confirm}) \\
     \hline
-    1HE1 & RAC1 (ACTIVE) & --  & 33x34x22, 29000 \\
-    4YON & RAC1:PREX1    & -- & 33x34x22, 29000 \\
-    1FOE & RAC1:TIAM1     & -- & 33x34x22, 29000 \\
-    2VRW & RAC1:VAV1      & -- & 33X34X22, 29000 \\
+    1HE1\cite{gappdb} & RAC1 (ACTIVE) & --  & 33x34x22, 29000 \\
+    4YON\cite{prex1pdb} & RAC1:PREX1    & -- & 33x34x22, 29000 \\
+    1FOE\cite{tiam1pdb} & RAC1:TIAM1     & -- & 33x34x22, 29000 \\
+    2VRW\cite{vav1pdb} & RAC1:VAV1      & -- & 33X34X22, 29000 \\
     4YON (docking)  & RAC1:PREX1  & NSC23766 & 33x34x22, 29000 \\
     4YON (docking)   & RAC1:PREX1    & IA-116 & 33X34X22, 29000 \\
     4YON (docking)   & RAC1:PREX1 & ZINC69391 & 33X34X22, 29000 \\
@@ -114,36 +115,21 @@
 
 \begin{itemize}
     \item List of PDBS used. All systems modelled are described in Table \ref{tbl:systemsStudied}.
+\subsection
+\subsection{Preparation of systems for molecular dynamics simulation:} \\
 
-    
-    \item Protocol for AMBER MD simulations \\
-         \textbf{Preparation of systems for molecular dynamics simulation:} \\
     The coordinates for the protein-ligand complexes were retrieved from the Protein Data Bank (PDB); the PDB entries used in 
-    this study are listed in Table S1 in the supplementary information. The X-ray structures were imported and processed in the
-     Maestro-GUI (Schrödinger suite, 2024).  All systems were prepared for MD simulations with the Leap module in AMBERtools23.
-    Protein atoms were atom-typed according
-     to the AMBER14 (ff14SB) force field. \\
-    \textbf{Generating AMBER-compatible parameters for ligands:} \\
+    this study are listed in Table S1 in the supplementary information. The X-ray structures were imported and processed in the Maestro-GUI (Schrödinger suite, 2024).  All systems were prepared for MD simulations with the Leap module in AMBERtools23. Protein atoms were atom-typed according to the AMBER14 (ff14SB) force field\cite{ff14sb}. \\
+     
+\subsection{Generating AMBER-compatible parameters for ligands:} \\
 
-    \textbf{Molecular dynamics simulations:} \\
-    All complexes were solvated with TIP3P waters enclosed in a box with dimensions extending 10 {\AA} beyond any protein atom, 
-    and an appropriate number of neutralizing ions were added to maintain the neutrality of the system.  The complexes were 
-    relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the 
-    steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for 
-    evaluating non-bonded interactions was placed at 8.0 Å for the minimization phase.  The first cycle of minimization 
-    was performed with  25 $kcal/(mol {\AA}^2) $ restraining force on the solute atoms, this force constant was reduced to 
-     5 $ kcal/(mol \r{A}^2) $  in the next cycle, and the final cycle was performed without any restraining forces on either 
-    the solute or the solvent atoms.  The system was heated in 4 stages (table 2) from 0 K to 300 K for 10 ns with  50 $ kcal/(mol {\AA}^2) $ restraining 
-    force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble 
-    for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually 
-    decreasing from 5 to 0 $kcal/(mol {\AA}^2)$.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was
-    placed at 8 {\AA}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, 
-    amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated 
-    using the Particle Mesh Ewald (PME) summation method. The cut-off for 
-    evaluating non-bonded interactions was placed at 9.0 Å for the production phase.
-    All the computations were carried out using the CUDA-enabled code of PMEMD in AMBER22.  
-    All simulations were performed with the SHAKE algorithm to constrain bonds to hydrogen atoms, with the tolerance
-    set to 0.00001 {\AA}.  A 2 fs integration time step was used to solve Newton\textquotesingle s equations of motion.  
+\subsection{Molecular dynamics simulations:} \\
+
+    All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10 {\AA} beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the 
+    steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0 Å for the minimization phase.  The first cycle of minimization was performed with  25 $kcal/(mol {\AA}^2) $ restraining force on the solute atoms, this force constant was reduced to 5 $ kcal/(mol \r{A}^2) $  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (table 2) from 0 K to 300 K for 10 ns with  50 $ kcal/(mol {\AA}^2) $ restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 $kcal/(mol {\AA}^2)$.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\AA}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated 
+    using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for 
+    evaluating non-bonded interactions was placed at 9.0 Å for the production phase. All the computations were done using the CUDA-enabled PMEMD code\cite{pmemd01, pmemd02, pmemd03} in AMBER22\cite{amber22, amber}.  
+    All simulations were performed with the SHAKE algorithm\cite{shake} to constrain bonds to hydrogen atoms, with the tolerance set to 0.00001 {\AA}.  A 2 fs integration time step was used to solve Newton\textquotesingle s equations of motion.  
     For analysis, the conformations were saved every 100 ps, amounting to 1000 snapshots per trajectory (3000 per system). \\
 
     \begin{table}
@@ -161,18 +147,18 @@
   \end{tabular}
 \end{table}
 
-    \textbf{Analysis of MD trajectories:} \\
-    Analysis of the MD trajectory was performed with the cpptraj module in AMBERTools23.  Before the analysis, all 
+\subsection{Analysis of MD trajectories:} \\
+
+    Analysis of the MD trajectory was performed with the cpptraj\cite{cpptraj} module in AMBERTools23.  Before the analysis, all 
     solvent atoms and neutralizing ions were stripped off, and the protein conformations were aligned to their respective X-ray conformation. 
     The mass-weighted C$\alpha$ root-mean-square deviation (RMSD) for the protein was computed using the X-ray conformation 
     as the reference.  The convergence of MD trajectories was estimated using the root-mean-squared average correlation (RAC) 
     with mass-weighted RMS averaging of  C$\alpha$ atoms, with the first frame of the trajectory as the reference.  
-    The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed to understand the domain-specific fluctuations. 
-    \item Protocol for POVME2 
-        \begin{itemize}
-            \item pocket identification
-             \item pocket volume measurements
-        \end{itemize}
+    The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed to understand the domain-specific fluctuations. \\
+   
+\subsection{Cryptic Pocket Identification:} \\
+
+    POVME-2.2.2 \cite{durrant2011povme, durrant2014povme} 
         \item fragment placement and trying to keep the pocket open to target drug-like molecules
             \begin{itemize}
                 \item Type of pocket and the type of fragment more suitable to keep it open
@@ -237,5 +223,7 @@ We studied how different RAC1 experimental structures were comparable to each ot
 \section{Discussion}
 
 Proteins are dynamics by nature, even if RAs members are closely related, their subtle sequence differences are linked to specific 
+
+\printbibliography[title={References}]
 
 \end{document}

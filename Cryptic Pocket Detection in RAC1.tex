@@ -106,13 +106,20 @@
     4YON\cite{prex1pdb} & RAC1:PREX1    & -- & 88951 \\
     1FOE\cite{tiam1pdb} & RAC1:TIAM1     & -- & 64367 \\
     2VRW\cite{vav1pdb} & RAC1:VAV1      & -- & 61807 \\
-    4YON (docking)  & RAC1:PREX1  & NSC23766 &  \\
-    4YON (docking)   & RAC1:PREX1    & IA-116 &  \\
-    4YON (docking)   & RAC1:PREX1 & ZINC69391 &   \\
-    4YON (docking)   & RAC1:PREX1   & EHT1864 &  \\
+    4YON (docking)  & RAC1:PREX1  & NSC23766\footnote[1]{See the supporting information} &  \\
+    4YON (docking)   & RAC1:PREX1    & IA-116\footnote[1]{See the supporting information} &  \\
+    4YON (docking)   & RAC1:PREX1 & ZINC69391\footnote[1]{See the supporting information} &   \\
+    4YON (docking)   & RAC1:PREX1   & EHT1864\footnote[1]{See the supporting information} &  \\
     \hline
   \end{tabular}
 \end{table}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Figures/chemical_structures.png}
+    \caption{RAC1 Modulators reported in the literature}
+    \label{fig:RAC1modulators}
+\end{figure}
 
 \begin{itemize}
     \item List of PDBS used. All systems modelled are described in Table \ref{tbl: Detailed system studies}.
@@ -128,7 +135,7 @@ RAC1 modulators mentioned in Table \ref{tbl: Detailed system studies} were docke
 
 \subsection{Generating AMBER-compatible parameters for ligands:} \\
 
-Amber-compatible parameters for all small molecules were obtained using Antechamber\cite{antechamber} and parmchk2 in AMBERtools23.  The General AMBER force field\cite{gaff2} (GAFF2) was used to define the atom types, atomic masses, and force constants for bonds, angles, torsions, and improper torsions. The partial charges were computed using sqm program with AM1-BCC\cite{am1bcc01, am1bcc02} method. For the VAV1 zinc finger region the parameters of the Zinc atom, coordinating cyteines and Histidines residues, the force field parameters were obtained from the ZAFF\cite{zaff} force field library.
+Amber-compatible parameters for all small molecules were obtained using Antechamber\cite{antechamber} and parmchk2 in AMBERtools23.  The General AMBER force field\cite{gaff2} (GAFF2) was used to define the atom types, atomic masses, and force constants for bonds, angles, torsions, and improper torsions. The partial charges were computed using sqm program with AM1-BCC\cite{am1bcc01, am1bcc02} method. For the VAV1 zinc finger region the parameters of the Zinc atom, coordinating cysteines and histidine residues, the force field parameters were obtained from the ZAFF\cite{zaff} force field library.
 
 \subsection{Molecular dynamics simulations:} \\
 
@@ -188,7 +195,9 @@ Where ($ \Delta$E_{MM} $) is the interaction energy between the binding partners
 
 \section{Results and discussion}
 
-We studied how different RAC1 experimental structures were comparable to each other by computing their RMSD. This allowed to select X structes in the apo form of Rac1, then Y structures with Rac1 bound to one partner, Z structures where Rac1 was bound to a ligand, and S structures where RAc1 was both bound to a partner protein and a ligand.
+We studied how different RAC1 experimental structures were comparable to each other by computing their RMSD. This allowed to select X structes in the apo form of Rac1, then Y structures with Rac1 bound to one partner, Z structures where Rac1 was bound to a ligand, and S structures where RAc1 was both bound to a partner protein and a ligand. \\
+
+
 
 \begin{figure}[ht]
     \centering

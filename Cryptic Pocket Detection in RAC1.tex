@@ -74,7 +74,7 @@
 %% if an abstract is not used by the target journal.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
- The work described here attempts to locate cryptic pockets in human RAC1 and RAC1-GEF interfaces to enhance the scope of therapeutic interventions in RAC1-associated disease pathways.  RAC1 (Ras-related C3 botulinum toxin substrate 1) acts as a molecular switch catalysing by hydrolysing GTP to GDP.  Owing to the slow nature of GTP hydrolysis and even slower dissociation of GDP, RAC1 is always assisted by Guanine Exchange Factors (GEFs) and GTPase-activating proteins (GAPs). The GEF and GAP binding to RAC1 control the switch mechanism, providing an opportunity to modulate the RAC1 activity in several diseases in which it has been implicated. Since targeting the GTP pocket is challenging  due to the large concentration of GTP to compete with the drug molecules, we embarked on finding alternative pockets on either RAC1 alone or in the interface RAC1-GEFs.  We found two putative cryptic pockets that are amenable to structure-based drug design. The first cavity is found on RAC1 alone. However, the pocket dynamics were by GEF binding. The second cavity was formed by the RAC1-GEFs interface that provides more GEF-dependent modulation by protein-protein interface binders.  
+ The work described here attempts to locate cryptic pockets in human RAC1 and RAC1-GEF interfaces to enhance the scope of therapeutic interventions in RAC1-associated disease pathways.  RAC1 (Ras-related C3 botulinum toxin substrate 1) acts as a molecular switch catalysing by hydrolysing GTP to GDP\@  Owing to the slow nature of GTP hydrolysis and even slower dissociation of GDP, RAC1 is always assisted by Guanine Exchange Factors (GEFs) and GTPase-activating proteins (GAPs). The GEF and GAP binding to RAC1 control the switch mechanism, providing an opportunity to modulate the RAC1 activity in several diseases in which it has been implicated. Since targeting the GTP pocket is challenging  due to the large concentration of GTP to compete with the drug molecules, we embarked on finding alternative pockets on either RAC1 alone or in the interface RAC1-GEFs.  We found two putative cryptic pockets that are amenable to structure-based drug design. The first cavity is found on RAC1 alone. However, the pocket dynamics were by GEF binding. The second cavity was formed by the RAC1-GEFs interface that provides more GEF-dependent modulation by protein-protein interface binders.  
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -101,14 +101,14 @@
     \hline
    Initial PDB & Protein & Modulator & Size (x, y, z, nb atoms \footnote{Need to confirm}) \\
     \hline
-    1HE1\cite{gappdb} & RAC1 (ACTIVE) & --  & 33x34x22, 29000 \\
-    4YON\cite{prex1pdb} & RAC1:PREX1    & -- & 33x34x22, 29000 \\
-    1FOE\cite{tiam1pdb} & RAC1:TIAM1     & -- & 33x34x22, 29000 \\
-    2VRW\cite{vav1pdb} & RAC1:VAV1      & -- & 33X34X22, 29000 \\
-    4YON (docking)  & RAC1:PREX1  & NSC23766 & 33x34x22, 29000 \\
-    4YON (docking)   & RAC1:PREX1    & IA-116 & 33X34X22, 29000 \\
-    4YON (docking)   & RAC1:PREX1 & ZINC69391 & 33X34X22, 29000 \\
-    4YON (docking)   & RAC1:PREX1   & EHT1864 & 33X34X22, 29000 \\
+    1HE1\cite{gappdb} & RAC1 (ACTIVE) & --  & 33$\times$34$\times$22, 29000 \\
+    4YON\cite{prex1pdb} & RAC1:PREX1    & -- & 33$\times$34$\times$22, 29000 \\
+    1FOE\cite{tiam1pdb} & RAC1:TIAM1     & -- & 33$\times$34$\times$22, 29000 \\
+    2VRW\cite{vav1pdb} & RAC1:VAV1      & -- & 33$\times$34$\times$22, 29000 \\
+    4YON (docking)  & RAC1:PREX1  & NSC23766 & 33$\times$34$\times$22, 29000 \\
+    4YON (docking)   & RAC1:PREX1    & IA-116 & 33$\times$34$\times$22, 29000 \\
+    4YON (docking)   & RAC1:PREX1 & ZINC69391 & 33$\times$34$\times$22, 29000 \\
+    4YON (docking)   & RAC1:PREX1   & EHT1864 & 33$\times$34$\times$22, 29000 \\
     \hline
   \end{tabular}
 \end{table}
@@ -122,9 +122,7 @@
     this study are listed in Table S1 in the supplementary information. The X-ray structures were imported and processed in the Maestro-GUI (Schrödinger suite, 2024).  All systems were prepared for MD simulations with the Leap module in AMBERtools23. Protein atoms were atom-typed according to the AMBER14 (ff14SB) force field\cite{ff14sb}. \\
      
 \subsection{Generating AMBER-compatible parameters for ligands:} \\
-
 \subsection{Molecular dynamics simulations:} \\
-
     All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10 {\AA} beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the 
     steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0 Å for the minimization phase.  The first cycle of minimization was performed with  25 $kcal/(mol {\AA}^2) $ restraining force on the solute atoms, this force constant was reduced to 5 $ kcal/(mol \r{A}^2) $  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (table 2) from 0 K to 300 K for 10 ns with  50 $ kcal/(mol {\AA}^2) $ restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 $kcal/(mol {\AA}^2)$.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\AA}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated 
     using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for 

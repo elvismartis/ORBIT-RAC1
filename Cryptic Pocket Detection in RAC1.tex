@@ -74,7 +74,7 @@
 %% if an abstract is not used by the target journal.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
- The work described here attempts to locate cryptic pockets in human RAC1 and RAC1-GEF interfaces to enhance the scope of therapeutic interventions in RAC1-associated disease pathways.  RAC1 (Ras-related C3 botulinum toxin substrate 1) acts as a molecular switch catalysing by hydrolysing GTP to GDP\@  Owing to the slow nature of GTP hydrolysis and even slower dissociation of GDP, RAC1 is always assisted by Guanine Exchange Factors (GEFs) and GTPase-activating proteins (GAPs). The GEF and GAP binding to RAC1 control the switch mechanism, providing an opportunity to modulate the RAC1 activity in several diseases in which it has been implicated. Since targeting the GTP pocket is challenging  due to the large concentration of GTP to compete with the drug molecules, we embarked on finding alternative pockets on either RAC1 alone or in the interface RAC1-GEFs.  We found two putative cryptic pockets that are amenable to structure-based drug design. The first cavity is found on RAC1 alone. However, the pocket dynamics were by GEF binding. The second cavity was formed by the RAC1-GEFs interface that provides more GEF-dependent modulation by protein-protein interface binders.  
+ The work described here attempts to locate cryptic pockets in human RAC1 and RAC1-GEF interfaces to enhance the scope of therapeutic interventions in RAC1-associated disease pathways.  RAC1 (Ras-related C3 botulinum toxin substrate 1) acts as a molecular switch catalysing by hydrolysing GTP to GDP\@  Owing to the slow nature of GTP hydrolysis and even slower dissociation of GDP, RAC1 is always assisted by Guanine Exchange Factors (GEFs) and GTPase-activating proteins (GAPs). The GEF and GAP binding to RAC1 control the switch mechanism, providing an opportunity to modulate the RAC1 activity in several diseases in which it has been implicated. Since targeting the GTP pocket is challenging due to the large concentration of GTP to compete with the drug molecules, we embarked on finding alternative pockets on either RAC1 alone or in the interface RAC1-GEFs.  We found two putative cryptic pockets that are amenable to structure-based drug design. The first cavity is found on RAC1 alone. However, the pocket dynamics were by GEF binding. The second cavity was formed by the RAC1-GEFs interface that provides more GEF-dependent modulation by protein-protein interface binders.  
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,7 +96,7 @@
 
 \begin{table}
   \caption{Detailed system studies}
-  \label{tbl: systems studied}
+  \label{tbl: Detailed system studies}
   \begin{tabular}{llccc}
     \hline
    Initial PDB & Protein & Modulator & Size (x, y, z, nb atoms \footnote{Need to confirm}) \\
@@ -114,15 +114,23 @@
 \end{table}
 
 \begin{itemize}
-    \item List of PDBS used. All systems modelled are described in Table \ref{tbl:systemsStudied}.
+    \item List of PDBS used. All systems modelled are described in Table \ref{tbl: Detailed system studies}.
 \subsection
 \subsection{Preparation of systems for molecular dynamics simulation:} \\
 
     The coordinates for the protein-ligand complexes were retrieved from the Protein Data Bank (PDB); the PDB entries used in 
     this study are listed in Table S1 in the supplementary information. The X-ray structures were imported and processed in the Maestro-GUI (Schrödinger suite, 2024).  All systems were prepared for MD simulations with the Leap module in AMBERtools23. Protein atoms were atom-typed according to the AMBER14 (ff14SB) force field\cite{ff14sb}. \\
-     
+
+\subsection{Molecular docking:} \\
+
+RAC1 modulators mentioned in Table \ref{tbl: Detailed system studies} were docked in the suitable cavity using Dock6\cite{dock6}. Since no experimentally solved structures are available to locate the binding site for the aforementioned ligands, we employed a blind docking approach. The centre of mass of the RAC1-PREX1 complex was used to define the centre of the grid box and the grid box expanded at least 10{\AA} beyond the protein atoms to allow a thorough search of the entire protein surface and available cavities thereof. The detailed protocol for DOCK6 is given in Table XX in the supplementary information. 
+
 \subsection{Generating AMBER-compatible parameters for ligands:} \\
+
+Amber-compatible parameters for all small molecules were obtained using Antechamber\cite{antechamber} and parmchk2 in AMBERtools23.  The General AMBER force field\cite{gaff2} (GAFF2) was used to define the atom types, atomic masses, and force constants for bonds, angles, torsions, and improper torsions. The partial charges were computed using sqm program with AM1-BCC\cite{am1bcc01, am1bcc02} method. For the VAV1 zinc finger region the parameters of the Zinc atom, coordinating cyteines and Histidines residues, the force field parameters were obtained from the ZAFF\cite{zaff} force field library.
+
 \subsection{Molecular dynamics simulations:} \\
+
     All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10 {\AA} beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the 
     steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0 Å for the minimization phase.  The first cycle of minimization was performed with  25 $kcal/(mol {\AA}^2) $ restraining force on the solute atoms, this force constant was reduced to 5 $ kcal/(mol \r{A}^2) $  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (table 2) from 0 K to 300 K for 10 ns with  50 $ kcal/(mol {\AA}^2) $ restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 $kcal/(mol {\AA}^2)$.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\AA}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated 
     using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for 
@@ -131,8 +139,8 @@
     For analysis, the conformations were saved every 100 ps, amounting to 1000 snapshots per trajectory (3000 per system). \\
 
     \begin{table}
-  \caption{Detailed stage of Heating using NVT Ensemble}
-  \label{tbl:systems studied}
+  \caption{Details of stages of Heating using NVT Ensemble}
+  \label{tbl:Details of stages of Heating using NVT Ensemble}
   \begin{tabular}{llccc}
     \hline
    Stage  & Temperature range (K) & Time (ns) \\
@@ -146,14 +154,25 @@
 \end{table}
 
 \subsection{Analysis of MD trajectories:} \\
+
     Analysis of the MD trajectory was performed with the cpptraj\cite{cpptraj} module in AMBERTools23.  Before the analysis, all 
     solvent atoms and neutralizing ions were stripped off, and the protein conformations were aligned to their respective X-ray conformation. 
     The mass-weighted C$\alpha$ root-mean-square deviation (RMSD) for the protein was computed using the X-ray conformation 
     as the reference.  The convergence of MD trajectories was estimated using the root-mean-squared average correlation (RAC) 
     with mass-weighted RMS averaging of  C$\alpha$ atoms, with the first frame of the trajectory as the reference.  
     The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed to understand the domain-specific fluctuations. \\
+
+\subsection{Free-Energy of Binding:} \\
+
+The free energy of binding was computed using the equation (Eq-1) on the conformations saved from the MD simulations using mm-pbsa python script\cite{mmpbsa} available in AMBERTools23; \\
+
+\($\Delta$G_{binding} = $\Delta$E_{MM} + $\Delta$H_{GBSA} - T$\Delta$S\) $   Eq-1 \\ 
+
+Where ($ \Delta$E_{MM} $) is the interaction energy between the binding partners computed in the gas phase using a molecular mechanics method.  The solvation-free energy or the enthalpy of hydration $ ($\Delta$H_{GBSA}) $  was computed using the Generalized-Born Surface Area (GBSA) method, and the entropic component of binding (\(T$\Delta$S)\), was not computed due to huge computation cost. The internal dielectric constant for GBSA calculations was set to 1 and the solvent dielectric constant was fixed as 80. For computing free energy of binding using the MM-GBSA method, the OBC’s GB model\cite{igb5} $ (igb = 5) $ was used. The mbondi3 radii set was employed to define the PB radii for all solute atoms during the preparation of the topology and parameter files in the leap module in AMBERTools23. The ionic strength for  GBSA calculations was maintained at 150 mM. All energy components, in an implicit solvent, were calculated using a large cut-off of 999Å. The surface area for the non-polar solvation term was computed using the linear combination of pairwise overlaps (LCPO) method\cite{lcpo}.
+
    
 \subsection{Cryptic Pocket Identification:} \\
+
     POVME-2.2.2 \cite{durrant2011povme, durrant2014povme} 
         \item fragment placement and trying to keep the pocket open to target drug-like molecules
             \begin{itemize}

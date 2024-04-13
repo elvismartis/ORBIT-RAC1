@@ -123,7 +123,8 @@
 
 \begin{itemize}
     \item List of PDBS used. All systems modelled are described in Table \ref{tbl: Detailed system studies}. \\
-    
+\end{itemize}
+
 \subsection{Preparation of systems for molecular dynamics simulation:} \\
 
     The coordinates for the protein-ligand complexes were retrieved from the Protein Data Bank (PDB); the PDB entries used in 
@@ -143,7 +144,7 @@
     All simulations were performed with the SHAKE algorithm\cite{shake} to constrain bonds to hydrogen atoms, with the tolerance set to 0.00001 {\AA}.  A 2 fs integration time step was used to solve Newton\textquotesingle s equations of motion.  
     For analysis, the conformations were saved every 100 ps, amounting to 1000 snapshots per trajectory (3000 per system). \\
 
-    \begin{table}
+\begin{table}
   \caption{Details of stages of Heating using NVT Ensemble}
   \label{tbl:Details of stages of Heating using NVT Ensemble}
   \begin{tabular}{llccc}
@@ -197,9 +198,15 @@ The free energy of binding was computed using the equation (Eq-1) on the conform
 
 \section{Results and discussion}
 
-We studied how different RAC1 experimental structures were comparable to each other by computing their RMSD. This allowed to select X structes in the apo form of Rac1, then Y structures with Rac1 bound to one partner, Z structures where Rac1 was bound to a ligand, and S structures where RAc1 was both bound to a partner protein and a ligand. \\
+We studied how different RAC1 experimental structures were comparable to each other by computing their RMSD. This allowed to select X structes in the apo form of Rac1, then Y structures with Rac1 bound to one partner, Z structures where Rac1 was bound to a ligand, and S structures where RAc1 was bound to a partner protein and a ligand. \\
+
+\subsection{Switch region dynamics is governed by GEFs and substrate molecules:}
+    The switch regions in Small GTPases are signature domains that govern and dictate the molecular switch mechanism which is central to the function of Small GTPases. RAC1 is not different in how the switch regions play a regulatory role in either keeping the RAC1 in active (GTP-bound) or inactive (GDP-active). The binding of GTP (also the presence of GDP) and GEFs dampen the dynamic flexibility in the switch region (\textbf{figure \ref{fig:switchdynamics}}). Furthermore, switch 1 is primarily involved in the binding of GTP and dissociation of GDP which is assisted by GAPs and GEFs respectively <ref>. GAP and GEF-associated molecular switch mechanism provides strict control in the RAC1-associated pathway that may be activated in response to external stimuli. This also provides an opportunity to modulate a particular GEF-dependent pathway, perhaps selectively, for therapeutic interventions.  It has been previously reported that Switch regions, particularly switch 1, are most dynamic in small GTPases <ref>. However, the exact conformational preference of the switch region remains elusive. However, in the case of switch Region 1, we observe the two Prolines (insert PDB numbering) that dictate the dynamics (MD analysis on this). 
 
 
+\subsection{GEF binding opens new cryptic sites in RAC1:}
+    
+    
 
 \begin{figure}[ht]
     \centering
@@ -223,7 +230,7 @@ We studied how different RAC1 experimental structures were comparable to each ot
     \centering
     \includegraphics[width=1\textwidth]{Figures/RMSD_Switch.001.png}
     \caption{Switch Region Dynamics is RAC1. A) Switch 1 region and B) Switch 2 region}
-    \label{fig:pocketEvolution}
+    \label{fig:switchdynamics}
 \end{figure}
 
 \begin{figure}[ht]

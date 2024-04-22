@@ -13,8 +13,6 @@
 %% servers.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
-\usepackage{biblatex} %Imports biblatex package
-\addbibresource{References.bib} %Import the bibliography file
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If issues arise when submitting your manuscript, you may want to
 %% un-comment the next line.  This provides information on the
@@ -133,10 +131,10 @@
 
 \subsection{Generating AMBER-compatible parameters for ligands:} \\
 
-    Amber-compatible parameters for all small molecules were obtained using Antechamber\cite{antechamber} and parmchk2 in AMBERtools23.  The General AMBER force field\cite{gaff2} (GAFF2) was used to define the atom types, atomic masses, and force constants for bonds, angles, torsions, and improper torsions. The partial charges were computed using sqm program with AM1-BCC\cite{am1bcc01, am1bcc02} method. For the VAV1 zinc finger region the parameters of the Zinc atom, coordinating cysteines and histidine residues, the force field parameters were obtained from the ZAFF\cite{zaff} force field library.
+    Amber-compatible parameters for all small molecules were obtained using Antechamber\cite{antechamber} and parmchk2 in AMBERtools23.  The General AMBER force field\cite{gaff2} (GAFF2) was used to define the atom types, atomic masses, and force constants for bonds, angles, torsions, and improper torsions. The partial charges were computed using sqm program with AM1-BCC\cite{am1bcc01, am1bcc02} method. For the VAV1 zinc finger region the parameters of the Zinc atom, coordinating cysteines and histidine residues, the force field parameters were obtained from the ZAFF\mcite{zaff} force field library.
 
 \subsection{Molecular dynamics simulations:} \\
-
+x	
     All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10 {\AA} beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the 
     steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0 Å for the minimization phase.  The first cycle of minimization was performed with  25 $kcal/(mol {\AA}^2) $ restraining force on the solute atoms, this force constant was reduced to 5 $ kcal/(mol \r{A}^2) $  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (table 2) from 0 K to 300 K for 10 ns with  50 $ kcal/(mol {\AA}^2) $ restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 $kcal/(mol {\AA}^2)$.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\AA}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated 
     using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for 
@@ -170,7 +168,7 @@
 
 \subsection{Cryptic Pocket Identification:} \\
 
-    POVME-2.2.2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the RAC1 and RAC1-GEFs complexed. To identify the pockets, the pocketID module on POVME-2.2.2 was used. To identify cryptic pockets on RAC1 and RAC1-GEF, we used various conformations obtained from MD simulations. The conformations were selected following a clustering analysis of the trajectories, and the cluster representatives of the most populated cluster were extracted. For practical purposes, we restricted the extracting the cluster representatives for 3 most populated clusters. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout the course of MD trajectories. It has been observerd that the pocket  might be a good candidiate for druggability if  its volume range was found to lie between 930${\AA}^3$ to 610${\AA}^3$\cite{perot2010druggable, nayal2006nature, an2005pocketome } 
+    POVME-2.2.2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the RAC1 and RAC1-GEFs complexed. To identify the pockets, the pocketID module on POVME-2.2.2 was used. To identify cryptic pockets on RAC1 and RAC1-GEF, we used various conformations obtained from MD simulations. The conformations were selected following a clustering analysis of the trajectories, and the cluster representatives of the most populated cluster were extracted. For practical purposes, we restricted the extracting the cluster representatives for 3 most populated clusters. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout the course of MD trajectories. It has been observerd that the pocket  might be a good candidiate for druggability if  its volume range was found to lie between $930{\AA}^3$ to $610{\AA}^3$ \cite{perot2010druggable, nayal2006nature, an2005pocketome} 
     \begin{table}
   \caption{Parameters for Pocket Identification using POVME-2}
   \label{tbl:pocketID}
@@ -274,6 +272,6 @@ We studied how different RAC1 experimental structures were comparable to each ot
 
 Proteins are dynamics by nature, even if RAs members are closely related, their subtle sequence differences are linked to specific 
 
-\printbibliography[title={References}]
+\bibliography{Cryptic Pocket Detection in RAC1}
 
 \end{document}

@@ -3,8 +3,8 @@
 %% The document class accepts keyval options, which should include
 %% the target journal and optionally the manuscript type. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[journal=jacsat,manuscript=article]{achemso}
-
+%\documentclass[journal=jacsat,manuscript=article]{achemso}
+\documentclass{achemso}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Place any additional packages needed here.  Only include packages
 %% which are essential, to avoid problems later. Do NOT use any
@@ -12,7 +12,7 @@
 %% extensions are not currently available on the ACS conversion
 %% servers.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+%\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If issues arise when submitting your manuscript, you may want to
 %% un-comment the next line.  This provides information on the
@@ -25,7 +25,7 @@
 %% possible, and avoid layout-changing macros (which are not used
 %% when typesetting).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand*\mycommand[1]{\texttt{\emph{#1}}}
+%\newcommand*\mycommand[1]{\texttt{\emph{#1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Meta-data block
@@ -58,8 +58,8 @@
 %% a running title from the author: this should be supplied as an
 %% optional argument to \title.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[An \textsf{achemso} demo]
-  {Identification of Cryptic Pockets in RAC1 and RHOGAP/GEFs binding interfaces}
+\title
+{Identification of Cryptic Pockets in RAC1 and RHOGAP/GEFs binding interfaces}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The manuscript does not need to include \maketitle, which is
@@ -84,7 +84,7 @@
     Small GTPAses act as molecular switches cycling between OFF and ON states. This switching mechnism thus 
     controls a vast variety of processes that control cell growth and differentiation to vesicular and nuclear transport.
 
-    \item structural biology information about RAC1 and protein-protein interactions with GEFs, GAPs and GDIs 
+    \item structural biology information about RAC1 and protein-protein interactions with partners 
 
     \item Therapeutic interventions on RAC1 and their disadvantages
     \item Binding site information and changes in the binding sites, if any are reported
@@ -104,12 +104,14 @@
     4YON\cite{prex1pdb} & RAC1:PREX1    & -- & 88951 \\
     1FOE\cite{tiam1pdb} & RAC1:TIAM1     & -- & 64367 \\
     2VRW\cite{vav1pdb} & RAC1:VAV1      & -- & 61807 \\
-    4YON (docking)  & RAC1:PREX1  & NSC23766\footnote[1]{See the supporting information} &  \\
-    4YON (docking)   & RAC1:PREX1    & IA-116\footnote[1]{See the supporting information} &  \\
-    4YON (docking)   & RAC1:PREX1 & ZINC69391\footnote[1]{See the supporting information} &   \\
-    4YON (docking)   & RAC1:PREX1   & EHT1864\footnote[1]{See the supporting information} &  \\
+    4YON (docking)  & RAC1:PREX1  & NSC23766\textsuperscript{\emph{1}} &  \\
+    4YON (docking)   & RAC1:PREX1    & IA-116\textsuperscript{\emph{1}} &  \\
+    4YON (docking)   & RAC1:PREX1 & ZINC69391\textsuperscript{\emph{1}} &   \\
+    4YON (docking)   & RAC1:PREX1   & EHT1864\textsuperscript{\emph{1}} &  \\
     \hline
   \end{tabular}
+  
+  \textsuperscript{\emph{1}}See the supporting information
 \end{table}
 
 \begin{figure}[ht]
@@ -132,7 +134,7 @@
 Amber-compatible parameters for all small molecules were obtained using Antechamber\cite{antechamber} and parmchk2 in AMBERtools23.  The General AMBER force field\cite{gaff2} (GAFF2) was used to define the atom types, atomic masses, and force constants for bonds, angles, torsions, and improper torsions. The partial charges were computed using sqm program with AM1-BCC\cite{am1bcc01, am1bcc02} method. For the VAV1 zinc finger region the parameters of the Zinc atom, coordinating cysteines and histidine residues, the force field parameters were obtained from the ZAFF\cite{zaff} force field library.
 
 \subsection{Molecular dynamics simulations:} 
- All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10${\AA}$ beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0 Å for the minimization phase.  The first cycle of minimization was performed with  25 $kcal/(mol {\r{A}^2}$ restraining force on the solute atoms, this force constant was reduced to 5 $kcal/(mol \r{A}^2)$  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (table 2) from 0 K to 300 K for 10 ns with  50 $kcal/(mol {\r{A}^2}$ restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 $kcal/(mol {\r{A}^2}$.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\r{A}}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for evaluating non-bonded interactions was placed at 9.0 {\r{A}}  for the production phase. All the computations were done using the CUDA-enabled PMEMD code\cite{pmemd01, pmemd02, pmemd03} in AMBER22\cite{amber22, amber}.  
+ All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10\r{A} beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0\r{A} for the minimization phase.  The first cycle of minimization was performed with  25 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms, this force constant was reduced to 5 kcal/(mol\r{A}$^2$)  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (table 2) from 0 K to 300 K for 10 ns with  50 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 kcal/(mol{\r{A}$^2$}.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\r{A}}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for evaluating non-bonded interactions was placed at 9.0 {\r{A}}  for the production phase. All the computations were done using the CUDA-enabled PMEMD code\cite{pmemd01, pmemd02, pmemd03} in AMBER22\cite{amber22, amber}.  
 All simulations were performed with the SHAKE algorithm\cite{shake} to constrain bonds to hydrogen atoms, with the tolerance set to 0.00001 {\AA}.  A 2 fs integration time step was used to solve Newton\textquotesingle s equations of motion.  For analysis, the conformations were saved every 100 ps, amounting to 1000 snapshots per trajectory (3000 per system). 
 
 \begin{table}
@@ -159,7 +161,7 @@ All simulations were performed with the SHAKE algorithm\cite{shake} to constrain
     The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed to understand the domain-specific fluctuations. 
 
 \subsection{Cryptic Pocket Identification:} 
-    POVME2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the RAC1 and RAC1-GEFs complexed. To identify the pockets, the pocketID module on POVME2 was used. To identify cryptic pockets on RAC1 and RAC1-GEF, we used various conformations obtained from MD simulations. The conformations were selected following a clustering analysis of the trajectories, and the cluster representatives of the most populated cluster were extracted. For practical purposes, we restricted the extracting the cluster representatives for 3 most populated clusters. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout MD trajectories. It has been observed that the pocket  might be a good candidate for druggability  if  its volume range\cite{perot2010druggable, nayal2006nature, an2005pocketome} was found to lie between 930${\r{A}^3}$ to 610${\r{A}^3}$. 
+    POVME2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the RAC1 and RAC1-GEFs complexed. To identify the pockets, the pocketID module on POVME2 was used. To identify cryptic pockets on RAC1 and RAC1-GEF, we used various conformations obtained from MD simulations. The conformations were selected following a clustering analysis of the trajectories, and the cluster representatives of the most populated cluster were extracted. For practical purposes, we restricted the extracting the cluster representatives for 3 most populated clusters. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout MD trajectories. It has been observed that the pocket  might be a good candidate for druggability  if  its volume range\cite{perot2010druggable, nayal2006nature, an2005pocketome} was found to lie between 930\r{A}$^3$ to 610\r{A}$^3$. 
     
     \begin{table}
   \caption{Parameters for Pocket Identification using POVME-2}
@@ -187,7 +189,7 @@ All simulations were performed with the SHAKE algorithm\cite{shake} to constrain
 \end{itemize}
 
 \subsection{Molecular docking:} 
-    RAC1 modulators mentioned in Table \ref{tbl: Detailed system studies} were docked in various cavities identified with POVME2 (\textit{vide supra}) using Dock6\cite{dock6}. The centre of mass of various cavities that were identified was used to define the centre of the grid box and the grid dimensions were at least $25{\r{A}^3}$ large to allow a thorough sampling of the binding site. The detailed protocol for DOCK6 is given in Table XX in the supplementary information. 
+    RAC1 modulators mentioned in Table \ref{tbl: Detailed system studies} were docked in various cavities identified with POVME2 (\textit{vide supra}) using Dock6\cite{dock6}. The centre of mass of various cavities that were identified was used to define the centre of the grid box and the grid dimensions were at least 25\r{A}$^3$ large to allow a thorough sampling of the binding site. The detailed protocol for DOCK6 is given in Table XX in the supplementary information. 
 \subsection{Free-Energy of Binding:} 
 
 The free energy of binding was computed using the equation (Eq-\ref{eq:free-energy}) on the conformations saved from the MD simulations using mm-pbsa python script\cite{mmpbsa} available in AMBERTools23; 

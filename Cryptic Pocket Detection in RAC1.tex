@@ -170,11 +170,27 @@
 
 \subsection{Cryptic Pocket Identification:} \\
 
-    POVME-2.2.2 \cite{durrant2011povme, durrant2014povme} 
-        \item fragment placement and trying to keep the pocket open to target drug-like molecules
-            \begin{itemize}
-                \item Type of pocket and the type of fragment more suitable to keep it open
-            \end{itemize}
+    POVME-2.2.2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the RAC1 and RAC1-GEFs complexed. To identify the pockets, the pocketID module on POVME-2.2.2 was used. To identify cryptic pockets on RAC1 and RAC1-GEF, we used various conformations obtained from MD simulations. The conformations were selected following a clustering analysis of the trajectories, and the cluster representatives of the most populated cluster were extracted. For practical purposes, we restricted the extracting the cluster representatives for 3 most populated clusters. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout the course of MD trajectories. It has been observerd that the pocket  might be a good candidiate for druggability if  its volume range was found to lie between 930${\AA}^3$ to 610${\AA}^3$\cite{perot2010druggable, nayal2006nature, an2005pocketome } 
+    \begin{table}
+  \caption{Parameters for Pocket Identification using POVME-2}
+  \label{tbl:pocketID}
+  \begin{tabular}{lll}
+    \hline
+   Parameter  & Value & Description \\
+    \hline
+    pocket detection resolution	 & 4.0 & The distance between probe points used to initially find the pockets \\
+    pocket measuring resolution & 1.0 & The distance between probe points used to measure identified pockets in greater detail. Should divide --pocket detection resolution evenly\\
+    clashing cutoff & 3.0 & In measuring the pockets, any points closer than this cutoff to receptor atoms will be removed \\
+    number of neighbors & 4 & In measuring the pockets, any points with fewer
+     than this number of neighbors will be deleted. These are usually
+     just stray points that don't belong to any real pocket \\ 
+    number of spheres & 5  & The number of inclusion spheres to generate for each pocket  \\
+    sphere padding & 5 .0 &   How much larger the radius of the inclusion spheres should be, beyond what is required to encompass the identified pockets  \\ 
+    \hline
+  \end{tabular}
+\end{table}
+
+
     \item Analysis of other MD observations to support pocket volume changes
         \begin{itemize}
             \item RMSDs for switch regions 1 and 2

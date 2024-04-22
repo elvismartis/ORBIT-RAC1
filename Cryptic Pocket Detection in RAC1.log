@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.18)  22 APR 2024 11:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.22)  22 APR 2024 16:45
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **"Cryptic Pocket Detection in RAC1.tex"
 (./Cryptic Pocket Detection in RAC1.tex
@@ -103,7 +104,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 107.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
@@ -375,92 +376,12 @@ otein in-ter-ac-tions with GEFs,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-
 Package natbib Warning: Citation `gappdb' on page 2 undefined on input line 102
 .
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.102 ...\cite{gappdb} & RAC1 (INACTIVE) & GDP:Mg^
-                                                  {2+} & 26102 \\
-? R
-OK, entering \nonstopmode...
-! Extra }, or forgotten $.
-<template> \unskip \hfil }
-                          \hskip \tabcolsep \endtemplate 
-l.102 ...gappdb} & RAC1 (INACTIVE) & GDP:Mg^{2+} &
-                                                   26102 \\
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.102 ...gappdb} & RAC1 (INACTIVE) & GDP:Mg^{2+} &
-                                                   26102 \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.102 ...gappdb} & RAC1 (INACTIVE) & GDP:Mg^{2+} &
-                                                   26102 \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
 
 Package natbib Warning: Citation `activeRAC1' on page 2 undefined on input line
  103.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.103 ...{activeRAC1}   & RAC1 (ACTIVE) &  GTP:Mg^
-                                                  {2+} & 24132  \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<template> \unskip \hfil }
-                          \hskip \tabcolsep \endtemplate 
-l.103 ...eRAC1}   & RAC1 (ACTIVE) &  GTP:Mg^{2+} &
-                                                   24132  \\
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.103 ...eRAC1}   & RAC1 (ACTIVE) &  GTP:Mg^{2+} &
-                                                   24132  \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.103 ...eRAC1}   & RAC1 (ACTIVE) &  GTP:Mg^{2+} &
-                                                   24132  \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
 
 Package natbib Warning: Citation `prex1pdb' on page 2 undefined on input line 1
@@ -480,528 +401,244 @@ File: Figures/chemical_structures.png Graphic file (type png)
 Package pdftex.def Info: Figures/chemical_structures.png  used on input line 11
 7.
 (pdftex.def)             Requested size: 469.75539pt x 190.88026pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.127 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Package natbib Warning: Citation `ff14sb' on page 2 undefined on input line 129
-.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
-
- []
-
 [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }]
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.133 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Package natbib Warning: Citation `antechamber' on page 3 undefined on input lin
-e 134.
+e 132.
 
 
-Package natbib Warning: Citation `gaff2' on page 3 undefined on input line 134.
+Package natbib Warning: Citation `gaff2' on page 3 undefined on input line 132.
 
 
 
 Package natbib Warning: Citation `am1bcc01' on page 3 undefined on input line 1
-34.
+32.
 
 
 Package natbib Warning: Citation `am1bcc02' on page 3 undefined on input line 1
-34.
-
-! Undefined control sequence.
-l.134 ...ameters were obtained from the ZAFF\mcite
-                                                  {zaff} force field library.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+32.
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.137 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Package natbib Warning: Citation `zaff' on page 3 undefined on input line 132.
 
 
-Package natbib Warning: Citation `tip3p' on page 3 undefined on input line 138.
+Package natbib Warning: Citation `tip3p' on page 3 undefined on input line 135.
 
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 139.
+LaTeX Warning: Command \r invalid in math mode on input line 135.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 139.
+LaTeX Warning: Command \r invalid in math mode on input line 135.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 139.
+LaTeX Warning: Command \r invalid in math mode on input line 135.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 139.
+LaTeX Warning: Command \r invalid in math mode on input line 135.
 
 
-Package natbib Warning: Citation `pme' on page 3 undefined on input line 140.
+Package natbib Warning: Citation `pme' on page 3 undefined on input line 135.
 
 
-Package natbib Warning: Citation `pmemd01' on page 3 undefined on input line 14
-1.
+Package natbib Warning: Citation `pmemd01' on page 3 undefined on input line 13
+5.
 
 
-Package natbib Warning: Citation `pmemd02' on page 3 undefined on input line 14
-1.
+Package natbib Warning: Citation `pmemd02' on page 3 undefined on input line 13
+5.
 
 
-Package natbib Warning: Citation `pmemd03' on page 3 undefined on input line 14
-1.
+Package natbib Warning: Citation `pmemd03' on page 3 undefined on input line 13
+5.
 
 
-Package natbib Warning: Citation `amber22' on page 3 undefined on input line 14
-1.
+Package natbib Warning: Citation `amber22' on page 3 undefined on input line 13
+5.
 
 
-Package natbib Warning: Citation `amber' on page 3 undefined on input line 141.
-
-
-
-Package natbib Warning: Citation `shake' on page 3 undefined on input line 142.
+Package natbib Warning: Citation `amber' on page 3 undefined on input line 135.
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--144
+Package natbib Warning: Citation `shake' on page 3 undefined on input line 136.
 
- []
 
 [3 <./Figures/chemical_structures.png>]
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.161 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Package natbib Warning: Citation `cpptraj' on page 4 undefined on input line 16
-2.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--168
-
- []
+Package natbib Warning: Citation `cpptraj' on page 4 undefined on input line 15
+4.
 
 [4]
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.170 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Package natbib Warning: Citation `durrant2011povme' on page 5 undefined on inpu
-t line 171.
+t line 162.
 
 
 Package natbib Warning: Citation `durrant2014povme' on page 5 undefined on inpu
-t line 171.
+t line 162.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 171.
+LaTeX Warning: Command \r invalid in math mode on input line 162.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 171.
+LaTeX Warning: Command \r invalid in math mode on input line 162.
 
 
 Package natbib Warning: Citation `perot2010druggable' on page 5 undefined on in
-put line 171.
+put line 162.
 
 
 Package natbib Warning: Citation `nayal2006nature' on page 5 undefined on input
- line 171.
+ line 162.
 
 
 Package natbib Warning: Citation `an2005pocketome' on page 5 undefined on input
- line 171.
+ line 162.
 
 
-Overfull \hbox (601.66168pt too wide) in paragraph at lines 175--189
+Overfull \hbox (601.66168pt too wide) in paragraph at lines 167--181
  [][] 
  []
 
 [5]
 
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.192     \item A
-                 nalysis of other MD observations to support pocket volume c...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.197 \end{itemize}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.197 \end{itemize}
-                   
-Things are pretty mixed up, but I think the worst is over.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.200 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Package natbib Warning: Citation `dock6' on page 6 undefined on input line 201.
+Package natbib Warning: Citation `dock6' on page 6 undefined on input line 192.
 
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 201.
+LaTeX Warning: Command \r invalid in math mode on input line 192.
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.203 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Package natbib Warning: Citation `mmpbsa' on page 6 undefined on input line 204
+Package natbib Warning: Citation `mmpbsa' on page 6 undefined on input line 195
 .
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
-
- []
-
-! Missing $ inserted.
+./Cryptic Pocket Detection in RAC1.tex:198: Display math should end with $$.
+<to be read again> 
+                   \Delta 
+l.198 $\Delta
+             $G_{binding} = $\Delta$E_{MM} + $\Delta$H_{GBSA} - T$\Delta$S
+? R
+OK, entering \nonstopmode...
+./Cryptic Pocket Detection in RAC1.tex:198: Missing $ inserted.
 <inserted text> 
                 $
-l.206 \($\Delta
-               $G_{binding} = $\Delta$E_{MM} + $\Delta$H_{GBSA} - T$\Delta$S...
+l.198 $\Delta
+             $G_{binding} = $\Delta$E_{MM} + $\Delta$H_{GBSA} - T$\Delta$S
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
+./Cryptic Pocket Detection in RAC1.tex:198: Missing $ inserted.
 <inserted text> 
                 $
-l.206 \($\Delta$G_
-                  {binding} = $\Delta$E_{MM} + $\Delta$H_{GBSA} - T$\Delta$S...
+l.198 $\Delta$G_
+                {binding} = $\Delta$E_{MM} + $\Delta$H_{GBSA} - T$\Delta$S
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
+./Cryptic Pocket Detection in RAC1.tex:198: Missing $ inserted.
 <inserted text> 
                 $
-l.206 \($\Delta$G_{binding} = $\Delta
-                                     $E_{MM} + $\Delta$H_{GBSA} - T$\Delta$S...
+l.198 $\Delta$G_{binding} = $\Delta
+                                   $E_{MM} + $\Delta$H_{GBSA} - T$\Delta$S
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
+./Cryptic Pocket Detection in RAC1.tex:198: Missing $ inserted.
 <inserted text> 
                 $
-l.206 \($\Delta$G_{binding} = $\Delta$E_
-                                        {MM} + $\Delta$H_{GBSA} - T$\Delta$S...
+l.198 $\Delta$G_{binding} = $\Delta$E_
+                                      {MM} + $\Delta$H_{GBSA} - T$\Delta$S
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
+./Cryptic Pocket Detection in RAC1.tex:198: Missing $ inserted.
 <inserted text> 
                 $
-l.206 ...ta$G_{binding} = $\Delta$E_{MM} + $\Delta
-                                                  $H_{GBSA} - T$\Delta$S\) \
+l.198 ...ta$G_{binding} = $\Delta$E_{MM} + $\Delta
+                                                  $H_{GBSA} - T$\Delta$S
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
+./Cryptic Pocket Detection in RAC1.tex:198: Missing $ inserted.
 <inserted text> 
                 $
-l.206 ...G_{binding} = $\Delta$E_{MM} + $\Delta$H_
-                                                  {GBSA} - T$\Delta$S\) \
+l.198 ...G_{binding} = $\Delta$E_{MM} + $\Delta$H_
+                                                  {GBSA} - T$\Delta$S
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
+./Cryptic Pocket Detection in RAC1.tex:198: Missing $ inserted.
 <inserted text> 
                 $
-l.206 ...elta$E_{MM} + $\Delta$H_{GBSA} - T$\Delta
-                                                  $S\) \
+l.198 ...elta$E_{MM} + $\Delta$H_{GBSA} - T$\Delta
+                                                  $S
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+./Cryptic Pocket Detection in RAC1.tex:200: Display math should end with $$.
+<to be read again> 
+                    
+l.200     Where  ($ 
+                    \(\Delta$E_{MM}\ $) is the interaction energy between th...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
 
-! LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.206 ...$E_{MM} + $\Delta$H_{GBSA} - T$\Delta$S\)
-                                                   \
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.208     Where  ($ \(
-                      \Delta$E_{MM}\ $) is the interaction energy between th...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
+[6]
+./Cryptic Pocket Detection in RAC1.tex:200: Missing $ inserted.
 <inserted text> 
                 $
-l.208     Where  ($ \(\Delta$E_
+l.200     Where  ($ \(\Delta$E_
                                {MM}\ $) is the interaction energy between th...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
+./Cryptic Pocket Detection in RAC1.tex:200: Missing $ inserted.
 <inserted text> 
                 $
-l.208 ... or the enthalpy of hydration \(\Delta$H_
+l.200 ... or the enthalpy of hydration \(\Delta$H_
                                                   {GBSA}\)  was computed usi...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Package natbib Warning: Citation `igb5' on page 6 undefined on input line 208.
+Package natbib Warning: Citation `igb5' on page 7 undefined on input line 200.
 
 
-Package natbib Warning: Citation `lcpo' on page 6 undefined on input line 208.
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
+Package natbib Warning: Citation `lcpo' on page 7 undefined on input line 200.
 
 
-Overfull \hbox (14.40913pt too wide) in paragraph at lines 217--217
+Overfull \hbox (14.40913pt too wide) in paragraph at lines 205--205
 []\OT1/cmr/bx/n/14.4 Switch re-gion dy-nam-ics is gov-erned by GEFs and sub-str
 ate molecules: 
  []
 
 [7]
-
-LaTeX Warning: File `Figures/image1.png' not found on input line 227.
-
-
-! Package pdftex.def Error: File `Figures/image1.png' not found: using draft se
-tting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.227 ...cs[width=1\textwidth]{Figures/image1.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 <Figures/RMSD_Switch.001.png, id=42, 1927.2pt x 1084.05pt>
 File: Figures/RMSD_Switch.001.png Graphic file (type png)
 <use Figures/RMSD_Switch.001.png>
-Package pdftex.def Info: Figures/RMSD_Switch.001.png  used on input line 245.
+Package pdftex.def Info: Figures/RMSD_Switch.001.png  used on input line 233.
 (pdftex.def)             Requested size: 469.75539pt x 264.22992pt.
-<Figures/Pocket_volume_fluctuations.001.png, id=43, 1927.2pt x 1084.05pt>
-File: Figures/Pocket_volume_fluctuations.001.png Graphic file (type png)
-<use Figures/Pocket_volume_fluctuations.001.png>
-Package pdftex.def Info: Figures/Pocket_volume_fluctuations.001.png  used on in
-put line 252.
-(pdftex.def)             Requested size: 469.75539pt x 264.22992pt.
-
-LaTeX Warning: File `Figures/image1.png' not found on input line 259.
-
-
-! Package pdftex.def Error: File `Figures/image1.png' not found: using draft se
-tting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259 ...cs[width=1\textwidth]{Figures/image1.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `Figures/pocketAnalysis.png' not found on input line 266.
-
-
-! Package pdftex.def Error: File `Figures/pocketAnalysis.png' not found: using 
-draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.266 ...=1\textwidth]{Figures/pocketAnalysis.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./Cryptic Pocket Detection in RAC1.bbl
-
-Package natbib Warning: Empty `thebibliography' environment on input line 29.
-
-! Undefined control sequence.
-<write> ...subitem}{\@mcitecorrectmaxwidthsubitem 
-                                                  }
-l.29 \end{mcitethebibliography}
-                               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\@mciteMaxWidthAuxWrite ... \mcitemaxwidthsubitem 
-                                                  =\@mcitecorrectmaxwidthsub...
-l.29 \end{mcitethebibliography}
-                               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   =
-l.29 \end{mcitethebibliography}
-                               
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@mciteMaxWidthAuxWrite ...correctmaxwidthsubitem 
-                                                  \relax \else \@latex@warni...
-l.29 \end{mcitethebibliography}
-                               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \relax 
-l.29 \end{mcitethebibliography}
-                               
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-)
+ (./Cryptic Pocket Detection in RAC1.bbl)
 
 Package natbib Warning: There were undefined citations.
 
-[8] [9] [10 <./Figures/RMSD_Switch.001.png> <./Figures/Pocket_volume_fluctuatio
-ns.001.png>] [11] [12] (./Cryptic Pocket Detection in RAC1.aux)
+[8] [9 <./Figures/RMSD_Switch.001.png>] (./Cryptic Pocket Detection in RAC1.aux
+)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6609 strings out of 474104
- 117983 string characters out of 5743467
+ 6527 strings out of 474104
+ 115375 string characters out of 5743467
  1936493 words of memory out of 5000000
- 28908 multiletter control sequences out of 15000+600000
- 567567 words of font info for 69 fonts, out of 8000000 for 9000
+ 28827 multiletter control sequences out of 15000+600000
+ 567398 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,16n,131p,1314b,534s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,16n,131p,1967b,534s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -1015,13 +652,12 @@ exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/
 texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Cryptic Pocket Detection in RAC1.pdf" (12 pages, 1150259 byt
-es).
+ive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on "Cryptic Pocket Detection in RAC1.pdf" (9 pages, 661527 bytes
+).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 110 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

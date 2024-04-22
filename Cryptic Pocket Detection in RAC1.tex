@@ -3,7 +3,6 @@
 %% The document class accepts keyval options, which should include
 %% the target journal and optionally the manuscript type. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\documentclass[journal=jacsat,manuscript=article]{achemso}
 \documentclass{achemso}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Place any additional packages needed here.  Only include packages
@@ -12,7 +11,7 @@
 %% extensions are not currently available on the ACS conversion
 %% servers.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If issues arise when submitting your manuscript, you may want to
 %% un-comment the next line.  This provides information on the
@@ -201,7 +200,7 @@ The free energy of binding was computed using the equation (Eq-\ref{eq:free-ener
 Where  \({\Delta}E_{MM}\) is the interaction energy between the binding partners computed in the gas phase using a molecular mechanics method.  The solvation-free energy or the enthalpy of hydration \({\Delta}H_{GBSA}\)  was computed using the Generalized-Born Surface Area (GBSA) method, and the entropic component of binding \(T{\Delta}S\) was not computed due to huge computation cost. The internal dielectric constant for GBSA calculations was set to 1 and the solvent dielectric constant was fixed as 80. For computing free energy of binding using the MM-GBSA method, the OBC’s GB model\cite{igb5} $ (igb = 5) $ was used. The mbondi3 radii set was employed to define the PB radii for all solute atoms during the preparation of the topology and parameter files in the leap module in AMBERTools23. The ionic strength for  GBSA calculations was maintained at 150 mM. All energy components, in an implicit solvent, were calculated using a large cut-off of 999Å. The surface area for the non-polar solvation term was computed using the linear combination of pairwise overlaps (LCPO) method\cite{lcpo}.
 
 \section{Results and discussion} 
-We studied how different RAC1 experimental structures were comparable to each other by computing their RMSD. This allowed to select X structes in the apo form of Rac1, then Y structures with Rac1 bound to one partner, Z structures where Rac1 was bound to a ligand, and S structures where RAc1 was bound to a partner protein and a ligand. 
+We studied how different RAC1 experimental structures were comparable to each other by computing their RMSD. This allowed to select X structes in the apo form of Rac1, then Y structures with Rac1 bound to one partner, Z structures where Rac1 was bound to a ligand, and S structures where RAC1 was bound to a partner protein and a ligand. 
 
 \subsection{GEFs govern the switch region dynamics:} 
     The switch regions in Small GTPases are signature domains that govern and dictate the molecular switch mechanism which is central to the function of Small GTPases. RAC1 is not different in how the switch regions play a regulatory role in either keeping the RAC1 in active (GTP-bound) or inactive (GDP-active). The binding of GTP (also the presence of GDP) and GEFs dampen the dynamic flexibility in the switch region (\textbf{figure \ref{fig:switchdynamics}}). Furthermore, switch 1 is primarily involved in the binding of GTP and dissociation of GDP which is assisted by GAPs and GEFs respectively <ref>. GAP and GEF-associated molecular switch mechanism provides strict control in the RAC1-associated pathway that may be activated in response to external stimuli. This also provides an opportunity to modulate a particular GEF-dependent pathway, perhaps selectively, for therapeutic interventions.  It has been previously reported that Switch regions, particularly switch 1, are most dynamic in small GTPases <ref>. However, the exact conformational preference of the switch region remains elusive. However, in the case of switch Region 1, we observe the two Prolines (insert PDB numbering) that dictate the dynamics (MD analysis on this). 

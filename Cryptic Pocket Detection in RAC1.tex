@@ -47,13 +47,18 @@
 %% when authors are associated with multiple institutions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \author{Elvis A. F. Martis}
+\affiliation[Nantes University]
+{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, France}
 \author{Johann Hendrickx}
-\author{Stéphane Téletchéa}
-\email{stephane.teletchea@univ-nantes.fr}
 \affiliation[Nantes University]
 {US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, France}
 \author{Vincent Sauzeau}
 \affiliation[CHU Nantes] {UMR\_S 1087 {/} UMR\_C 6291 l'Unité de Recherche de l'Institut du Thorax, F-44000 Nantes, France}
+\author{Stéphane Téletchéa}
+\email{stephane.teletchea@univ-nantes.fr}
+\affiliation[Nantes University]
+{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, France}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The document title should be given as usual. Some journals require
@@ -81,12 +86,16 @@
 %% Start the main part of the manuscript here.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-     GTPases, a ubiquitous class of proteins, play pivotal roles in various cellular processes, including signal transduction, vesicle trafficking, cytoskeletal dynamics, and cell division. They act as molecular switches cycling between OFF (GDP-bound) and ON (GTP-bound) states. This switching mechanism thus controls a vast variety of processes that control cell growth and differentiation to vesicular and nuclear transport. Ras GTPases regulate cell proliferation, differentiation, and survival, while Rho GTPases govern cytoskeletal dynamics and cell migration <ref>.  Their activity is tightly regulated through a sophisticated molecular switch mechanism, orchestrated by guanine nucleotide exchange factors (GEFs), GTPase-activating proteins (GAPs), and guanine nucleotide dissociation inhibitors (GDIs)\cite{cherfils2013regulation}. GTPases alone are known to poorly hydrolyse GTP, which is assisted by GAPs. Furthermore, GDP:Mg$^{2+}$ dissociates from GTPases very slowly, and therefore, GEFs assist in exchanging GDP for GTP, and thereby expediting the dissociation of GDP. Taken together, GEFs assist in the GTPase activation while GAPs assist in GTP hydrolysis. After GTP hydrolysis, GTPases enter the inactive state and no more signal transduction is observed\cite{bos2007gefs}. 
-     In some classes of GTPases, the active and inactive state cycling is conjugated with GTPases being transported to the cell membrane and back to cytosol. This class of GTPases are found with post-translational modification to carry long-chain fatty acids at their C-terminal to assist insertion in the lipid bilayer. GDIs\cite{dermardirossian2005gdis, maruta1998gtpase} sequester the lipid part to prevent membrane insertion and keep the GTPases in the cytosol. The coordinated action of GTPases, GEFs, GAPs, and GDIs is essential for various cellular processes. Dysregulation of these components contributes to pathologies like cancer, neurodegeneration, and immune disorders. For instance, mutations in Ras and its regulators are implicated in oncogenesis, highlighting the therapeutic potential of targeting GTPase signalling pathways\cite{cherfils2013regulation}.
-
+     GTPases, a ubiquitous class of proteins, play pivotal roles in various cellular processes, including signal transduction, vesicle trafficking, cytoskeletal dynamics, and cell division. They act as molecular switches cycling between OFF (GDP-bound inactive) and ON (GTP-bound active) states. This switching mechanism thus controls a vast variety of processes that control cell growth and differentiation to vesicular and nuclear transport\cite{cherfils2013regulation, loirand2013small}. Ras GTPases regulate cell proliferation, differentiation, and survival, while Rho GTPases govern cytoskeletal dynamics and cell migration .  Their activity is tightly regulated through a sophisticated molecular switch mechanism, orchestrated by guanine nucleotide exchange factors (GEFs), GTPase-activating proteins (GAPs), and guanine nucleotide dissociation inhibitors (GDIs)\cite{cherfils2013regulation}. GTPases alone are known to poorly hydrolyse GTP, which is assisted by GAPs. Furthermore, GDP:Mg$^{2+}$ dissociates from GTPases very slowly, and therefore, GEFs assist in exchanging GDP for GTP, and thereby expediting the dissociation of GDP. Taken together, GEFs assist in the GTPase activation while GAPs assist in GTP hydrolysis. After GTP hydrolysis, GTPases enter the inactive state and no more signal transduction is observed\cite{bos2007gefs}. 
+     In some classes of GTPases, the active and inactive state cycling is conjugated with GTPases being transported to the cell membrane and back to the cytosol. This class of GTPases are found with post-translational modification to carry long-chain fatty acids at their C-terminal to assist insertion in the lipid bilayer. GDIs\cite{dermardirossian2005gdis, maruta1998gtpase} sequester the lipid chain to prevent membrane insertion and keep the GTPases in the cytosol. This coordinated action of GTPases, GEFs, GAPs, and GDIs is essential for various cellular processes. Dysregulation of any of these components contributes to pathologies like cancer, neurodegeneration, and immune disorders. For instance, mutations in Ras and its regulators are implicated in oncogenesis, highlighting the therapeutic potential of targeting GTPase signalling pathways\cite{cherfils2013regulation}. 
 % structural biology information about RAC1 and protein-protein interactions with partners 
-
+   Small GTPases are relatively small proteins that possess conserved domains across several several families. All small GTPases are known to be made up of six $\beta$-sheets surrounded by 5 $\alpha$-helices. All domains are conserved such that they carry a guanine nucleoside binding site divided specifically to recognize the guanine base and phosphate groups and the magnesium ion\cite{toma2019structural, cherfils2013regulation}. The traffic to the guanine nucleoside binding site is intricately regulated by the switch regions. Therefore, GEFs and GAPs play a significant role in the dynamics of the switch regions to control the guanine exchange. GEFs are known to assist in the dissociation of GDP and magnesium ion by electrostatic repulsion of magnesium ion that weakens the affinity of GDP which eventually dissociates. Alternatively, some GEFs are believed to rearrange the switch I or II conformation such that GDP's affinity is reduced facilitating its dissociation. However, it is not uncommon for GEFs to work with the combination of the aforementioned mechanisms to assist GDP dissociation \cite{cherfils1999gefs, cherfils2014gefs}. \\
+   
    Small molecule inhibitors targeting GTPase activity or disruptors of GEF/GAP interactions\cite{gray2020targeting} are under development for cancer therapy. However, there are several challenges in targeting GTPases and/or GTPases-GAP/GEF complexes. Firstly, targeting the guanine binding site is met with large competition from GTP which is present in millimolar concentrations and possesses picomolar affinity to GTPase\cite{traut1994physiological}. 
+   <Add motivation of targeting GEF-RAC1 interface> 
+    1. What and Why of PPIs
+    2. Why not Guanine binding site
+    3. Advantages like selectivity based on which GEF binds to the RAC1.
    Therefore, we attempt to locate cryptic pockets on the RAC1 protein alone or on the RAC1-GEF complex to expand the horizon of structure-based drug design. We use molecular dynamics to explore the conformational landscape of the proteins and probe the possibility of finding cryptic pockets that might be found thereof. POVME2 was employed to identify and measure the pocket volumes of these cryptic pockets.
 
 \section{Methods}
@@ -111,9 +120,9 @@
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\textwidth]{Figures/chemical_structures.png}
-    \caption{RAC1 Modulators reported in the literature}
-    \label{fig:RAC1modulators}
+    \includegraphics[width=1\textwidth]{Figure1.jpg}
+    \caption{RAC1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human RAC1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Red Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for human RAC1 domains. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region.}
+    \label{fig:RAC1domainsdynamics}
 \end{figure}
 
 \begin{itemize}
@@ -226,13 +235,18 @@ The pocketID located three different sites that could be potential binding sites
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\textwidth]{Figures/RMSD_Switch.001.png}
-    \caption{Switch Region Dynamics is RAC1. A) Switch 1 region and B) Switch 2 region}
-    \label{fig:switchdynamics}
+    \includegraphics[width=1\textwidth]{Figure2.jpg}
+    \caption{RAC1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human RAC1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Red Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for human RAC1 domains. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region. \textbf{Legends incomplete and incorrect.}}
+    \label{fig:rogdistpca}
 \end{figure}
+
+
+
+
+
 %
 %\begin{figure}[ht]
-  %  \centering
+  %  \centering 
    % \includegraphics[width=1\textwidth]{Figures/Pocket_volume_fluctuations.001.png}
     %\caption{Variation in Pocket Volumes in RAC1 with or without GEF binding partners.}
     %\label{fig:allpockets}

@@ -125,20 +125,19 @@
 \end{itemize}
 
 \subsection{Preparation of systems for molecular dynamics simulation:} 
-    The coordinates for the protein-ligand complexes were retrieved from the Protein Data Bank (PDB); the PDB entries used in 
-    this study are listed in Table S1 in the supplementary information. The X-ray structures were imported and processed in the Maestro-GUI (Schrödinger suite, 2024).  All systems were prepared for MD simulations with the Leap module in AMBERtools23. Protein atoms were atom-typed according to the AMBER14 (ff14SB) force field\citation{ff14sb}. 
+    The coordinates for the protein-ligand complexes were retrieved from the Protein Data Bank (PDB); the PDB entries used in this study are listed in \textbf{Table \ref{tbl: Detailed system studies}}. The X-ray structures were imported and processed in the Maestro-GUI (Schrödinger suite, 2024).  All systems were prepared for MD simulations with the Leap module in AMBERtools23. Protein atoms were atom-typed according to the AMBER14 (ff14SB) force field\citation{ff14sb}.  
 
 
 \subsection{Generating AMBER-compatible parameters for ligands:} 
 Amber-compatible parameters for all small molecules were obtained using Antechamber\cite{antechamber} and parmchk2 in AMBERtools23.  The General AMBER force field\cite{gaff2} (GAFF2) was used to define the atom types, atomic masses, and force constants for bonds, angles, torsions, and improper torsions. The partial charges were computed using sqm program with AM1-BCC\cite{am1bcc01, am1bcc02} method. For the VAV1 zinc finger region the parameters of the Zinc atom, coordinating cysteines and histidine residues, the force field parameters were obtained from the ZAFF\cite{zaff} force field library.
 
 \subsection{Molecular dynamics simulations:} 
- All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10\r{A} beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0\r{A} for the minimization phase.  The first cycle of minimization was performed with  25 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms, this force constant was reduced to 5 kcal/(mol\r{A}$^2$)  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (table 2) from 0 K to 300 K for 10 ns with  50 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 kcal/(mol{\r{A}$^2$}.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\r{A}}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for evaluating non-bonded interactions was placed at 9.0 {\r{A}}  for the production phase. All the computations were done using the CUDA-enabled PMEMD code\cite{pmemd01, pmemd02, pmemd03} in AMBER22\cite{amber22, amber}.  
+ All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10\r{A} beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0\r{A} for the minimization phase.  The first cycle of minimization was performed with  25 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms, this force constant was reduced to 5 kcal/(mol\r{A}$^2$)  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (see \textbf{Table \ref{tbl: Heating using NVT Ensemble}}) from 0 K to 300 K for 10 ns with  50 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 kcal/(mol{\r{A}$^2$}.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\r{A}}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for evaluating non-bonded interactions was placed at 9.0 {\r{A}}  for the production phase. All the computations were done using the CUDA-enabled PMEMD code\cite{pmemd01, pmemd02, pmemd03} in AMBER22\cite{amber22, amber}.  
 All simulations were performed with the SHAKE algorithm\cite{shake} to constrain bonds to hydrogen atoms, with the tolerance set to 0.00001 {\AA}.  A 2 fs integration time step was used to solve Newton\textquotesingle s equations of motion.  For analysis, the conformations were saved every 100 ps, amounting to 1000 snapshots per trajectory (3000 per system). 
 
 \begin{table}
   \caption{Details of stages of Heating using NVT Ensemble}
-  \label{tbl:Details of stages of Heating using NVT Ensemble}
+  \label{tbl: Heating using NVT Ensemble}
   \begin{tabular}{lcccc}
     \hline
    Stage  & Temperature range (K) & Time (ns) \\
@@ -152,12 +151,8 @@ All simulations were performed with the SHAKE algorithm\cite{shake} to constrain
 \end{table}
 
 \subsection{Analysis of MD trajectories:} 
-    Analysis of the MD trajectory was performed with the cpptraj\cite{cpptraj} module in AMBERTools23.  Before the analysis, all 
-    solvent atoms and neutralizing ions were stripped off, and the protein conformations were aligned to their respective X-ray conformation. 
-    The mass-weighted C$\alpha$ root-mean-square deviation (RMSD) for the protein was computed using the X-ray conformation 
-    as the reference.  The convergence of MD trajectories was estimated using the root-mean-squared average correlation (RAC) 
-    with mass-weighted RMS averaging of  C$\alpha$ atoms, with the first frame of the trajectory as the reference.  
-    The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed to understand the domain-specific fluctuations. 
+    Analysis of the MD trajectory was performed with the cpptraj\cite{cpptraj} module in AMBERTools23.  Before the analysis, all solvent atoms and neutralizing ions were stripped off, and the protein conformations were aligned to their respective X-ray conformation.  The mass-weighted C$\alpha$ root-mean-square deviation (RMSD) for the protein was computed using the X-ray conformation as the reference. The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed to understand the domain-specific fluctuations. 
+    Furthermore, to understand the specific dynamical changes in RAC1 when bound to different binding partners, we extracted the essential dynamical properties using Principal Component Analysis (PCA). The Variance-Covariance matrix for C$\alpha$ atoms was extracted in  cpptraj\cite{cpptraj} module in AMBERTools23. We extracted and analysed 10 principal components, however, the first two principle components explained $<$ 50\% variance in the data. To visualise the essential dynamics, the vectors were projected on the C$\alpha$ atoms and visualised in VMD 1.9.3 \cite{humphrey1996vmd}.
 
 \subsection{Cryptic Pocket Identification:} 
     POVME2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the RAC1 and RAC1-GEFs complex. To identify the pockets, the pocketID module on POVME2 was used on conformations obtained from MD simulations. The conformations were selected following a clustering analysis of the trajectories, and the cluster representatives of the most populated cluster were extracted. For practical purposes, we restricted the extracting of the cluster representatives for the 3 most populated clusters. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout MD trajectories. It has been observed that the pocket might be a good candidate for druggability if its volume range\cite{perot2010druggable, nayal2006nature, an2005pocketome} was found to lie between 930\r{A}$^3$ to 610\r{A}$^3$. 
@@ -239,13 +234,30 @@ The pocketID located three different sites that could be potential binding sites
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Figure2.jpg}
-    \caption{RAC1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human RAC1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Red Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for human RAC1 domains. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region. \textbf{Legends incomplete and incorrect.}}
-    \label{fig:rogdistpca}
+    \caption{Radius of Gyration in comparison with Centre of mass distances. \textbf{Legends incomplete}}
+    \label{fig:rogdist}
 \end{figure}
+
 \begin{figure}[ht]
     \centering
    \includegraphics[width=1\textwidth]{Figure3.jpg}
-    \caption{RAC1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human RAC1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Red Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for human RAC1 domains. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region. \textbf{Legends incomplete and incorrect.}}
+    \caption{PCA for RAC1 Domain with Nucleotides. \textbf{Legends incomplete}}
+    \label{fig:pca_rac1}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+   \includegraphics[width=1\textwidth]{Figure4.jpg}
+    \caption{PCA for RAC1:GEFs Complexes. \textbf{Legends incomplete}}
+    \label{fig:pca_rac1_gef}
+\end{figure}
+
+
+
+\begin{figure}[ht]
+    \centering
+   \includegraphics[width=1\textwidth]{Figure5.jpg}
+    \caption{Povme analysis \textbf{Legends incomplete}}
     \label{fig:povme}
 \end{figure}
 

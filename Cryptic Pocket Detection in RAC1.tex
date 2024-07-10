@@ -66,7 +66,7 @@
 %% optional argument to \title.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title
-{Are RAC1-GEF Binding Interface Druggable?}
+{How well do we understand the dynamic landscape of RAC1?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The manuscript does not need to include \maketitle, which is
@@ -125,11 +125,11 @@
 \end{itemize}
 
 \subsection{Preparation of systems for molecular dynamics simulation:} 
-    The coordinates for the protein-ligand complexes were retrieved from the Protein Data Bank (PDB); the PDB entries used in this study are listed in \textbf{Table \ref{tbl: Detailed system studies}}. The X-ray structures were imported and processed in the Maestro-GUI (Schrödinger suite, 2024).  All systems were prepared for MD simulations with the Leap module in AMBERtools23. Protein atoms were atom-typed according to the AMBER14 (ff14SB) force field\citation{ff14sb}.  
+    The coordinates for the protein-ligand complexes were retrieved from the Protein Data Bank (PDB); the PDB entries used in this study are listed in \textbf{Table \ref{tbl: Detailed system studies}}. The X-ray structures were imported and processed in the UCSF Chimera v1.17 \cite{pettersen2004ucsf}. Any missing loops were built using modeller \cite{fiser2003modeller} with  UCSF Chimera v1.17 as the GUI \cite{yang2012ucsf, huang2014enhancing}. 
 
 
-\subsection{Generating AMBER-compatible parameters for ligands:} 
-Amber-compatible parameters for all small molecules were obtained using Antechamber\cite{antechamber} and parmchk2 in AMBERtools23.  The General AMBER force field\cite{gaff2} (GAFF2) was used to define the atom types, atomic masses, and force constants for bonds, angles, torsions, and improper torsions. The partial charges were computed using sqm program with AM1-BCC\cite{am1bcc01, am1bcc02} method. For the VAV1 zinc finger region the parameters of the Zinc atom, coordinating cysteines and histidine residues, the force field parameters were obtained from the ZAFF\cite{zaff} force field library.
+\subsection{Generating AMBER-compatible parameters:} 
+ All systems were prepared for MD simulations with the Leap module in AMBERtools23. Protein atoms were atom-typed according to the AMBER14 (ff14SB) force field\citation{ff14sb}.  Amber-compatible parameters for all nucleotides were obtained from the Manchester AMBER database  For the VAV1 zinc finger region the parameters of the Zinc atom, coordinating cysteines and histidine residues, the force field parameters were obtained from the ZAFF\cite{zaff} force field library.
 
 \subsection{Molecular dynamics simulations:} 
  All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10\r{A} beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0\r{A} for the minimization phase.  The first cycle of minimization was performed with  25 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms, this force constant was reduced to 5 kcal/(mol\r{A}$^2$)  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (see \textbf{Table \ref{tbl: Heating using NVT Ensemble}}) from 0 K to 300 K for 10 ns with  50 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 kcal/(mol{\r{A}$^2$}.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\r{A}}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for evaluating non-bonded interactions was placed at 9.0 {\r{A}}  for the production phase. All the computations were done using the CUDA-enabled PMEMD code\cite{pmemd01, pmemd02, pmemd03} in AMBER22\cite{amber22, amber}.  
@@ -195,7 +195,9 @@ The free energy of binding was computed using the equation (Eq-\ref{eq:free-ener
 Where  \({\Delta}E_{MM}\) is the interaction energy between the binding partners computed in the gas phase using a molecular mechanics method.  The solvation-free energy or the enthalpy of hydration \({\Delta}H_{GBSA}\)  was computed using the Generalized-Born Surface Area (GBSA) method, and the entropic component of binding \(T{\Delta}S\) was not computed due to huge computation cost. The internal dielectric constant for GBSA calculations was set to 1 and the solvent dielectric constant was fixed as 80. For computing free energy of binding using the MM-GBSA method, the OBC’s GB model\cite{igb5} $ (igb = 5) $ was used. The mbondi3 radii set was employed to define the PB radii for all solute atoms during the preparation of the topology and parameter files in the leap module in AMBERTools23. The ionic strength for  GBSA calculations was maintained at 150 mM. All energy components, in an implicit solvent, were calculated using a large cut-off of 999Å. The surface area for the non-polar solvation term was computed using the linear combination of pairwise overlaps (LCPO) method\cite{lcpo}.
 
 \section{Results and discussion} 
-We studied the differences in the RAC1 conformations when bound to guanine exchange factors (GEFs) and the nucleotides.  We study in depth the binding affinities of the nucleotides and the GEFs to understand and identify important amino acid residues. Lastly, we identified and studied the dynamics of binding pockets on RAC1 and RAC1:GEFs complexes that may serve as important observations to explore the initial hit finding and lead optimisation for targeting specific RAC1:GEF complexes. 
+We studied the differences in the RAC1 conformations when bound to guanine exchange factors (GEFs) and the nucleotides.  In this work, we attempt to provide an in-depth analysis of the binding affinities of the nucleotides and the GEFs. This will further improve the understanding and quantify the importance of amino acid residues. Lastly, we identified and studied the dynamics of binding pockets on RAC1 and RAC1:GEFs complexes that may serve as important observations to explore the initial hit finding and lead optimisation for targeting specific RAC1:GEF complexes. 
+
+
 \begin{figure}[ht]
     \centering
 %    \includegraphics[width=1\textwidth]{Figure1.jpg}
@@ -204,33 +206,19 @@ We studied the differences in the RAC1 conformations when bound to guanine excha
     \label{fig:RAC1domainsdynamics}
 \end{figure}
 
-\subsection{GEFs and nucleotides govern the switch region dynamics:} 
-    Dynamically, the most significant regions on RAC1 are the P-loop, switch region and the helical insert (\textbf{figure \ref{fig:RAC1domainsdynamics}A and \ref{fig:RAC1domainsdynamics}B}). The P-loop interacts with the phosphate group from the nucleotides, and therefore, shows significant changes in flexibility in presence and absence of the nucleotides.
-    The switch regions in Small GTPases are signature domains that govern and dictate the molecular switch mechanism which is central to the function of Small GTPases. RAC1 is not different in how the switch regions play a regulatory role in either keeping the RAC1 in active (GTP-bound) or inactive (GDP-active). The binding of GTP (also the presence of GDP) and GEFs dampen the dynamic flexibility in the switch region (\textbf{figure \ref{fig:RAC1domainsdynamics}}). Furthermore, switch I is primarily involved in the binding of GTP and dissociation of GDP which is assisted by GAPs and GEFs respectively <ref>. GAP and GEF-associated molecular switch mechanism provides strict control in the RAC1-associated pathway that may be activated in response to external stimuli. This also provides an opportunity to modulate a particular GEF-dependent pathway, perhaps selectively, for therapeutic interventions.  It has been previously reported that Switch regions, particularly switch I, are most dynamic in small GTPases <ref>. However, the exact conformational preference of the switch region remains elusive. However, in the case of switch Region 1, we observe the two Prolines (insert PDB numbering) that dictate the dynamics (MD analysis on this). 
+\subsection{How do Nucleotides affect the P-loop dynamics?} 
+    Small GTPases in general, and RAC1 in particular, are not stable by themselves in the nucleotide-free form. Therefore, several regulators like Guanine exchange factors (GEFs) and GTP activating proteins (GAPs) bind to stabilise this form which facilitates the exchange between GDP and GTP. In this work, we emphasise the effects of binding GEFs on RAC1 dynamic landscape and present means to explore this information to target specific RAC1-GEF complexes for therapeutic purposes. GEFs assist in rapid dissociation of GDP; which is tightly bound to RAC1 after the hydrolysis of GTP to GDP and iP. The sequence of events from GDP dissociation to GTP binding has been resolved for several representative small GTPases and extensively reviewed by Cherfils et al \cite{cherfils1999gefs, cherfils2014gefs}. We use all-atom molecular dynamics simulations to improve the understanding of RAC1 dynamics and the effect of GEF and nucleotide binding. The implication of this work will largely aid in structure-based drug design and attempt to answer the selectivity questions that may arise. To be able to provide an exhaustive analysis of RAC1's structure and dynamics we focus on three main regions that are involved in the nucleotide and GEF binding.  Dynamically, the most significant regions on RAC1 are the P-loop, and the two switch regions (\textbf{figure \ref{fig:RAC1domainsdynamics}A and \ref{fig:RAC1domainsdynamics}B}). 
+    The P-loop interacts with the phosphate group from the nucleotides and positions the phosphate group and magnesium ion optimally for hydrolysis. Therefore, it shows significant changes in flexibility in the presence and absence of the nucleotides. We see that the atomic fluctuations of RAC1 bound to GDP and GTP are lowest (\textbf{figure \ref{fig:RAC1domainsdynamics}C}) indicating the tight binding of phosphate groups. Moreover, as we monitor the time-evolution behaviour of the P-loop  (\textbf{figure \ref{fig:RAC1domainsdynamics}F}) most of the conformation explored during the time course of the simulations is very close to the X-ray conformation of the respective systems exemplified by the RMSD values observed to be $<$ 1.5 {\r{A}}. The GTP/GDP bound systems show very strong ordering of the loop with RMSD distribution around 0.5 {\r{A}} (\textbf{figure \ref{fig:RAC1domainsdynamics}F}), followed by the GEF bound RAC1 (RMSD distribution around 0.5-0.75 {\r{A}}), whereas the apo structures exhibit relatively broader distribution indicative of the higher flexibility. 
 
 
-\subsection{RAC1-GEFs show significant differences in the interface region:}
-The pocketID located three different sites that could be potential binding sites for small molecules which is consistent with all the 3 RAC1-GEF complexes used in this work. \textbf{Site 1} is the nucleotide-binding site or the catalytic site. \textbf{Site 2} is located at the interface of RAC1 and GEF. \textbf{Site 3} is located on RAC1 located below switch I <Figure to show this>. We are aware that Site 1 is well studied experimentally as well as theoretically to explain the GTP/GDP binding and nucleotide exchange <REF>. Site 2 which is observed only in RAC1-GEF complexes, we are not aware of any report in the literature that particularly attempts to show its existence and evaluate the drugability. However, Peyroche et al.,\cite{peyroche1999brefeldin} hypothesized that Brefeldin A exhibits its inhibitory action by binding to the ARF-GDP-SEC7 domain. Furthermore, the type of inhibition was shown to be the uncompetitive type\cite{peyroche1999brefeldin,chardin1999brefeldin} and corroborated by the X-ray structures \cite{mossessova2003crystal,renault2003structural}. We embarked on this work to ascertain atomistic details of the interface region formed by RAC1-GEFs that could be a potential binding site to target RAC1-dependent pathways. We observed that RAC1 bound to Prex-1, Tiam1 and VAV1 show significant differences in the pocket volumes in the interface region. We hypothesise that this is a potential advantage to design and target selective molecules against RAC1 bound to different GEFs. 
+\subsection{How do GEFs affect the P-loop dynamics?} 
+This ordering of the loop is significantly less in the apo structures with and without GEFs. However, in RAC1 bound to PREX1, we observe that the P-loop conformation was exceptionally ordered akin to the one seen when nucleotide occupies the site. From the differences in the P-loop flexibility, we hypothesise that GEF-bound RAC1 conformations can be graded from being close to the activated state or merely a nucleotide-free state that will change towards the activated conformation to ready to accept GTP. Therefore, we speculate that RAC1 bound to PREX1 shows P-loop conformation close to nucleotide-bound conformation indicating that RAC1 is nearly ready to bind a GTP molecule. In this line, the other GEFs, namely, VAV1 and TIAM1, show dynamical similarities to the \textit{apo}RAC1 that was initiated from GDP-bound conformation. 
+
+\subsection{Do different GEFs affect the switch region dynamics differently?}
+    The switch regions in RAC1 are signature domains that govern and dictate the molecular switch mechanism that is central to its function.  The binding of GTP/GDP or GEFs dampen the dynamic flexibility in the switch regions (\textbf{figure \ref{fig:RAC1domainsdynamics}D and \ref{fig:RAC1domainsdynamics}E}). Furthermore, the switch I region forms part of the nucleotide-binding site and thereby its flexibility is affected by GTP/GDP. 
+   
+    Moreover, this is assisted by GAPs and GEFs respectively <ref>. GAP and GEF-associated molecular switch mechanism provides strict control in the RAC1-associated pathway that may be activated in response to external stimuli. This also provides an opportunity to modulate a particular GEF-dependent pathway, perhaps selectively, for therapeutic interventions.  It has been previously reported that Switch regions, particularly switch I, are most dynamic in small GTPases <ref>. However, the exact conformational preference of the switch region remains elusive. However, in the case of switch Region 1, we observe the two Prolines (insert PDB numbering) that dictate the dynamics (MD analysis on this). 
     
-\subsection{Correlation in Pocket volumes:}
-%\begin{figure}[ht]
-  %  \centering
-  %  \includegraphics[width=1\textwidth]{Figures/image1.png}
-   % \caption{Systems prepared and studied in this article}
-   % \label{fig:systemsOfInterest}
-%\end{figure}
-
-
-
-\begin{itemize}
-    \item Try to look for a connection/relation between the following
-        \begin{itemize}
-        \item switch region dynamics with different binding partners
-        \item switch region dynamics with pocket volumes
-        \item If we find different pockets that might open and close with different binders
-        \end{itemize}
-\end{itemize}
-
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Figure2.jpg}
@@ -253,13 +241,40 @@ The pocketID located three different sites that could be potential binding sites
 \end{figure}
 
 
-
+\subsection{RAC1-GEFs interfaces present an excellent idea for protein-protein modulators:}
+The pocketID located three different sites that could be potential binding sites for small molecules, consistent with all the 3 RAC1-GEF complexes used in this work. \textbf{Site 1} is the nucleotide-binding site or the catalytic site. \textbf{Site 2} is located at the interface of RAC1 and GEF. \textbf{Site 3} is located on RAC1 located below switch I <Figure to show this>. We are aware that Site 1 is well studied experimentally as well as theoretically to explain the GTP/GDP binding and nucleotide exchange <REF>. Site 2 which is observed only in RAC1-GEF complexes, we are not aware of any report in the literature that particularly attempts to show its existence and evaluate the drugability. However, Peyroche et al.,\cite{peyroche1999brefeldin} hypothesized that Brefeldin A exhibits its inhibitory action by binding to the ARF-GDP-SEC7 domain. Furthermore, the type of inhibition was shown to be the uncompetitive type\cite{peyroche1999brefeldin,chardin1999brefeldin} and corroborated by the X-ray structures \cite{mossessova2003crystal,renault2003structural}. We embarked on this work to ascertain atomistic details of the interface region formed by RAC1-GEFs that could be a potential binding site to target RAC1-dependent pathways. We observed that RAC1 bound to Prex-1, Tiam1 and VAV1 show significant differences in the pocket volumes in the interface region. We hypothesise that this is a potential advantage to design and target selective molecules against RAC1 bound to different GEFs. 
+    
+\subsection{Cryptic pocket detected in activated or near activated RAC1 conformations:}
+    The \textbf{site 3} that is detected only GTP-bound or GEF-bound RAC1 conformations, to the best of our knowledge has never been reported and/or detected. Interestingly, this site is close to the \textbf{site 2}, i.e., the interface region in the RAC1-GEF complex. Site 3 (\textbf{figure \ref{fig:povme}A to \ref{fig:povme}C}) is located at the base of the switch I loop adjacent to the helix that precedes the switch I loop. Further, the base of site 3 comprised the hairpin loop that forms anti-parallel sheets leading to the switch II loop. The role of this site remains elusive, however, its strategic proximity can be explored by molecules that target Site 1 and Site 2. While protein-protein interface modulators that would target site 2 could be extended with the help of suitable linkers to reach site 3. This would offer an elegant strategy, akin to molecular glues, with the possibility of high-level selectivity towards GEF-bound RAC1. In GDP-bound or inactive RAC1 conformations site 3 was not detected.  Furthermore, we compared the pocket volume distribution for activated RAC1 with and without GEF. In the former case, the peak volume distribution was around 80-100 {\r{A}$^3$} (\textbf{figure \ref{fig:povme}F) which remains far too less to be accessible for small molecule binding. Whereas, this distribution shifts to larger volumes in the presence of GEFs. For RAC1-VAV1 and RAC1-TIAM1 complex the volume distribution peaks around 300-350 {\r{A}$^3$} and that for RAC1-PREX1 is $>$ 600 {\r{A}$^3$} (\textbf{figure \ref{fig:povme}F). The increasing volumes of site 3 observed in activated RAC1 with and without GEFs, indicate that perhaps site 3 is important to accommodate proteins for downstream signalling. In the case of RAC1-GEF complexes, PREX1 one binding shows the greatest increase in the pocket volume, where MD-generated conformations showed volumes approached 900 {\r{A}$^3$} (\textbf{figure \ref{fig:povme}F). 
+    
 \begin{figure}[ht]
     \centering
    \includegraphics[width=1\textwidth]{Figure5.jpg}
     \caption{Povme analysis \textbf{Legends incomplete}}
     \label{fig:povme}
 \end{figure}
+
+%\begin{figure}[ht]
+  %  \centering
+  %  \includegraphics[width=1\textwidth]{Figures/image1.png}
+   % \caption{Systems prepared and studied in this article}
+   % \label{fig:systemsOfInterest}
+%\end{figure}
+
+
+
+\begin{itemize}
+    \item Try to look for a connection/relation between the following
+        \begin{itemize}
+        \item switch region dynamics with different binding partners
+        \item switch region dynamics with pocket volumes
+        \item If we find different pockets that might open and close with different binders
+        \end{itemize}
+\end{itemize}
+
+
+
+
 
 %
 %\begin{figure}[ht]

@@ -87,12 +87,12 @@ All simulations were performed with the SHAKE algorithm\cite{shake} to constrain
   \end{tabular}
 \end{table}
 
-\subsection{Analysis of MD trajectories:} 
+\subsection{Measuring the structural dynamics of RAC1:} 
     Analysis of the MD trajectory was performed with the cpptraj\cite{cpptraj} module in AMBERTools23.  Before the analysis, all solvent atoms and neutralizing ions were stripped off, and the protein conformations were aligned to their respective X-ray conformation.  The mass-weighted C$\alpha$ root-mean-square deviation (RMSD) for the protein was computed using the X-ray conformation as the reference. The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed to understand the domain-specific fluctuations. 
-    Furthermore, to understand the specific dynamical changes in RAC1 when bound to different binding partners, we extracted the essential dynamical properties using Principal Component Analysis (PCA). The Variance-Covariance matrix for C$\alpha$ atoms was extracted in  cpptraj\cite{cpptraj} module in AMBERTools23. We extracted and analysed 10 principal components, however, the first two principle components explained $<$ 50\% variance in the data. To visualise the essential dynamics, the vectors were projected on the C$\alpha$ atoms and visualised in VMD 1.9.3 \cite{humphrey1996vmd}.
+    Furthermore, to understand the specific dynamical changes in RAC1 when bound to different binding partners, we extracted the essential dynamical properties using Principal Component Analysis (PCA). The Variance-Covariance matrix for C$\alpha$ atoms was extracted in  cpptraj\cite{cpptraj} module in AMBERTools23. We extracted and analysed 10 principal components, however, the first two principal components explained $<$ 50\% variance in the data. To visualise the essential dynamics, the vectors were projected on the C$\alpha$ atoms and visualised in VMD 1.9.3 \cite{humphrey1996vmd}.
 
-\subsection{Pocket Detection and Volume Measurements:} 
-    POVME2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the RAC1 and RAC1-GEFs complex. To identify the pockets, the pocketID module on POVME2 was used on conformations obtained from MD simulations. The conformations were selected following a clustering analysis of the trajectories, and the cluster representatives of the most populated cluster were extracted. For practical purposes, we restricted the extracting of the cluster representatives for the 3 most populated clusters. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout MD trajectories. It has been observed that the pocket might be a good candidate for druggability if its volume range\cite{perot2010druggable, nayal2006nature, an2005pocketome} was found to lie between 930\r{A}$^3$ to 610\r{A}$^3$. 
+\subsection{Identification and measurement of alternate pockets on RAC1:} 
+    POVME2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the RAC1. To be able to incorporate various experimental conformations of RAC1, we employed RAC1 with different binding partners (see \textbf{Table \ref{tbl: Detailed system studies}}).  To identify the pockets, the pocketID module on POVME2 was used on aforementioned RAC1 structures. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout MD trajectories. It has been observed that the pocket might be a good candidate for druggability if its volume range\cite{perot2010druggable, nayal2006nature, an2005pocketome} was found to lie between 610\r{A}$^3$ to 930\r{A}$^3$. 
     
     \begin{table}
   \caption{Parameters for Pocket Identification using POVME-2}
@@ -120,7 +120,7 @@ All simulations were performed with the SHAKE algorithm\cite{shake} to constrain
 \end{itemize}
 
 
-\subsection{Identifying critical RAC1 residues for GEF binding:} 
+\subsection{Quantifying the GEF binding hotspots on RAC1 surface:} 
 
 The free energy of binding was computed using the equation (Eq-\ref{eq:free-energy}) on the conformations saved from the MD simulations using mm-pbsa python script\cite{mmpbsa} available in AMBERTools23; 
 
@@ -135,8 +135,18 @@ Where  \({\Delta}E_{MM}\) is the interaction energy between the binding partners
 \section{Results and discussion}
 
 \subsection{Nucleotide and GEF binding significantly affects the switch region dynamics}
+ Comments on RMSD
+    a) Region wise w/ and w/o nucleotides
+    b) Region wise w/ and w/o GEFs
+    c) Overall comment on a) and b)
+    d) Show with RMSF plots the flexibility of each region 
+    e) Support with PCA plots for more detailed discussion (later this will support different pocket dynamics)
 
 \subsection{identifying alternate binding pockets on RAC1 surface} 
+    I) Discuss elaborately the RAC1 regions that significantly contribute to GEF binding vis-à-vis X-ray observations on these interactions. 
+        a) Link and compare to the dynamical observation of these regions/residues w/o GEFs.
+        
 
+\bibliography{References} 
 
 \end{document}

@@ -15,13 +15,13 @@
 
 % Title
 \title
-{Detection of Alternate Druggable Pockets on RAC1}
+{In Search of Alternate Binding Pockets on RAC1 Surface}
 
 
 \begin{document}
  % Abstract
  \begin{abstract}
-  RAC1 (Ras-related C3 botulinum toxin substrate 1) is a molecular switch catalysing by hydrolysing GTP to GDP. Owing to the slow nature of GTP hydrolysis and even slower dissociation of GDP, RAC1 is always assisted by Guanine Exchange Factors (GEFs) and GTPase-activating proteins (GAPs). As a result, GEFs and GAPs control the switching mechanism in RAC1. This regulatory control mechanism by several GEFs and GAPS provides a means to modulate the RAC1 activity in several diseases in which it has been implicated. The work described here attempts to understand various dynamical aspect of RAC1 in presence of GTP, GDP and guanine exchange factors (GEFs). The primary objective is to enhance the scope of therapeutic interventions in RAC1-associated disease pathways by locating alternative binding site(s) in the RAC1 surface not observed in X-ray derived tertiary structure.  We are aware that targeting the nucleotide binding pocket is challenging due to the picomolar binding affinity and high levels of GTP to compete with the drug molecules. we embarked on finding alternative pockets on RAC1 that can modulate its activity. We observe that the active conformation of RAC1, GTP- or GEF-bound, opens a cryptic pocket that lies below the switch I region. This pocket could be targetted by small molecules to control the flexibility of switch I, which is crucial for nucleotide exchange, and therefore, for GEF binding. 
+  RAC1 (Ras-related C3 botulinum toxin substrate 1) is a molecular switch catalysing by hydrolysing GTP to GDP. Owing to the slow nature of GTP hydrolysis and even slower dissociation of GDP, RAC1 is always assisted by Guanine Exchange Factors (GEFs) and GTPase-activating proteins (GAPs). As a result, GEFs and GAPs control the switching mechanism in RAC1. This regulatory control mechanism by several GEFs and GAPS provides a means to modulate the RAC1 activity in several diseases in which it has been implicated. The work described here attempts to understand various dynamical aspects of RAC1 in presence of GTP, GDP and guanine exchange factors (GEFs). The primary objective is to enhance the scope of therapeutic interventions in RAC1-associated disease pathways by locating alternative binding site(s) in the RAC1 surface not observed in X-ray derived tertiary structure.  We are aware that targeting the nucleotide binding pocket is challenging due to the picomolar binding affinity and high levels of GTP to compete with the drug molecules. we embarked on finding alternative pockets on RAC1 that can modulate its activity. We observe that the active conformation of RAC1, GTP- or GEF-bound, opens a cryptic pocket that lies below the switch I region. This pocket could be targeted by small molecules to control the flexibility of switch I, which is crucial for nucleotide exchange, and therefore, for GEF binding. 
 \end{abstract}
 
 % Main Text starts from here
@@ -29,9 +29,9 @@
 % Introduction and Motivation of the work
 \section{Introduction}
     Small GTPases, a ubiquitous class of proteins, play pivotal roles in various cellular processes. Their functions include signal transduction, vesicle trafficking, cytoskeletal dynamics, and cell division. Ras GTPases regulate cell proliferation, differentiation, and survival. While Rho GTPases govern cytoskeletal dynamics and cell migration.  Their activity is regulated through a molecular switch mechanism by guanine nucleotide exchange factors (GEFs), GTPase-activating proteins (GAPs), and guanine nucleotide dissociation inhibitors (GDIs)\cite{cherfils2013regulation}. These molecular switches cycle between OFF (GDP-bound inactive) and ON (GTP-bound active) states. This switching mechanism controls various processes like cell growth and differentiation to vesicular and nuclear transport\cite{cherfils2013regulation, loirand2013small}. 
-    Small GTPases are proteins that possess conserved domains across several families; made up of six $\beta$-sheets surrounded by 5 $\alpha$-helices. All domains are conserved such that they carry a guanine nucleoside binding site divided to recognize the guanine base and phosphate groups and the magnesium ion\cite{toma2019structural, cherfils2013regulation}. The switch regions regulate the traffic to the guanine nucleoside binding site. It is also well established that GTPases alone cannot hydrolyse GTP effectively. Therefore,  GEFs and GAPs play a significant role in assisting the switching mechanism of GTPases. They control the dynamics of the switch regions that facilitate either hydrolysis of GTP or dissociation of GDP. GDP:Mg$^{2+}$ dissociates from GTPases very slowly, and therefore, GEFs assist in exchanging GDP for GTP One of the accepted mechanisms of GEFs in the dissociation of GDP is by electrostatic repulsion of magnesium ion that forms strong interaction with GTPases and phosphate groups of GDP. The loss of magnesium ion weakens the affinity of GDP which eventually dissociates. Alternatively, some GEFs can rearrange the switch I or II conformations such that GDP's affinity is reduced facilitating its dissociation. However, GEFs can also combine the two mechanisms to facilitate GDP dissociation \cite{cherfils1999gefs, cherfils2014gefs}. \\ 
+    Small GTPases are proteins that possess conserved domains across several families; made up of six $\beta$-sheets surrounded by 5 $\alpha$-helices. All domains are conserved such that they carry a guanine nucleoside binding site divided to recognize the guanine base and phosphate groups and the magnesium ion\cite{toma2019structural, cherfils2013regulation}. The switch regions regulate the traffic to the guanine nucleoside binding site. It is also well established that GTPases alone cannot hydrolyse GTP effectively. Therefore,  GEFs and GAPs, play a significant role in assisting the switching mechanism of GTPases. They control the dynamics of the switch regions that facilitate either hydrolysis of GTP or dissociation of GDP. GDP:Mg$^{2+}$ dissociates from GTPases very slowly, and therefore, GEFs assist in exchanging GDP for GTP One of the accepted mechanisms of GEFs in the dissociation of GDP is by electrostatic repulsion of magnesium ion that forms strong interaction with GTPases and phosphate groups of GDP. The loss of magnesium ion weakens the affinity of GDP which eventually dissociates. Alternatively, some GEFs can rearrange the switch I or II conformations such that GDP's affinity is reduced facilitating its dissociation. However, GEFs can also combine the two mechanisms to facilitate GDP dissociation \cite{cherfils1999gefs, cherfils2014gefs}. \\ 
     Furthermore, GAPs stabilise the transition state for GTP:Mg$^{2+}$:GTPases and facilitate the hydrolysis of $\gamma$-phosphate group from GTP. taken together, the switching mechanism can be seen as GEFs assist in the GTPase activation while GAPs assist in GTP hydrolysis. Following GTP hydrolysis, the inactive GTPases prevent further signal transduction.\cite{bos2007gefs}. 
-    In some classes of GTPases, the active and inactive state cycling is conjugated with GTPases being shuttled between the cell membrane and cytosol. Such GTPases are found with post-translational modification to carry long-chain fatty acids at their C-terminal to assist bilayer insertion. GDIs\cite{dermardirossian2005gdis, maruta1998gtpase} sequester the lipid component to prevent membrane insertion to GTPases in the cytosol. This coordinated action of GTPases, GEFs, GAPs, and GDIs is essential for various cellular processes. Dysregulation of any of these components contributes to pathologies like cancer, neurodegeneration, and inflammatory disorders. For instance, mutations in Ras and its regulators are implicated in oncogenesis, highlighting the therapeutic potential of targeting GTPase signalling pathways\cite{cherfils2013regulation}. Such mutations are known to disrupt the equilibrium between the active and inactive states of GTPases. It has also been observed that some mutations enhance the affinity of GEFs or GAPs that traps the small GTPases either in an activated state or inactivated state. Small molecule inhibitors targeting GTPase activity or disruptors of GEF/GAP interactions\cite{gray2020targeting} are under development for cancer therapy. However, there are several challenges in targeting GTPases and/or GTPases-GAP/GEF complexes. Firstly, targeting the guanine binding site is challenging owing to the large intracellular concentration of GTP and high affinity\cite{traut1994physiological}. In such cases, finding an allosteric site can avoid such competition with endogenous substrates. GTPase hyperactivation or hyper-inactivation can be corrected by disrupting the protein-protein interaction (PPI) between GTPases and GEFs/GAPs. However, it is known that targeting PPI interfaces is extremely challenging due to shallow cavities. 
+    In some classes of GTPases, the active and inactive state cycling is conjugated with GTPases being shuttled between the cell membrane and cytosol. Such GTPases are found with post-translational modification to carry long-chain fatty acids at their C-terminal to assist bilayer insertion. GDIs\cite{dermardirossian2005gdis, maruta1998gtpase} sequester the lipid component to prevent membrane insertion to GTPases in the cytosol. This coordinated action of GTPases, GEFs, GAPs, and GDIs is essential for various cellular processes. Dysregulation of these components contributes to pathologies like cancer, neurodegeneration, and inflammatory disorders. For instance, mutations in Ras and its regulators are implicated in oncogenesis, highlighting the therapeutic potential of targeting GTPase signalling pathways\cite{cherfils2013regulation}. Such mutations are known to disrupt the equilibrium between the active and inactive states of GTPases. It has also been observed that some mutations enhance the affinity of GEFs or GAPs that traps the small GTPases either in an activated state or inactivated state. Small molecule inhibitors targeting GTPase activity or disruptors of GEF/GAP interactions\cite{gray2020targeting} are under development for cancer therapy. However, there are several challenges in targeting GTPases and/or GTPases-GAP/GEF complexes. Firstly, targeting the guanine binding site is challenging owing to the large intracellular concentration of GTP and high affinity\cite{traut1994physiological}. In such cases, finding an allosteric site can avoid such competition with endogenous substrates. GTPase hyper-activation or hyper-inactivation can be corrected by disrupting the protein-protein interaction (PPI) between GTPases and GEFs/GAPs. However, it is known that targeting PPI interfaces is extremely challenging due to shallow cavities. 
    
 
 % Methods section
@@ -135,17 +135,33 @@ Where  \({\Delta}E_{MM}\) is the interaction energy between the binding partners
 \section{Results and discussion}
 
 \subsection{Nucleotide and GEF binding significantly affects the switch region dynamics}
- Comments on RMSD
-    a) Region wise w/ and w/o nucleotides
-    b) Region wise w/ and w/o GEFs
-    c) Overall comment on a) and b)
-    d) Show with RMSF plots the flexibility of each region 
-    e) Support with PCA plots for more detailed discussion (later this will support different pocket dynamics)
-
+ Comments on Structural dynamics
+ \begin{enumerate}
+    \item Region wise w/ and w/o nucleotides
+    \item Region wise w/ and w/o GEFs
+    \item Taken together, comment on 1. and 2.
+    \item Show with RMSF plots the flexibility of each region 
+    \item Support with PCA plots for more detailed discussion (later this will support different pocket dynamics)
+\end{enumerate}
 \subsection{identifying alternate binding pockets on RAC1 surface} 
-    I) Discuss elaborately the RAC1 regions that significantly contribute to GEF binding vis-à-vis X-ray observations on these interactions. 
+ \begin{enumerate}   
+    \item Discuss elaborately the RAC1 regions that significantly contribute to GEF binding vis-à-vis X-ray observations on these interactions. 
         a) Link and compare to the dynamical observation of these regions/residues w/o GEFs.
-        
+    \item Show and disuss the nucleotide site volume changes as follows:
+         \begin{enumerate}   
+        \item Inactive (GDP bound) $->$ Effect of GDP deletion
+       \item Active (GTP bound) $->$ Effect of GTP deletion
+        \item Binding DH/PH containing GEF $->$ PREX1, VAV1 and TIAM1
+       \item DHR domain containing GEF $->$ DOCK2
+        \item Discuss what is the "Taken Together message"
+        \end{enumerate}
+    \item Show and discuss all other pockets 
+    \begin{enumerate} 
+       \item KRAS-G12C covalent binding pocket $->$ Since this already shown in GTPases (RAS family) elaborate here RAC1 (or RHO family) and discuss if this FIRST time observation or not. If not, then discuss with published work.
+        \item Discuss all other pockets $->$ Find out if any have been reported for RAC1 or RHO family or other GTPases.
+        \end{enumerate}
+    \item Link MMGBSA per residue decomposition and contribution of residues surrounding these pockets vis-à-vis different GEFs.
+\end{enumerate}        
 
 \bibliography{References} 
 

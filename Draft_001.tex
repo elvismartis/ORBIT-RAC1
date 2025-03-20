@@ -1,28 +1,31 @@
 \documentclass[12pt, a4paper]{achemso}
+
 % Authors
 \author{Elvis A. F. Martis}
 \affiliation[Nantes University]
-{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, France}
+{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, FRANCE}
 \author{Johann Hendrickx}
 \affiliation[Nantes University]
-{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, France}
+{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, FRANCE}
 \author{Vincent Sauzeau}
-\affiliation[CHU Nantes] {UMR\_S 1087 {/} UMR\_C 6291 l'Unité de Recherche de l'Institut du Thorax, F-44000 Nantes, France}
+\affiliation[CHU Nantes] {UMR\_S 1087 {/} UMR\_C 6291 l'Unité de Recherche de l'Institut du Thorax, F-44000 Nantes, FRANCE}
 \author{Stéphane Téletchéa}
 \email{stephane.teletchea@univ-nantes.fr}
 \affiliation[Nantes University]
-{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, France}
+{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, FRANCE}
 
 % Title
 \title
-{In Search of Alternate Binding Pockets on RAC1 Surface}
+{Are There Any Alternate Binding Pockets on The RAC1 Surface?}
 
 
 \begin{document}
+
  % Abstract
  \begin{abstract}
   RAC1 (Ras-related C3 botulinum toxin substrate 1) is a molecular switch catalysing by hydrolysing GTP to GDP. Owing to the slow nature of GTP hydrolysis and even slower dissociation of GDP, RAC1 is always assisted by Guanine Exchange Factors (GEFs) and GTPase-activating proteins (GAPs). As a result, GEFs and GAPs control the switching mechanism in RAC1. This regulatory control mechanism by several GEFs and GAPS provides a means to modulate the RAC1 activity in several diseases in which it has been implicated. The work described here attempts to understand various dynamical aspects of RAC1 in presence of GTP, GDP and guanine exchange factors (GEFs). The primary objective is to enhance the scope of therapeutic interventions in RAC1-associated disease pathways by locating alternative binding site(s) in the RAC1 surface not observed in X-ray derived tertiary structure.  We are aware that targeting the nucleotide binding pocket is challenging due to the picomolar binding affinity and high levels of GTP to compete with the drug molecules. we embarked on finding alternative pockets on RAC1 that can modulate its activity. We observe that the active conformation of RAC1, GTP- or GEF-bound, opens a cryptic pocket that lies below the switch I region. This pocket could be targeted by small molecules to control the flexibility of switch I, which is crucial for nucleotide exchange, and therefore, for GEF binding. 
 \end{abstract}
+
 
 % Main Text starts from here
 
@@ -40,20 +43,18 @@
 \begin{table}
   \caption{Detailed system studies}
   \label{tbl: Detailed system studies}
-  \begin{tabular}{llccc}
+  \begin{tabular}{c c c}
     \hline
-   \textbf{Initial PDB} & \textbf{Protein} & \textbf{Modulator/LIGAND} & \textbf{Size (nb atoms)} \\
+   \textbf{Initial PDB} & \textbf{RAC1 Modulator/LIGAND} & \textbf{Comments} \\
     \hline
-    1HE1\cite{gappdb} & RAC1 (INACTIVE) & GDP:$Mg^{2+}$ & 26102 \\
-    3TH5\cite{activeRAC1}   & RAC1 (ACTIVE) &  GTP:$Mg^{2+}$ & 24132  \\
-    4YON\cite{prex1pdb} & RAC1:PREX1    & -- & 88951 \\
-    1FOE\cite{tiam1pdb} & RAC1:TIAM1     & -- & 64367 \\
-    2VRW\cite{vav1pdb} & RAC1:VAV1      & -- & 61807 \\
-    2YIN\cite{dock2pdb} & RAC1:DOCK2      & -- & XXXX \\
+    1HE1\cite{gappdb} &  GDP:$Mg^{2+}$ & Inactive RAC1 \\
+    3TH5\cite{activeRAC1}   & GTP:$Mg^{2+}$ & Active RAC1 \\
+    4YON\cite{prex1pdb} & PREX1 &  DH/PH containing GEF \\
+    1FOE\cite{tiam1pdb} & TIAM1 &  DH/PH containing GEF \\
+    2VRW\cite{vav1pdb} & VAV1 & DH/PH containing GEF \\
+    2YIN\cite{dock2pdb} & DOCK2 & DHR domain containing GEF \\
     \hline
   \end{tabular}
-  
-  \textsuperscript{\emph{1}}See the supporting information
 \end{table}
 
 
@@ -95,7 +96,7 @@ All simulations were performed with the SHAKE algorithm\cite{shake} to constrain
     POVME2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the RAC1. To be able to incorporate various experimental conformations of RAC1, we employed RAC1 with different binding partners (see \textbf{Table \ref{tbl: Detailed system studies}}).  To identify the pockets, the pocketID module on POVME2 was used on aforementioned RAC1 structures. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout MD trajectories. It has been observed that the pocket might be a good candidate for druggability if its volume range\cite{perot2010druggable, nayal2006nature, an2005pocketome} was found to lie between 610\r{A}$^3$ to 930\r{A}$^3$. 
     
     \begin{table}
-  \caption{Parameters for Pocket Identification using POVME-2}
+  \caption{Parameters used for pocket identification}
   \label{tbl:pocketID}
   \begin{tabular}{lc}
     \hline
@@ -147,7 +148,7 @@ Where  \({\Delta}E_{MM}\) is the interaction energy between the binding partners
  \begin{enumerate}   
     \item Discuss elaborately the RAC1 regions that significantly contribute to GEF binding vis-à-vis X-ray observations on these interactions. 
         a) Link and compare to the dynamical observation of these regions/residues w/o GEFs.
-    \item Show and disuss the nucleotide site volume changes as follows:
+    \item Show and discuss the nucleotide site volume changes as follows:
          \begin{enumerate}   
         \item Inactive (GDP bound) $->$ Effect of GDP deletion
        \item Active (GTP bound) $->$ Effect of GTP deletion
@@ -163,6 +164,7 @@ Where  \({\Delta}E_{MM}\) is the interaction energy between the binding partners
     \item Link MMGBSA per residue decomposition and contribution of residues surrounding these pockets vis-à-vis different GEFs.
 \end{enumerate}        
 
+% List of References cited
 \bibliography{References} 
 
 \end{document}

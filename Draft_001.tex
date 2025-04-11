@@ -70,7 +70,7 @@
  All systems were prepared for MD simulations with the Leap module in AMBERtools23. Protein atoms were atom-typed according to the AMBER14 (ff14SB) force field\citation{ff14sb}.  Amber-compatible parameters for all nucleotides were obtained from the Manchester AMBER database  For the VAV1 zinc finger region the parameters of the Zinc atom, coordinating cysteines and histidine residues, the force field parameters were obtained from the ZAFF\cite{zaff} force field library.
 
 \subsection{Molecular dynamics simulations:} 
- All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10\r{A} beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0\r{A} for the minimization phase.  The first cycle of minimization was performed with  25 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms, this force constant was reduced to 5 kcal/(mol\r{A}$^2$)  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (see \textbf{Table \ref{tbl: Heating using NVT Ensemble}}) from 0 K to 300 K for 10 ns with  50 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^-1$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 kcal/(mol{\r{A}$^2$}.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\r{A}}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for evaluating non-bonded interactions was placed at 9.0 {\r{A}}  for the production phase. All the computations were done using the CUDA-enabled PMEMD code\cite{pmemd01, pmemd02, pmemd03} in AMBER22\cite{amber22, amber}.  
+ All complexes were solvated with TIP3P\cite{tip3p} waters enclosed in a box with dimensions extending 10\r{A} beyond any protein atom,  and an appropriate number of neutralizing ions were added to maintain the system's neutrality.  The complexes were relaxed using three cycles of minimization of 50000 steps each.  The first 5000 steps of minimization adopted the steepest descent algorithm, and the remaining 45000 steps used the conjugate gradient algorithm.  The cut-off for evaluating non-bonded interactions was placed at 8.0\r{A} for the minimization phase.  The first cycle of minimization was performed with  25 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms, this force constant was reduced to 5 kcal/(mol\r{A}$^2$)  in the next cycle, and the final cycle was performed without any restraining forces on either the solute or the solvent atoms.  The system was heated in 4 stages (see \textbf{Table \ref{tbl: Heating using NVT Ensemble}}) from 0 K to 300 K for 10 ns with  50 kcal/(mol{\r{A}$^2$} restraining force on the solute atoms using the Langevin dynamics, with a collisional frequency of  2 $ps^{-1}$.  The next step employed the NPT ensemble for density equilibration for another 2 cycles of 10 ns each, with the restraining force on the solute atoms gradually decreasing from 5 to 0 kcal/(mol{\r{A}$^2$}.  In the equilibration phase, the cut-off for evaluating non-bonded interactions was placed at 8 {\r{A}}.  In the production phase of the MD simulations, all systems were simulated for 100 ns in triplicate, amounting to a 300 ns trajectory for each system.  The long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) summation method\cite{pme}. The cut-off for evaluating non-bonded interactions was placed at 9.0 {\r{A}}  for the production phase. All the computations were done using the CUDA-enabled PMEMD code\cite{pmemd01, pmemd02, pmemd03} in AMBER22\cite{amber22, amber}.  
 All simulations were performed with the SHAKE algorithm\cite{shake} to constrain bonds to hydrogen atoms, with the tolerance set to 0.00001 {\AA}.  A 2 fs integration time step was used to solve Newton\textquotesingle s equations of motion.  For analysis, the conformations were saved every 100 ps, amounting to 1000 snapshots per trajectory (3000 per system). 
 
 \begin{table}
@@ -159,15 +159,23 @@ Small GTPases show significant role in regulating many cellular processes owing 
     \centering
     \includegraphics[width=1\textwidth]{Figure2.jpg}
     \caption{Essential Dynamics of RAC1 protein extracted using principal component analysis. } 
-    \label{fig:RAC1PCA}
+    \label{fig:RAC1PCA-1}
 \end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Figure3.jpg}
+    \caption{Essential Dynamics of RAC1 protein extracted using principal component analysis. } 
+    \label{fig:RAC1PCA-2}
+\end{figure}
+
 
 
 \subsection{identifying alternate binding pockets on RAC1 surface} 
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\textwidth]{Figure3.jpg}
+    \includegraphics[width=1\textwidth]{Figure4.jpg}
     \caption{Binding Pockets on RAC1 surface. \textbf{A)}  \textbf{B)}  \textbf{C)}  \textbf{D)}  \textbf{E)}  \textbf{F)} \textbf{F)}} 
     \label{fig:RAC1pockets}
 \end{figure}

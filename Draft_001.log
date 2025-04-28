@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.3.6)  28 APR 2025 12:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.3.6)  28 APR 2025 14:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Volumes/LOIRE/Work/univ-nantes/Cryptic-Pocket-Detection-in-RAC1/Draft_001.tex
-(/Volumes/LOIRE/Work/univ-nantes/Cryptic-Pocket-Detection-in-RAC1/Draft_001.tex
+**Draft_001.tex
+(./Draft_001.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/achemso/achemso.cls
@@ -25,22 +25,29 @@ File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks17
 \XKV@tempa@toks=\toks18
- (/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/keyval.tex))
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/keyval.tex))
 \XKV@depth=\count196
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \acs@bib@file=\write3
 \c@bibnote=\count197
- (/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count198
@@ -55,9 +62,11 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen147
 \Gm@layoutvoffset=\dimen148
 \Gm@dimlist=\toks19
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen149
 \captionmargin=\dimen150
@@ -71,31 +80,39 @@ Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count267
 \c@continuedfloat=\count268
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count269
 \float@exts=\toks20
 \float@box=\box51
 \@float@everytoks=\toks21
 \@floatcapt=\box52
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -121,17 +138,22 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \acs@collect@empty@toks=\toks27
 \acs@tocentry@height=\skip56
 \acs@tocentry@width=\skip57
- (/usr/local/texlive/2024/texmf-dist/tex/latex/achemso/achemso-jacsat.cfg
-File: achemso-jacsat.cfg 2024-01-30 v3.13g achemso configuration: J. Am. Chem. Soc.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/achemso/achemso-jacsat.cfg
+File: achemso-jacsat.cfg 2024-01-30 v3.13g achemso configuration: J. Am. Chem. 
+Soc.
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip58
 \bibsep=\skip59
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count278
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/achemso/natmove.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/achemso/natmove.sty
 Package: natmove 2010/01/15 v1.1a Automatic citation moving with natbib
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/mciteplus/mciteplus.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/mciteplus/mciteplus.sty
 Package: mciteplus 2013/09/13 v1.2 enhanced mcite
 \@mcitetmptoksA=\toks28
 \@mcitetmpdima=\dimen159
@@ -218,9 +240,12 @@ Package caption Info: End \AtBeginDocument code.
 \everyMPtoPDFconversion=\toks30
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 22.
@@ -236,54 +261,72 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 22.
 
 Overfull \hbox (14.73372pt too wide) in paragraph at lines 26--27
-[]\OT1/cmr/m/n/10.95 RAC1 (Ras-related C3 bo-tulinum toxin sub-strate 1) is a molec-u-lar switch catalysing
+[]\OT1/cmr/m/n/10.95 RAC1 (Ras-related C3 bo-tulinum toxin sub-strate 1) is a m
+olec-u-lar switch catalysing
  []
 
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4] [5] [6] [7]
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1
+.enc}] [4] [5] [6] [7]
 <Figure5.jpg, id=39, 684.3969pt x 394.8351pt>
 File: Figure5.jpg Graphic file (type jpg)
 <use Figure5.jpg>
-Package pdftex.def Info: Figure5.jpg  used on input line 142.
+Package pdftex.def Info: Figure5.jpg  used on input line 133.
 (pdftex.def)             Requested size: 452.96826pt x 261.32697pt.
 <Figure1.jpg, id=40, 1054.1784pt x 603.2136pt>
 File: Figure1.jpg Graphic file (type jpg)
 <use Figure1.jpg>
-Package pdftex.def Info: Figure1.jpg  used on input line 153.
+Package pdftex.def Info: Figure1.jpg  used on input line 144.
 (pdftex.def)             Requested size: 452.96826pt x 259.1927pt.
  [8]
 <Figure2.jpg, id=44, 583.2189pt x 276.7941pt>
 File: Figure2.jpg Graphic file (type jpg)
 <use Figure2.jpg>
-Package pdftex.def Info: Figure2.jpg  used on input line 169.
+Package pdftex.def Info: Figure2.jpg  used on input line 160.
 (pdftex.def)             Requested size: 452.96826pt x 214.98624pt.
 <Figure3.jpg, id=45, 606.8271pt x 277.9986pt>
 File: Figure3.jpg Graphic file (type jpg)
 <use Figure3.jpg>
-Package pdftex.def Info: Figure3.jpg  used on input line 176.
+Package pdftex.def Info: Figure3.jpg  used on input line 167.
 (pdftex.def)             Requested size: 452.96826pt x 207.5143pt.
 <Figure4.jpg, id=46, 431.6928pt x 327.8649pt>
 File: Figure4.jpg Graphic file (type jpg)
 <use Figure4.jpg>
-Package pdftex.def Info: Figure4.jpg  used on input line 183.
+Package pdftex.def Info: Figure4.jpg  used on input line 174.
 (pdftex.def)             Requested size: 452.96826pt x 344.02316pt.
- [9 <./Figure5.jpg>] [10 <./Figure1.jpg>] (./Draft_001.bbl [11 <./Figure2.jpg>] [12 <./Figure3.jpg>] [13 <./Figure4.jpg>] [14] [15]) [16] (./Draft_001.aux)
+ [9 <./Figure5.jpg>] [10 <./Figure1.jpg>]
+(./Draft_001.bbl [11 <./Figure2.jpg>] [12 <./Figure3.jpg>] [13 <./Figure4.jpg>]
+[14] [15]) [16] (./Draft_001.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4933 strings out of 474116
- 85050 string characters out of 5743683
+ 4932 strings out of 474116
+ 84857 string characters out of 5743683
  1935187 words of memory out of 5000000
  27261 multiletter control sequences out of 15000+600000
  565737 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,131p,2064b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Draft_001.pdf (16 pages, 16380645 bytes).
+ 84i,12n,131p,1999b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local
+/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local
+/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
+xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/tex
+live/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Draft_001.pdf (16 pages, 16380474 bytes).
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream

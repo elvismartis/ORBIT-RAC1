@@ -28,7 +28,7 @@
 
  % Abstract
  \begin{abstract}
-  RAC1 (Ras-related C3 botulinum toxin substrate 1) is a molecular switch catalysing by hydrolysing GTP to GDP. Owing to the slow nature of GTP hydrolysis and even slower dissociation of GDP, RAC1 is always assisted by Guanine Exchange Factors (GEFs) and GTPase-activating proteins (GAPs). As a result, GEFs and GAPs control the switching mechanism in RAC1. This regulatory control mechanism by several GEFs and GAPS provides a means to modulate the RAC1 activity in several diseases in which it has been implicated. The work described here attempts to understand various dynamical aspects of RAC1 in presence of GTP, GDP and guanine exchange factors (GEFs). The primary objective is to enhance the scope of therapeutic interventions in RAC1-associated disease pathways by locating alternative binding site(s) in the RAC1 surface not observed in X-ray derived tertiary structure.  We are aware that targeting the nucleotide binding pocket is challenging due to the picomolar binding affinity and high levels of GTP to compete with the drug molecules. we embarked on finding alternative pockets on RAC1 that can modulate its activity. We observe that the active conformation of RAC1, GTP- or GEF-bound, opens a cryptic pocket that lies below the switch I region. This pocket could be targeted by small molecules to control the flexibility of switch I, which is crucial for nucleotide exchange, and therefore, for GEF binding. 
+  Rac1 (Ras-related C3 botulinum toxin substrate 1) is a molecular switch catalysing by hydrolysing GTP to GDP. Owing to the slow nature of GTP hydrolysis and even slower dissociation of GDP, Rac1 is always assisted by Guanine Exchange Factors (GEFs) and GTPase-activating proteins (GAPs). As a result, GEFs and GAPs control the switching mechanism in Rac1. This regulatory control mechanism by several GEFs and GAPS provides a means to modulate the Rac1 activity in several diseases in which it has been implicated. The work described here attempts to understand various dynamical aspects of Rac1 in presence of GTP, GDP and guanine exchange factors (GEFs). The primary objective is to enhance the scope of therapeutic interventions in Rac1-associated disease pathways by locating alternative binding site(s) in the Rac1 surface not observed in X-ray derived tertiary structure.  We are aware that targeting the nucleotide binding pocket is challenging due to the picomolar binding affinity and high levels of GTP to compete with the drug molecules. we embarked on finding alternative pockets on Rac1 that can modulate its activity. We observe that the active conformation of Rac1, GTP- or GEF-bound, opens a cryptic pocket that lies below the switch I region. This pocket could be targeted by small molecules to control the flexibility of switch I, which is crucial for nucleotide exchange, and therefore, for GEF binding. 
 \end{abstract}
 
 
@@ -50,10 +50,10 @@
   \label{tbl: Detailed system studies}
   \begin{tabular}{c c c}
     \hline
-   \textbf{Initial PDB} & \textbf{RAC1 Modulator/LIGAND} & \textbf{Comments} \\
+   \textbf{Initial PDB} & \textbf{Rac1 Modulator/LIGAND} & \textbf{Comments} \\
     \hline
-    1HE1\cite{gappdb} &  GDP:$Mg^{2+}$ & Inactive RAC1 \\
-    3TH5\cite{activeRAC1}   & GTP:$Mg^{2+}$ & Active RAC1 \\
+    1HE1\cite{gappdb} &  GDP:$Mg^{2+}$ & Inactive Rac1 \\
+    3TH5\cite{activeRac1}   & GTP:$Mg^{2+}$ & Active Rac1 \\
     4YON\cite{prex1pdb} & PREX1 &  DH/PH containing GEF \\
     1FOE\cite{tiam1pdb} & TIAM1 &  DH/PH containing GEF \\
     2VRW\cite{vav1pdb} & VAV1 & DH/PH containing GEF \\
@@ -93,12 +93,12 @@ All simulations were performed with the SHAKE algorithm\cite{shake} to constrain
   \end{tabular}
 \end{table}
 
-\subsection{Measuring the structural dynamics of RAC1:} 
+\subsection{Measuring the structural dynamics of Rac1:} 
     Analysis of the MD trajectory was performed with the cpptraj\cite{cpptraj} module in AMBERTools23.  Before the analysis, all solvent atoms and neutralizing ions were stripped off, and the protein conformations were aligned to their respective X-ray conformation.  The mass-weighted C$\alpha$ root-mean-square deviation (RMSD) for the protein was computed using the X-ray conformation as the reference. The root-mean-square fluctuations (RMSF) per residue for the backbone and side-chain atoms were computed to understand the domain-specific fluctuations. 
-    Furthermore, to understand the specific dynamical changes in RAC1 when bound to different binding partners, we extracted the essential dynamical properties using Principal Component Analysis (PCA). The Variance-Covariance matrix for C$\alpha$ atoms was extracted in  cpptraj\cite{cpptraj} module in AMBERTools23. We extracted and analysed 10 principal components, however, the first two principal components explained $<$ 50\% variance in the data. To visualise the essential dynamics, the vectors were projected on the C$\alpha$ atoms and visualised in VMD 1.9.3 \cite{humphrey1996vmd}.
+    Furthermore, to understand the specific dynamical changes in Rac1 when bound to different binding partners, we extracted the essential dynamical properties using Principal Component Analysis (PCA). The Variance-Covariance matrix for C$\alpha$ atoms was extracted in  cpptraj\cite{cpptraj} module in AMBERTools23. We extracted and analysed 10 principal components, however, the first two principal components explained $<$ 50\% variance in the data. To visualise the essential dynamics, the vectors were projected on the C$\alpha$ atoms and visualised in VMD 1.9.3 \cite{humphrey1996vmd}.
 
-\subsection{Identification and measurement of alternate pockets on RAC1:} 
-    POVME2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the RAC1. To be able to incorporate various experimental conformations of RAC1, we employed RAC1 with different binding partners (see \textbf{Table \ref{tbl: Detailed system studies}}).  To identify the pockets, the pocketID module on POVME2 was used on aforementioned RAC1 structures. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout MD trajectories. It has been observed that the pocket might be a good candidate for druggability if its volume range\cite{perot2010druggable, nayal2006nature, an2005pocketome} was found to lie between 610\r{A}$^3$ to 930\r{A}$^3$. 
+\subsection{Identification and measurement of alternate pockets on Rac1:} 
+    POVME2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the Rac1. To be able to incorporate various experimental conformations of Rac1, we employed Rac1 with different binding partners (see \textbf{Table \ref{tbl: Detailed system studies}}).  To identify the pockets, the pocketID module on POVME2 was used on aforementioned Rac1 structures. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout MD trajectories. It has been observed that the pocket might be a good candidate for druggability if its volume range\cite{perot2010druggable, nayal2006nature, an2005pocketome} was found to lie between 610\r{A}$^3$ to 930\r{A}$^3$. 
     
     \begin{table}
   \caption{Parameters used for pocket identification}
@@ -117,7 +117,7 @@ All simulations were performed with the SHAKE algorithm\cite{shake} to constrain
   \end{tabular}
 \end{table}
 
-\subsection{Quantifying the GEF binding hotspots on RAC1 surface:} 
+\subsection{Quantifying the GEF binding hotspots on Rac1 surface:} 
 
 The free energy of binding was computed using the equation (Eq-\ref{eq:free-energy}) on the conformations saved from the MD simulations using mm-pbsa python script\cite{mmpbsa} available in AMBERTools23; 
 
@@ -125,15 +125,15 @@ The free energy of binding was computed using the equation (Eq-\ref{eq:free-ener
  \   {\Delta}G_{binding} = {\Delta}E_{MM} + {\Delta}H_{GBSA} - T{\Delta}S   
 \end{equation}
 
-Where  \({\Delta}E_{MM}\) is the interaction energy between the binding partners computed in the gas phase using a molecular mechanics method.  The solvation-free energy or the enthalpy of hydration \({\Delta}H_{GBSA}\)  was computed using the Generalized-Born Surface Area (GBSA) method, and the entropic component of binding \(T{\Delta}S\) was not computed due to huge computation cost. The internal dielectric constant for GBSA calculations was set to 1 and the solvent dielectric constant was fixed as 80. For computing free energy of binding using the MM-GBSA method, the OBC’s GB model\cite{igb5} $ (igb = 5) $ was used. The mbondi3 radii set was employed to define the PB radii for all solute atoms during the preparation of the topology and parameter files in the leap module in AMBERTools23. The ionic strength for  GBSA calculations was maintained at 150 mM. All energy components, in an implicit solvent, were calculated using a large cut-off of 999 Å. The surface area for the non-polar solvation term was computed using the linear combination of pairwise overlaps (LCPO) method\cite{lcpo}. To identify the critical amino acid residues that are critical for the protein-protein interactions between RAC1 and GEFs, we computed the pairwise decomposition of the binding affinity value. 
+Where  \({\Delta}E_{MM}\) is the interaction energy between the binding partners computed in the gas phase using a molecular mechanics method.  The solvation-free energy or the enthalpy of hydration \({\Delta}H_{GBSA}\)  was computed using the Generalized-Born Surface Area (GBSA) method, and the entropic component of binding \(T{\Delta}S\) was not computed due to huge computation cost. The internal dielectric constant for GBSA calculations was set to 1 and the solvent dielectric constant was fixed as 80. For computing free energy of binding using the MM-GBSA method, the OBC’s GB model\cite{igb5} $ (igb = 5) $ was used. The mbondi3 radii set was employed to define the PB radii for all solute atoms during the preparation of the topology and parameter files in the leap module in AMBERTools23. The ionic strength for  GBSA calculations was maintained at 150 mM. All energy components, in an implicit solvent, were calculated using a large cut-off of 999 Å. The surface area for the non-polar solvation term was computed using the linear combination of pairwise overlaps (LCPO) method\cite{lcpo}. To identify the critical amino acid residues that are critical for the protein-protein interactions between Rac1 and GEFs, we computed the pairwise decomposition of the binding affinity value. 
 
 % Results and Discussion
 \section{Results and discussion}
-Small GTPases play a significant role in regulating cellular processes owing to their switching mechanism. GTP-bound state is called the \textit{Active state} and the GDP-bound is called the \textit{Inactive state}. The energy obtained from the GTP hydrolysis is used to undergo conformational changes that are partially responsible for the switching mechanism. Since nucleotides bind tightly to the GTPases, their dissociation is assisted by Guanine Exchange Factors (GEFs).  There are several GEFs available for this purpose, and specific GEFs active specific GTPases. In case of RAC1, PREX1, TIAM1, VAV1 and DOCK2 are specific GEFs implicated in a wide variety of diseases. Structurally, PREX1, TIAM1 and VAV1 are DH/PH domain containing proteins, while DOCK2 contains DHR domain. Irrespective of their structural diversity, all GEFs bind to the switch I and II regions and assist in the nucleotide exchange, i.e. dissociation of GDP and association of GTP. 
-The nucleotide binding site is well conserved among the GTPase family, and therefore, making it challenging to target for finding small molecule binders. The molar concentrations of GTPs with picomolar levels of binding affinity makes it even more difficult for the competing the small molecules. Therefore, we embarked to understand the complete dynamical landscape of RAC1 protein bound to either nucleotides (GDP or GTP) or GEFs (PREX1, TIAM1, VAV1 or DOCK2). We expect to locate alternate binding pockets, that may improve the druggability of RAC1 protein. We also attempt to understand if different binding parters show differences in the pockets we identify which can be exploited to selectively target RAC1 implicated in different signalling pathways. We hypothesise that the selectivity can be measured as the function of the pocket volume changes. we also attempt to establish if there exists any correlation in the volume changes amongst other pockets or with the nucleotide binding site. The latter can be believed to influence the nucleotide traffic and eventually control the switching mechanism of RAC1. 
+Small GTPases play a significant role in regulating cellular processes owing to their switching mechanism. GTP-bound state is called the \textit{Active state} and the GDP-bound is called the \textit{Inactive state}. The energy obtained from the GTP hydrolysis is used to undergo conformational changes that are partially responsible for the switching mechanism. Since nucleotides bind tightly to the GTPases, their dissociation is assisted by Guanine Exchange Factors (GEFs).  There are several GEFs available for this purpose, and specific GEFs active specific GTPases. In case of Rac1, PREX1, TIAM1, VAV1 and DOCK2 are specific GEFs implicated in a wide variety of diseases. Structurally, PREX1, TIAM1 and VAV1 are DH/PH domain containing proteins, while DOCK2 contains DHR domain. Irrespective of their structural diversity, all GEFs bind to the switch I and II regions and assist in the nucleotide exchange, i.e. dissociation of GDP and association of GTP. 
+The nucleotide binding site is well conserved among the GTPase family, and therefore, making it challenging to target for finding small molecule binders. The molar concentrations of GTPs with picomolar levels of binding affinity makes it even more difficult for the competing the small molecules. Therefore, we embarked to understand the complete dynamical landscape of Rac1 protein bound to either nucleotides (GDP or GTP) or GEFs (PREX1, TIAM1, VAV1 or DOCK2). We expect to locate alternate binding pockets, that may improve the druggability of Rac1 protein. We also attempt to understand if different binding parters show differences in the pockets we identify which can be exploited to selectively target Rac1 implicated in different signalling pathways. We hypothesise that the selectivity can be measured as the function of the pocket volume changes. we also attempt to establish if there exists any correlation in the volume changes amongst other pockets or with the nucleotide binding site. The latter can be believed to influence the nucleotide traffic and eventually control the switching mechanism of Rac1. 
 \subsection{Rac1 shows possibility of four more binding pockets}
-   
-We employed the POVME2 tool to identify and measure the pocket volume changes over the course of the MD trajectory. RAC1 was  simulated under different conditions (See \textbf{Table \ref{tbl: Detailed system studies}}). Prior to identifying the binding pockets all binding partners including nucleotides were deleted from the trajectory. Pockets were identified using the starting conformation of RAC1 and the pocket volume changes were monitored throughout the course of the simulation. In addition to the nucleotide binding site, we identified four pockets on the RAC1 surface (\textbf{Figure \ref{fig:nucleotidepockets}}). Site P2  (\textbf{Figure \ref{fig:otherpockets}A}) lies are the interjunction between switch I and II, while site P2(\textbf{Figure \ref{fig:otherpockets}A}) lies slightly downstream to Site P1. These sites form that interface region where GEFs and GAPs are known to dock and perform their functions.  The site P2, we identified, is present between the switch I and II which was identified in K-RAS and H-RAS \cite{sun2012discovery, maurer2012small}.  This site is present at a crucial location that can be used to modulate the dynamics of the switch regions, thereby modulating the binding of upstream of GEFs. We further hypothesise the possibility to occlude the nucleotide binding site by blocking the switch region conformation in a position such that it is unfavourable for GTP binding, thereby prolonging the nucleotide free state and prevent the downstream signalling. 
+We employed the POVME2 tool to identify and measure the pocket volume changes over the course of the MD trajectory. Rac1 was  simulated under different conditions (See \textbf{Table \ref{tbl: Detailed system studies}}). Prior to identifying the binding pockets, all binding partners including nucleotides were deleted from the trajectory. Pockets were identified using the starting conformation of Rac1 X-ray structure, and the pocket volume changes were monitored throughout the course of the simulation. In addition to the nucleotide binding site (\textbf{Figure \ref{fig:nucleotidepockets}A}), we identified four pockets on the Rac1 surface that we believe are potential new binding sites. Site P1  lies are the interjunction between switch I and II, while site P2 lies slightly downstream to Site P1. These sites form that interface region where GEFs and GAPs are known to dock and perform their functions (\textbf{Figure \ref{fig:otherpockets}A}).  Site P2 is the also in Rac1 is similar to the one in K-RAS and H-RAS \cite{sun2012discovery, maurer2012small} that is occupied by the covalent inhibitors in G12C RAS variants.  This site is present at a crucial location that can be used to modulate the dynamics of the switch regions, thereby modulating the binding of upstream of GEFs. We further hypothesise the possibility to occlude the nucleotide binding site by blocking the switch region conformation in a position such that it is unfavourable for GTP binding, thereby prolonging the nucleotide free state and prevent the downstream signalling. 
+We measured pocket volume changes in the nucleotide binding site in response to various Rac1 binding partners. Nucleotide binding restricts the volume fluctuations under 3000\r{A}$^3$ (\textbf{Figure \ref{fig:nucleotidepockets}B}). Further, we tested the effect of removal of nucleotides (delGDP and delGTP in \textbf{Figure \ref{fig:nucleotidepockets}B}) and found that mean pocket volume and fluctuations in the volumes showed tendency to increase. It is now well established that GEF function by facilitating the dissociation of GDP, followed by GTP binding. The latter promotes the dissociation of GEFs from the Rac1 surface. The pocket volume fluctuations in the nucleotide binding site were significantly increased. However, the magnitude of increase was not the same for all GEFs used in this study. For example, PREX1 and DOCK2, showed volume changes with similar magnitude as seen in Rac1 devoid of nucleotides (delGDP and delGTP in \textbf{Figure \ref{fig:nucleotidepockets}B}). Interestingly, TIAM1 and VAV1 showed significantly enlarged nucleotide pocket. The volume fluctuations ranged from 2000\r{A}$^3$ to 4000\r{A}$^3$. We hypothesis that, such difference in pocket volume changes in presence of different GEF suggests that X-ray structure has perhaps captured the Rac1-GEF complexes either just after GDP dissociation (PREX1 and DOCK2) or in a state that was preorganised for GTP:$Mg^{2+}$ association.
  
 \begin{figure}[ht]
     \centering
@@ -156,7 +156,7 @@ We employed the POVME2 tool to identify and measure the pocket volume changes ov
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig3.jpg}
-    \caption{RAC1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human RAC1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Orange Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for human RAC1 domain. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region.delGDP and delGTP are systems from which by deleting the corresponding nucleotides from the RAC1 binding pocket to create an \textit{apo} system.} 
+    \caption{Rac1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human Rac1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Orange Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for human Rac1 domain. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region.delGDP and delGTP are systems from which by deleting the corresponding nucleotides from the Rac1 binding pocket to create an \textit{apo} system.} 
     \label{fig:MD}
 \end{figure}
 
@@ -172,30 +172,30 @@ We employed the POVME2 tool to identify and measure the pocket volume changes ov
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig4.jpg}
-    \caption{Essential Dynamics of RAC1 protein extracted using principal component analysis. } 
+    \caption{Essential Dynamics of Rac1 protein extracted using principal component analysis. } 
     \label{fig:PCA-1}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig5.jpg}
-    \caption{Essential Dynamics of RAC1 protein extracted using principal component analysis. } 
+    \caption{Essential Dynamics of Rac1 protein extracted using principal component analysis. } 
     \label{fig:PCA-2}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig6.jpg}
-    \caption{Per Residue contribution from RAC1 protein towards GEF binding. } 
+    \caption{Per Residue contribution from Rac1 protein towards GEF binding. } 
     \label{fig:MMGBSA}
 \end{figure}
 
-\subsection{identifying alternate binding pockets on RAC1 surface} 
+\subsection{identifying alternate binding pockets on Rac1 surface} 
 
 
 
  \begin{enumerate}   
-    \item Discuss elaborately the RAC1 regions that significantly contribute to GEF binding vis-à-vis X-ray observations on these interactions. 
+    \item Discuss elaborately the Rac1 regions that significantly contribute to GEF binding vis-à-vis X-ray observations on these interactions. 
         a) Link and compare to the dynamical observation of these regions/residues w/o GEFs.
     \item Show and discuss the nucleotide site volume changes as follows:
          \begin{enumerate}   
@@ -207,8 +207,8 @@ We employed the POVME2 tool to identify and measure the pocket volume changes ov
         \end{enumerate}
     \item Show and discuss all other pockets 
     \begin{enumerate} 
-       \item KRAS-G12C covalent binding pocket $->$ Since this already shown in GTPases (RAS family) elaborate here RAC1 (or RHO family) and discuss if this FIRST time observation or not. If not, then discuss with published work.
-        \item Discuss all other pockets $->$ Find out if any have been reported for RAC1 or RHO family or other GTPases.
+       \item KRAS-G12C covalent binding pocket $->$ Since this already shown in GTPases (RAS family) elaborate here Rac1 (or RHO family) and discuss if this FIRST time observation or not. If not, then discuss with published work.
+        \item Discuss all other pockets $->$ Find out if any have been reported for Rac1 or RHO family or other GTPases.
         \end{enumerate}
     \item Link MMGBSA per residue decomposition and contribution of residues surrounding these pockets vis-à-vis different GEFs.
 \end{enumerate}        

@@ -9,9 +9,9 @@
 \author{Elvis A. F. Martis}
 \affiliation[Nantes University]
 {US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, FRANCE}
-\author{Johann Hendrickx}
-\affiliation[Nantes University]
-{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, FRANCE}
+%\author{Johann Hendrickx}
+%\affiliation[Nantes University]
+%{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, FRANCE}
 \author{Vincent Sauzeau}
 \affiliation[CHU Nantes] {UMR\_S 1087 {/} UMR\_C 6291 l'Unité de Recherche de l'Institut du Thorax, F-44000 Nantes, FRANCE}
 \author{Stéphane Téletchéa}
@@ -127,18 +127,14 @@ The free energy of binding was computed using the equation (Eq-\ref{eq:free-ener
 
 Where  \({\Delta}E_{MM}\) is the interaction energy between the binding partners computed in the gas phase using a molecular mechanics method.  The solvation-free energy or the enthalpy of hydration \({\Delta}H_{GBSA}\)  was computed using the Generalized-Born Surface Area (GBSA) method, and the entropic component of binding \(T{\Delta}S\) was not computed due to huge computation cost. The internal dielectric constant for GBSA calculations was set to 1 and the solvent dielectric constant was fixed as 80. For computing free energy of binding using the MM-GBSA method, the OBC’s GB model\cite{igb5} $ (igb = 5) $ was used. The mbondi3 radii set was employed to define the PB radii for all solute atoms during the preparation of the topology and parameter files in the leap module in AMBERTools23. The ionic strength for  GBSA calculations was maintained at 150 mM. All energy components, in an implicit solvent, were calculated using a large cut-off of 999 Å. The surface area for the non-polar solvation term was computed using the linear combination of pairwise overlaps (LCPO) method\cite{lcpo}. To identify the critical amino acid residues that are critical for the protein-protein interactions between Rac1 and GEFs, we computed the pairwise decomposition of the binding affinity value. 
 
-% Results and Discussion
+
 \section{Results and discussion}
+
 Small GTPases play a significant role in regulating cellular processes owing to their switching mechanism. GTP-bound state is called the \textit{Active state} and the GDP-bound is called the \textit{Inactive state}. The energy obtained from the GTP hydrolysis is used to undergo conformational changes that are partially responsible for the switching mechanism. Since nucleotides bind tightly to the GTPases, their dissociation is assisted by Guanine Exchange Factors (GEFs).  There are several GEFs available for this purpose, and specific GEFs active specific GTPases. In case of Rac1, PREX1, TIAM1, VAV1 and DOCK2 are specific GEFs implicated in a wide variety of diseases. Structurally, PREX1, TIAM1 and VAV1 are DH/PH domain containing proteins, while DOCK2 contains DHR domain. Irrespective of their structural diversity, all GEFs bind to the switch I and II regions and assist in the nucleotide exchange, i.e. dissociation of GDP and association of GTP. 
 The nucleotide binding site is well conserved among the GTPase family, and therefore, making it challenging to target for finding small molecule binders. The molar concentrations of GTPs with picomolar levels of binding affinity makes it even more difficult for the competing the small molecules. Therefore, we embarked to understand the complete dynamical landscape of Rac1 protein bound to either nucleotides (GDP or GTP) or GEFs (PREX1, TIAM1, VAV1 or DOCK2). We expect to locate alternate binding pockets, that may improve the druggability of Rac1 protein. We also attempt to understand if different binding parters show differences in the pockets we identify which can be exploited to selectively target Rac1 implicated in different signalling pathways. We hypothesise that the selectivity can be measured as the function of the pocket volume changes. we also attempt to establish if there exists any correlation in the volume changes amongst other pockets or with the nucleotide binding site. The latter can be believed to influence the nucleotide traffic and eventually control the switching mechanism of Rac1. 
+
 \subsection{Rac1 shows possibility of four more binding pockets}
-We employed the POVME2 tool to identify and measure the pocket volume changes over the course of the MD trajectory. Rac1 was  simulated under different conditions (See \textbf{Table \ref{tbl: Detailed system studies}}). Prior to identifying the binding pockets, all binding partners including nucleotides were deleted from the trajectory. Pockets were identified using the starting conformation of Rac1 X-ray structure, and the pocket volume changes were monitored throughout the course of the simulation. 
 
-We measured pocket volume changes in the nucleotide binding site in response to various Rac1 binding partners. The presence of nucleotides (GDP or GTP) in their site restricts the volume fluctuations under 3000\r{A}$^3$ (\textbf{Figure \ref{fig:nucleotidepockets}B}). This is the attributed to tight binding of nucleotides stabilised with $Mg^{2+}$ that interactions with the switch regions and reduces their conformational flexibility. This was tested by removal of nucleotides (delGDP and delGTP in \textbf{Figure \ref{fig:nucleotidepockets}B}) and found that mean pocket volume and fluctuations in the volumes showed greater tendency to increase. It is well established that GEF function by facilitating the dissociation of GDP, followed by GTP binding. The latter promotes the dissociation of GEFs from the Rac1 surface. The pocket volume fluctuations in the nucleotide binding site were significantly increased in presence of GEFs. However, the increase in the magnitude was not the same for all GEFs used in this study. For example, PREX1 and DOCK2, showed volume changes with similar magnitude as seen in Rac1 devoid of nucleotides (delGDP and delGTP in \textbf{Figure \ref{fig:nucleotidepockets}B}). Interestingly, TIAM1 and VAV1 showed significantly enlarged nucleotide pocket. These volume fluctuations ranged from 2000\r{A}$^3$ to 4000\r{A}$^3$. We hypothesis that, such difference in pocket volume changes in presence of different GEF suggests that X-ray structure has perhaps captured the Rac1-GEF complexes either just after GDP dissociation (PREX1 and DOCK2) or in a state that was pre-organised for GTP:$Mg^{2+}$ association. 
-
-In addition to the nucleotide binding site (\textbf{Figure \ref{fig:nucleotidepockets}A}), we identified four pockets on the Rac1 surface that we believe are potential new binding sites. Site P1  lies are the inter-junction between switch I and II, while site P2 lies slightly below the Site P1. These sites form the interface region where GEFs and GAPs are known to dock to perform their functions (\textbf{Figure \ref{fig:otherpockets}A}).  Site P2 in Rac1 is similar to the one in K-RAS and H-RAS \cite{sun2012discovery, maurer2012small} that is occupied by the covalent inhibitors in G12C RAS variants.  This site is present at a crucial location that can be used to modulate the dynamics of the switch regions. Thereby modulating the binding of upstream of GEFs (\textbf{Figure \ref{fig:otherpockets}B}) can be believed to be GEF specific owing to their different pocket volumes and therefore, accessible to small molecules of different sizes. The is also a possibility to occlude the nucleotide binding site by blocking the switch region conformations in a position such that it is unfavourable for GTP binding. thereby prolonging the nucleotide free state and prevent the downstream signalling. Site P2 located below Site P1, and also found to show different volume changes, rather increased volume, in presence of different GEF (\textbf{Figure \ref{fig:otherpockets}C}). This could serve as a pocket to extend Site P1 binders for more GEF specific control. The targetting of site P1 and/or site P2 will either prevent GEF binding to Rac1, and thereby, prevent activation of GEF-dependent downstream signalling. 
-
-Away from GEF binding site, we also identified Site P3 and P4  (\textbf{Figure \ref{fig:otherpockets}A}). Site P3 is located at the starting point of switch I. Targetting this site could modulate the switch I dynamics. This could in return have on an influence of the traffic to the nucleotide binding site as well as GEF binding. Site P4 is the smallest pocket in terms of the volume and the only site with no direct connection to the switch region. 
 
 \begin{figure}[ht]
     \centering
@@ -147,21 +143,29 @@ Away from GEF binding site, we also identified Site P3 and P4  (\textbf{Figure \
     \label{fig:nucleotidepockets}
 \end{figure}
 
+We employed the POVME2 tool to identify and measure the pocket volume changes over the course of the MD trajectory. Rac1 was  simulated under different conditions (See \textbf{Table \ref{tbl: Detailed system studies}}). Prior to identifying the binding pockets, all binding partners including nucleotides were deleted from the trajectory. Pockets were identified using the starting conformation of Rac1 X-ray structure, and the pocket volume changes were monitored throughout the course of the simulation. 
+
+We measured pocket volume changes in the nucleotide binding site in response to various Rac1 binding partners. The presence of nucleotides (GDP or GTP) in their site restricts the volume fluctuations under 3000\r{A}$^3$ (\textbf{Figure \ref{fig:nucleotidepockets}B}). This is the attributed to tight binding of nucleotides stabilised with $Mg^{2+}$ that interactions with the switch regions and reduces their conformational flexibility. This was tested by removal of nucleotides (delGDP and delGTP in \textbf{Figure \ref{fig:nucleotidepockets}B}) and found that mean pocket volume and fluctuations in the volumes showed greater tendency to increase. It is well established that GEF function by facilitating the dissociation of GDP, followed by GTP binding. The latter promotes the dissociation of GEFs from the Rac1 surface. The pocket volume fluctuations in the nucleotide binding site were significantly increased in presence of GEFs. However, the increase in the magnitude was not the same for all GEFs used in this study. For example, PREX1 and DOCK2, showed volume changes with similar magnitude as seen in Rac1 devoid of nucleotides (delGDP and delGTP in \textbf{Figure \ref{fig:nucleotidepockets}B}). Interestingly, TIAM1 and VAV1 showed significantly enlarged nucleotide pocket. These volume fluctuations ranged from 2000\r{A}$^3$ to 4000\r{A}$^3$. We hypothesis that, such difference in pocket volume changes in presence of different GEF suggests that X-ray structure has perhaps captured the Rac1-GEF complexes either just after GDP dissociation (PREX1 and DOCK2) or in a state that was pre-organised for GTP:$Mg^{2+}$ association. 
 
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig2.jpg}
-    \caption{Four binding site identified using POVME2. \textbf{A)} Shows the surface model of Rac1 protein with coloured spears illustrating the binding site identified. The following violin plots illustrate the distribution of the pocket volumes for each of these binding sites on the Rac1 surface monitored when Rac1 is complexed with either GEFs, GDP, GTP or in the \textit{apo}-state. \textbf{B)} Site P1. It is same site of the KRAS-G12C covalent inhibitors binds.   \textbf{C)} Site P2 is found at the bottom of switch I and II loops. \textbf{D)} Site P3 is found at the bottom of the switch I region.  \textbf{E)} Site P4 is only pocket that is not located close to switch I or II regions.} 
+    \caption{Four binding site identified using POVME2. \textbf{A)} Shows the surface model of Rac1 protein with coloured spears illustrating the binding site identified. The following violin plots illustrate the distribution of the pocket volumes for each of these binding sites on the Rac1 surface monitored when Rac1 is complexed with either GEFs, GDP, GTP or in the \textit{apo}-state. \textbf{B)} Site P1. It is same site of the KRAS-G12C covalent inhibitors binds.   \textbf{C)} Site P2 is found at the bottom of switch I and II loops. \textbf{D)} Site P3 is found at the bottom of the switch I region.  \textbf{E)} Site P4 is only pocket that is not located close to switch I or II regions. The dotted line indicates the minimum volume for druggability of a pocket\cite{perot2010druggable, nayal2006nature, an2005pocketome}.} 
     \label{fig:otherpockets}
 \end{figure}
+
+In addition to the nucleotide binding site (\textbf{Figure \ref{fig:nucleotidepockets}A}), we identified four pockets on the Rac1 surface that we believe are potential new binding sites. Site P1  lies are the inter-junction between switch I and II, while site P2 lies slightly below the Site P1. These sites form the interface region where GEFs and GAPs are known to dock to perform their functions (\textbf{Figure \ref{fig:nucleotidepockets}A}).  Site P2 in Rac1 is similar to the one in K-RAS and H-RAS \cite{sun2012discovery, maurer2012small} that is occupied by the covalent inhibitors in G12C RAS variants.  This site is present at a crucial location that can be used to modulate the dynamics of the switch regions. Thereby modulating the binding of upstream of GEFs (\textbf{Figure \ref{fig:otherpockets}B}) can be believed to be GEF specific owing to their different pocket volumes and therefore, accessible to small molecules of different sizes. The is also a possibility to occlude the nucleotide binding site by blocking the switch region conformations in a position such that it is unfavourable for GTP binding. thereby prolonging the nucleotide free state and prevent the downstream signalling. Site P2 located below Site P1, and also found to show different volume changes, rather increased volume, in presence of different GEF (\textbf{Figure \ref{fig:otherpockets}C}). This could serve as a pocket to extend Site P1 binders for more GEF specific control. The targetting of site P1 and/or site P2 will either prevent GEF binding to Rac1, and thereby, prevent activation of GEF-dependent downstream signalling. 
+
+Away from GEF binding site are located site P3 and P4 (\textbf{Figure \ref{fig:nucleotidepockets}A}). Site P3 is located at the starting point of switch I. Targetting this site could modulate the switch I dynamics. This could in return have on an influence of the traffic to the nucleotide binding site as well as GEF binding. Site P4 is the smallest pocket in terms of the volume and the only site with no direct connection to the switch region. 
+
 
 \subsection{Nucleotide and GEF binding significantly affects the switch region dynamics}
  Comments on Structural dynamics
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig3.jpg}
-    \caption{Rac1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human Rac1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Orange Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for human Rac1 domain. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region.delGDP and delGTP are systems from which by deleting the corresponding nucleotides from the Rac1 binding pocket to create an \textit{apo} system.} 
+    \caption{Rac1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human Rac1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Orange Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for human Rac1 domain. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region. \textbf{delGDP} and \textbf{delGTP} are systems created by deleting the nucleotides from the Rac1 binding pocket to create corresponding \textit{apo} system.} 
     \label{fig:MD}
 \end{figure}
 
@@ -177,14 +181,14 @@ Away from GEF binding site, we also identified Site P3 and P4  (\textbf{Figure \
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig4.jpg}
-    \caption{Essential Dynamics of Rac1 protein extracted using principal component analysis. } 
+    \caption{Effect of nucleotide binding on the essential dynamics of Rac1 protein. } 
     \label{fig:PCA-1}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig5.jpg}
-    \caption{Essential Dynamics of Rac1 protein extracted using principal component analysis. } 
+    \caption{Effect of GEF binding on the essential dynamics of Rac1 protein } 
     \label{fig:PCA-2}
 \end{figure}
 
@@ -195,7 +199,7 @@ Away from GEF binding site, we also identified Site P3 and P4  (\textbf{Figure \
     \label{fig:MMGBSA}
 \end{figure}
 
-\subsection{identifying alternate binding pockets on Rac1 surface} 
+
 
 
 

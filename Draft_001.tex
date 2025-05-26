@@ -139,8 +139,8 @@ The nucleotide binding site is well conserved among the GTPase family, and there
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig1.jpg}
-    \caption{The Surface of Rac1 with emphasis on nucleotide binding site. \textbf{A)} Shows the surface model of Rac1 protein with coloured spears illustrating the binding site identified with POVME2. The helical insert is highlighted using the yellow colour. The green region indicates the switch II and orange region indicates the switch I region. The magenta region slightly visible through the red spears indicates the P-loop. The red spears occupy the nucleotide binding site that is lined with helical insert, switch regions and the P-loop forms the phosphate binding region. Blue spears occupy the site P1 and the cyan spears occupy the site P2. Site P3 and P4 are visible by rotating the Rac1 by 90\textdegree. The salmon pink spears occupy site P3 while the olive green spears occupy site P5.  \textbf{B)} The violin plots illustrate the distribution of the pocket volumes for each of the nucletide binding site. The changes in the pocket volumes are monitored when Rac1 is complexed with either GEFs, GDP, GTP or in the \textit{apo}-state.}  
-    \label{fig:nucleotidepockets}
+    \caption{The Surface of Rac1 with all plausible binding sites. }  
+    \label{fig:pockets}
 \end{figure}
 
 We employed the POVME2 tool to identify and measure the pocket volume changes over the course of the MD trajectory. Rac1 was  simulated under different conditions (See \textbf{Table \ref{tbl: Detailed system studies}}). Prior to identifying the binding pockets, all binding partners including nucleotides were deleted from the trajectory. Pockets were identified using the starting conformation of Rac1 X-ray structure, and the pocket volume changes were monitored throughout the course of the simulation. 
@@ -151,8 +151,8 @@ We measured pocket volume changes in the nucleotide binding site in response to 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig2.jpg}
-    \caption{Four binding site identified using POVME2. \textbf{A)} Shows the surface model of Rac1 protein with coloured spears illustrating the binding site identified. The following violin plots illustrate the distribution of the pocket volumes for each of these binding sites on the Rac1 surface monitored when Rac1 is complexed with either GEFs, GDP, GTP or in the \textit{apo}-state. \textbf{B)} Site P1. It is same site of the KRAS-G12C covalent inhibitors binds.   \textbf{C)} Site P2 is found at the bottom of switch I and II loops. \textbf{D)} Site P3 is found at the bottom of the switch I region.  \textbf{E)} Site P4 is only pocket that is not located close to switch I or II regions. The dotted line indicates the minimum volume for druggability of a pocket\cite{perot2010druggable, nayal2006nature, an2005pocketome}.} 
-    \label{fig:otherpockets}
+    \caption{\textbf{A)} Shows the surface model of Rac1 protein with coloured spears illustrating the binding site identified with POVME2. The helical insert is highlighted using the yellow colour. The green region indicates the switch II and orange region indicates the switch I region. The magenta region slightly visible through the red spears indicates the P-loop. The red spears occupy the nucleotide binding site that is lined with helical insert, switch regions and the P-loop forms the phosphate binding region. Blue spears occupy the site P1 and the cyan spears occupy the site P2. Site P3 and P4 are visible by rotating the Rac1 by 90\textdegree. The salmon pink spears occupy site P3 while the olive green spears occupy site P5.  \textbf{B)} The violin plots illustrate the distribution of the pocket volumes for each of the nucletide binding site. The changes in the pocket volumes are monitored when Rac1 is complexed with either GEFs, GDP, GTP or in the \textit{apo}-state.} 
+    \label{fig:nucleotidepockets}
 \end{figure}
 
 In addition to the nucleotide binding site (\textbf{Figure \ref{fig:nucleotidepockets}A}), we identified four pockets on the Rac1 surface that we believe are potential new binding sites. Site P1  lies are the inter-junction between switch I and II, while site P2 lies slightly below the Site P1. These sites form the interface region where GEFs and GAPs are known to dock to perform their functions (\textbf{Figure \ref{fig:nucleotidepockets}A}).  Site P2 in Rac1 is similar to the one in K-RAS and H-RAS \cite{sun2012discovery, maurer2012small} that is occupied by the covalent inhibitors in G12C RAS variants.  This site is present at a crucial location that can be used to modulate the dynamics of the switch regions. Thereby modulating the binding of upstream of GEFs (\textbf{Figure \ref{fig:otherpockets}B}) can be believed to be GEF specific owing to their different pocket volumes and therefore, accessible to small molecules of different sizes. The is also a possibility to occlude the nucleotide binding site by blocking the switch region conformations in a position such that it is unfavourable for GTP binding. thereby prolonging the nucleotide free state and prevent the downstream signalling. Site P2 located below Site P1, and also found to show different volume changes, rather increased volume, in presence of different GEF (\textbf{Figure \ref{fig:otherpockets}C}). This could serve as a pocket to extend Site P1 binders for more GEF specific control. The targetting of site P1 and/or site P2 will either prevent GEF binding to Rac1, and thereby, prevent activation of GEF-dependent downstream signalling. 
@@ -165,11 +165,11 @@ Away from GEF binding site are located site P3 and P4 (\textbf{Figure \ref{fig:n
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig3.jpg}
-    \caption{Rac1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human Rac1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Orange Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for human Rac1 domain. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region. \textbf{delGDP} and \textbf{delGTP} are systems created by deleting the nucleotides from the Rac1 binding pocket to create corresponding \textit{apo} system.} 
-    \label{fig:MD}
+    \caption{Four binding site identified using POVME2. \textbf{A)} Shows the surface model of Rac1 protein with coloured spears illustrating the binding site identified. The following violin plots illustrate the distribution of the pocket volumes for each of these binding sites on the Rac1 surface monitored when Rac1 is complexed with either GEFs, GDP, GTP or in the \textit{apo}-state. \textbf{B)} Site P1. It is same site of the KRAS-G12C covalent inhibitors binds.   \textbf{C)} Site P2 is found at the bottom of switch I and II loops. \textbf{D)} Site P3 is found at the bottom of the switch I region.  \textbf{E)} Site P4 is only pocket that is not located close to switch I or II regions. The dotted line indicates the minimum volume for druggability of a pocket\cite{perot2010druggable, nayal2006nature, an2005pocketome}.} 
+    \label{fig:otherpockets}
 \end{figure}
 
- 
+
  \begin{enumerate}
     \item Region wise w/ and w/o nucleotides
     \item Region wise w/ and w/o GEFs
@@ -181,26 +181,31 @@ Away from GEF binding site are located site P3 and P4 (\textbf{Figure \ref{fig:n
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig4.jpg}
-    \caption{Effect of nucleotide binding on the essential dynamics of Rac1 protein. } 
-    \label{fig:PCA-1}
+    \caption{Rac1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human Rac1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Orange Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for human Rac1 domain. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region. \textbf{delGDP} and \textbf{delGTP} are systems created by deleting the nucleotides from the Rac1 binding pocket to create corresponding \textit{apo} system.} 
+    \label{fig:MD}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig5.jpg}
-    \caption{Effect of GEF binding on the essential dynamics of Rac1 protein } 
-    \label{fig:PCA-2}
+    \caption{Effect of nucleotide binding on the essential dynamics of Rac1 protein } 
+    \label{fig:PCA-1}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig6.jpg}
-    \caption{Per Residue contribution from Rac1 protein towards GEF binding. } 
-    \label{fig:MMGBSA}
+    \caption{Effect of GEF binding on the essential dynamics of Rac1 protein } 
+    \label{fig:PCA-2}
 \end{figure}
 
 
-
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Fig7.jpg}
+    \caption{Per Residue contribution from Rac1 protein towards GEF binding. } 
+    \label{fig:MMGBSA}
+\end{figure}
 
 
  \begin{enumerate}   

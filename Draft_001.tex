@@ -2,16 +2,13 @@
 \usepackage{natbib} 
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc}    
-%\usepackage{hyperref}   
+\usepackage{hyperref}   
 \usepackage{url}      
 
-% Authors
+
 \author{Elvis A. F. Martis}
 \affiliation[Nantes University]
 {US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, FRANCE}
-%\author{Johann Hendrickx}
-%\affiliation[Nantes University]
-%{US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, FRANCE}
 \author{Vincent Sauzeau}
 \affiliation[CHU Nantes] {UMR\_S 1087 {/} UMR\_C 6291 l'Unité de Recherche de l'Institut du Thorax, F-44000 Nantes, FRANCE}
 \author{Stéphane Téletchéa}
@@ -19,22 +16,22 @@
 \affiliation[Nantes University]
 {US2B, Nantes Université, CNRS, UMR 6286, F-44000 Nantes, FRANCE}
 
-% Title
+
 \title
 {Guanine Exchange Factors Show Existence of Transient Pockets on Rac1 Surface}
 
 
 \begin{document}
 
- % Abstract
+
  \begin{abstract}
    Rac1 (Ras-related C3 botulinum toxin substrate 1) is a molecular switch catalysing by hydrolysing GTP to GDP. Owing to the slow nature of GTP hydrolysis and even slower dissociation of GDP, Rac1 is always assisted by Guanine Exchange Factors (GEFs) and GTPase-activating proteins (GAPs). As a result, GEFs and GAPs control the switching mechanism in Rac1. This regulatory control mechanism by several GEFs and GAPs provides a means to modulate the Rac1 activity in several diseases in which it has been implicated. The work described here attempts to understand various dynamical aspects of Rac1 in the presence of GTP, GDP, and guanine exchange factors (GEFs) to locate transient binding site(s) on the Rac1 surface. We observe four binding sites, two of which are transient sites that form the docking site for GEFs. In the absence of GEFs, the pocket volumes are too small to be druggable, indicating their transient nature. Using the pocket volume fluctuations, we evaluate their significance for targeting small molecules.  
 \end{abstract}
 
 
-% Main Text starts from here
 
-% Introduction and Motivation of the work
+
+
 \section{Introduction}
     Small GTPases, a ubiquitous class of proteins, play pivotal roles in various cellular processes. Their functions include signal transduction, vesicle trafficking, cytoskeletal dynamics, and cell division. Ras GTPases regulate cell proliferation, differentiation, and survival. While Rho GTPases govern cytoskeletal dynamics and cell migration.  Their activity is regulated through a molecular switch mechanism by guanine nucleotide exchange factors (GEFs), GTPase-activating proteins (GAPs), and guanine nucleotide dissociation inhibitors (GDIs)\cite{cherfils2013regulation}. These molecular switches cycle between OFF (GDP-bound inactive) and ON (GTP-bound active) states. This switching mechanism controls various processes like cell growth and differentiation to vesicular and nuclear transport\cite{cherfils2013regulation, loirand2013small}. 
     Small GTPases are proteins that possess conserved domains across several families; made up of six $\beta$-sheets surrounded by 5 $\alpha$-helices. All domains are conserved such that they carry a guanine nucleoside binding site divided to recognize the guanine base and phosphate groups and the magnesium ion\cite{toma2019structural, cherfils2013regulation}. The switch regions regulate the traffic to the guanine nucleoside binding site. It is also well established that GTPases alone cannot hydrolyse GTP effectively. Therefore,  GEFs and GAPs, play a significant role in assisting the switching mechanism of GTPases. They control the dynamics of the switch regions that facilitate either hydrolysis of GTP or dissociation of GDP. GDP:Mg$^{2+}$ dissociates from GTPases very slowly, and therefore, GEFs assist in exchanging GDP for GTP One of the accepted mechanisms of GEFs in the dissociation of GDP is by electrostatic repulsion of magnesium ion that forms strong interaction with GTPases and phosphate groups of GDP. The loss of magnesium ion weakens the affinity of GDP which eventually dissociates. Alternatively, some GEFs can rearrange the switch I or II conformations such that GDP's affinity is reduced facilitating its dissociation. However, GEFs can also combine the two mechanisms to facilitate GDP dissociation \cite{cherfils1999gefs, cherfils2014gefs}. \\ 
@@ -42,7 +39,7 @@
     In some classes of GTPases, the active and inactive state cycling is conjugated with GTPases being shuttled between the cell membrane and cytosol. Such GTPases are found with post-translational modification to carry long-chain fatty acids at their C-terminal to assist bilayer insertion. GDIs\cite{dermardirossian2005gdis, maruta1998gtpase} sequester the lipid component to prevent membrane insertion to GTPases in the cytosol. This coordinated action of GTPases, GEFs, GAPs, and GDIs is essential for various cellular processes. Dysregulation of these components contributes to pathologies like cancer, neurodegeneration, and inflammatory disorders. For instance, mutations in Ras and its regulators are implicated in oncogenesis, highlighting the therapeutic potential of targeting GTPase signalling pathways\cite{cherfils2013regulation}. Such mutations are known to disrupt the equilibrium between the active and inactive states of GTPases. It has also been observed that some mutations enhance the affinity of GEFs or GAPs that traps the small GTPases either in an activated state or inactivated state. Small molecule inhibitors targeting GTPase activity or disruptors of GEF/GAP interactions\cite{gray2020targeting} are under development for cancer therapy. However, there are several challenges in targeting GTPases and/or GTPases-GAP/GEF complexes. Firstly, targeting the guanine binding site is challenging owing to the large intracellular concentration of GTP and high affinity\cite{traut1994physiological}. In such cases, finding an allosteric site can avoid such competition with endogenous substrates. GTPase hyper-activation or hyper-inactivation can be corrected by disrupting the protein-protein interaction (PPI) between GTPases and GEFs/GAPs. However, it is known that targeting PPI interfaces is extremely challenging due to shallow cavities. 
    
 
-% Methods section
+
 \section{Methods}
 
 \begin{table}
@@ -100,7 +97,7 @@ All simulations were performed with the SHAKE algorithm\cite{shake} to constrain
 \subsection{Identification and measurement of alternate pockets on Rac1:} 
     POVME2 \cite{durrant2011povme, durrant2014povme} was employed for identifying various pockets on the Rac1. To be able to incorporate various experimental conformations of Rac1, we employed Rac1 with different binding partners (see \textbf{Table \ref{tbl: Detailed system studies}}).  To identify the pockets, the pocketID module on POVME2 was used on aforementioned Rac1 structures. The parameters used for pocket identification are shown in \textbf{Table~\ref{tbl:pocketID}}. Following the pocket identification, we monitored the pocket volume changes of these pockets throughout MD trajectories. It has been observed that the pocket might be a good candidate for druggability if its volume range\cite{perot2010druggable, nayal2006nature, an2005pocketome} was found to lie between 610\r{A}$^3$ to 930\r{A}$^3$. 
     
-    \begin{table}
+  \begin{table}
   \caption{Parameters used for pocket identification}
   \label{tbl:pocketID}
   \begin{tabular}{lc}
@@ -127,13 +124,13 @@ The free energy of binding was computed using the equation (Eq-\ref{eq:free-ener
 
 Where  \({\Delta}E_{MM}\) is the interaction energy between the binding partners computed in the gas phase using a molecular mechanics method.  The solvation-free energy or the enthalpy of hydration \({\Delta}H_{GBSA}\)  was computed using the Generalized-Born Surface Area (GBSA) method, and the entropic component of binding \(T{\Delta}S\) was not computed due to huge computation cost. The internal dielectric constant for GBSA calculations was set to 1 and the solvent dielectric constant was fixed as 80. For computing free energy of binding using the MM-GBSA method, the OBC’s GB model\cite{igb5} $ (igb = 5) $ was used. The mbondi3 radii set was employed to define the PB radii for all solute atoms during the preparation of the topology and parameter files in the leap module in AMBERTools23. The ionic strength for  GBSA calculations was maintained at 150 mM. All energy components, in an implicit solvent, were calculated using a large cut-off of 999 Å. The surface area for the non-polar solvation term was computed using the linear combination of pairwise overlaps (LCPO) method\cite{lcpo}. To identify the critical amino acid residues that are critical for the protein-protein interactions between Rac1 and GEFs, we computed the pairwise decomposition of the binding affinity value. 
 
-
+ \newpage
 \section{Results and discussion}
 
 Rac1 plays a significant role in regulating cellular processes owing to their switching mechanism that recruit several proteins upstream and downstream. The GTP-bound state is called the \textit{Active state} and the GDP-bound is called the \textit{Inactive state}. The energy obtained from the GTP hydrolysis is used to undergo conformational changes that are partially responsible for the switching mechanism. And the rest of the conformational switching is brought about by GTPase activating proteins (GAPs) or Guanine Exchange Factors (GEFs). Owing to the picomolar affinity of the nucleotides to Rac1,  GEFs play a crucial role in the the nucleotide dissociation. They do so by bringing about a desirable conformational changes in the Rac1 switch regions to expel GDP and magnesium atom.  There are several GEFs available for this purpose, and specific GEFs active specific GTPases. PREX1, TIAM1, VAV1 and DOCK2 are  Rac1 specific GEFs implicated in a wide variety of diseases. Structurally, PREX1, TIAM1 and VAV1 are DH/PH domain containing proteins, while DOCK2 contains DHR domain. Irrespective of their structural diversity, GEFs bind to the switch I and II regions and assist in the nucleotide exchange.
 
 The nucleotide binding site is well conserved among the GTPase family, and therefore, posing significant challenges to target it. The molar concentrations of GTPs and picomolar binding affinity makes it more difficult for the competing small molecules. The switching mechanism offers a conformational landscape that can be studied and new binding sites can be located. Furthermore, the associate of the exchange factors shows the existence of alternative binding sites that might transient open to allow binding of other proteins. Therefore, we embarked to understand the complete dynamical landscape of Rac1 protein bound to either nucleotides (GDP or GTP) or GEFs (PREX1, TIAM1, VAV1 or DOCK2). We expect to locate alternate binding pockets that may improve the druggability of Rac1 protein. We also attempt to understand if different binding parters show differences in the pockets we identify which can be exploited to selectively target Rac1 implicated in different signalling pathways. We hypothesise that the selectivity can be measured as the function of the pocket volume changes. we also attempt to establish if there exists any correlation in the volume changes amongst other pockets or with the nucleotide binding site. The latter can be believed to influence the nucleotide traffic and eventually control the switching mechanism of Rac1. 
-
+ \newpage
 \subsection{GEF assistence opening of transient pockets}
 
 
@@ -148,7 +145,7 @@ We employed the POVME2 tool to identify and measure the pocket volume changes ov
 We measured pocket volume changes in the nucleotide binding site in response to various Rac1 binding partners. The presence of nucleotides (GDP or GTP) in their site restricts the volume fluctuations under 3000\r{A}$^3$ (\textbf{Figure \ref{fig:nucleotidepockets}B}). This is the attributed to tight binding of nucleotides, further stabilised with $Mg^{2+}$ that interacts with the switch regions.  This severely reduces their conformational flexibility the switch regions (\textbf{Figure \ref{fig:MD}D and \ref{fig:MD}E}). The switch region conformation is also found to be reduced by GEF binding (\textbf{Figure \ref{fig:MD}D and \ref{fig:MD}E}) suggesting their role to control the nucleotide traffic by modulating the switching regions.  We tested this hypothesis by simulating a nucleotide-free and GEF-free form of Rac1 (delGDP and delGTP in \textbf{Figure \ref{fig:nucleotidepockets}B}) and found that the mean pocket volume and fluctuations showed a greater tendency to increase. 
 The pocket volume fluctuations in the nucleotide binding site was higher in presence of GEFs than in presence of GTP or GDP. The increase in the magnitude was not the same for all GEFs used in this study. For example, PREX1 and DOCK2, showed volume changes with similar magnitude as seen in Rac1 devoid of nucleotides (delGDP and delGTP in \textbf{Figure \ref{fig:nucleotidepockets}B}). Interestingly, TIAM1 and VAV1 showed significantly enlarged nucleotide pocket. These volume fluctuations ranged from 2000\r{A}$^3$ to 4000\r{A}$^3$. We hypothesis that, such difference in pocket volume changes in presence of different GEF suggests that X-ray structure has perhaps captured the Rac1-GEF complexes either just after GDP dissociation (PREX1 and DOCK2) or in a state that was pre-organised for GTP:$Mg^{2+}$ association. 
 
-
+ \newpage
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig2.jpg}
@@ -160,9 +157,12 @@ In addition to the nucleotide binding site (\textbf{Figure \ref{fig:nucleotidepo
 
 Away from GEF binding site are located site P3 and P4 (\textbf{Figure \ref{fig:nucleotidepockets}A}). Site P3 is located at the starting point of switch I. Targetting this site could modulate the switch I dynamics. This could in return have on an influence of the traffic to the nucleotide binding site as well as GEF binding. Site P4 is the smallest pocket in terms of the volume and the only site with no direct connection to the switch region. 
 
-
+ \newpage
 \subsection{Nucleotide and GEF binding significantly affects the switch region dynamics}
- Comments on Structural dynamics
+
+ 
+ 
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig3.jpg}
@@ -171,14 +171,16 @@ Away from GEF binding site are located site P3 and P4 (\textbf{Figure \ref{fig:n
 \end{figure}
 
 
- \begin{enumerate}
-    \item Region wise w/ and w/o nucleotides
-    \item Region wise w/ and w/o GEFs
-    \item Taken together, comment on 1. and 2.
-    \item Show with RMSF plots the flexibility of each region 
-    \item Support with PCA plots for more detailed discussion (later this will support different pocket dynamics)
-\end{enumerate}
 
+% \begin{enumerate}
+ %   \item Region wise w/ and w/o nucleotides
+ %   \item Region wise w/ and w/o GEFs
+ %   \item Taken together, comment on 1. and 2.
+  %  \item Show with RMSF plots the flexibility of each region 
+  %  \item Support with PCA plots for more detailed discussion (later this will support different pocket dynamics)
+%\end{enumerate}
+
+\newpage
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig4.jpg}
@@ -186,6 +188,7 @@ Away from GEF binding site are located site P3 and P4 (\textbf{Figure \ref{fig:n
     \label{fig:MD}
 \end{figure}
 
+\newpage
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig5.jpg}
@@ -193,6 +196,7 @@ Away from GEF binding site are located site P3 and P4 (\textbf{Figure \ref{fig:n
     \label{fig:PCA-1}
 \end{figure}
 
+\newpage
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig6.jpg}
@@ -200,7 +204,7 @@ Away from GEF binding site are located site P3 and P4 (\textbf{Figure \ref{fig:n
     \label{fig:PCA-2}
 \end{figure}
 
-
+\newpage
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Fig7.jpg}
@@ -209,26 +213,26 @@ Away from GEF binding site are located site P3 and P4 (\textbf{Figure \ref{fig:n
 \end{figure}
 
 
- \begin{enumerate}   
-    \item Discuss elaborately the Rac1 regions that significantly contribute to GEF binding vis-à-vis X-ray observations on these interactions. 
-        a) Link and compare to the dynamical observation of these regions/residues w/o GEFs.
-    \item Show and discuss the nucleotide site volume changes as follows:
-         \begin{enumerate}   
-        \item Inactive (GDP bound) $->$ Effect of GDP deletion
-       \item Active (GTP bound) $->$ Effect of GTP deletion
-        \item Binding DH/PH containing GEF $->$ PREX1, VAV1 and TIAM1
-       \item DHR domain containing GEF $->$ DOCK2
-        \item Discuss what is the "Taken Together message"
-        \end{enumerate}
-    \item Show and discuss all other pockets 
-    \begin{enumerate} 
-       \item KRAS-G12C covalent binding pocket $->$ Since this already shown in GTPases (RAS family) elaborate here Rac1 (or RHO family) and discuss if this FIRST time observation or not. If not, then discuss with published work.
-        \item Discuss all other pockets $->$ Find out if any have been reported for Rac1 or RHO family or other GTPases.
-        \end{enumerate}
-    \item Link MMGBSA per residue decomposition and contribution of residues surrounding these pockets vis-à-vis different GEFs.
-\end{enumerate}        
+% \begin{enumerate}   
+%    \item Discuss elaborately the Rac1 regions that significantly contribute to GEF binding vis-à-vis X-ray observations on these interactions. 
+ %       a) Link and compare to the dynamical observation of these regions/residues w/o GEFs.
+ %   \item Show and discuss the nucleotide site volume changes as follows:
+ %        \begin{enumerate}   
+ %       \item Inactive (GDP bound) $->$ Effect of GDP deletion
+%       \item Active (GTP bound) $->$ Effect of GTP deletion
+ %       \item Binding DH/PH containing GEF $->$ PREX1, VAV1 and TIAM1
+  %     \item DHR domain containing GEF $->$ DOCK2
+  %      \item Discuss what is the "Taken Together message"
+  %      \end{enumerate}
+  %  \item Show and discuss all other pockets 
+ %   \begin{enumerate} 
+  %     \item KRAS-G12C covalent binding pocket $->$ Since this already shown in GTPases (RAS family) elaborate here Rac1 (or RHO family) and discuss if this FIRST time observation or not. If not, then discuss with published work.
+%        \item Discuss all other pockets $->$ Find out if any have been reported for Rac1 or RHO family or other GTPases.
+ %       \end{enumerate}
+  %  \item Link MMGBSA per residue decomposition and contribution of residues surrounding these pockets vis-à-vis different GEFs.
+%\end{enumerate}        
 
-% List of References cited
+
 \bibliography{Draft_001} 
 
 \end{document}

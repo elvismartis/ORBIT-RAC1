@@ -161,10 +161,16 @@ Transient pockets open in response to ligand binding suggesting an induced fit m
 \end{figure}
 
 
-
 \subsection{Role of switch region dynamics in formation of transient pockets.}
-(still to be ADDED)
+ In RAC1, like all other small GTPases, the switch regions should much higher conformational movements that were sensitive to nucleotide and GEF binding.  The essential dynamics extracted from the dominate modes of motions suggested by the first principal component (XX\%) also suggest that switch regions contribute to most of dynamics in the RAC1. Further, we embarked on understanding how the switch regions dynamics changes in response to GEF binding or nucleotide binding. The nucleotide-free and GEF-free states served to understand the changes inherent to RAC1 without of it binding partners. 
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Fig_domain_RMSF.jpg}
+    \caption{Rac1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human Rac1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Orange Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for the human Rac1 domain. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)}. The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)}. The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region. \textbf{delGDP} and \textbf{delGTP} are systems created by deleting the nucleotides from the Rac1 binding pocket to create corresponding \textit{apo} system.} 
+    \label{fig:MD}
+\end{figure}
+ 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{PCA.jpg}
@@ -172,19 +178,20 @@ Transient pockets open in response to ligand binding suggesting an induced fit m
     \label{fig:PCA}
 \end{figure}
 
-%\begin{figure}[ht]
-%    \centering
-%    \includegraphics[width=1\textwidth]{Figcorr_nucleotide.jpg}
-%    \caption{Pearson Correlation for the volume fluctuations among different pockets and the effect of nucleotide binding. \textbf{A)} GDP-bound Rac1; \textbf{B)} GTP-bound Rac1; \textbf{C)} Nucleotide-free state created by deleting GDP from Rac1; \textbf{D)} Nucleotide-free state created by deleting GTP from Rac1.} 
-%    \label{fig:CORRNUC}
-%\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Figcorr_nucleotide.jpg}
+    \caption{Pearson Correlation for the volume fluctuations among different pockets and the effect of nucleotide binding. \textbf{A)} GDP-bound Rac1; \textbf{B)} GTP-bound Rac1; \textbf{C)} Nucleotide-free state created by deleting GDP from Rac1; \textbf{D)} Nucleotide-free state created by deleting GTP from Rac1.} 
+    \label{fig:CORRNUC}
+\end{figure}
 
-%\begin{figure}[ht]
-%    \centering
-%    \includegraphics[width=1\textwidth]{Figcorr_gef.jpg}
-%    \caption{Pearson Correlation for the volume fluctuations among different pockets and the effect of GEF binding. \textbf{A)} PREX1-bound Rac1; \textbf{B)} TIAM1-bound Rac1; \textbf{C)}  VAV1-bound Rac1; \textbf{D)} DOCK2-bound Rac1. Rac1 in all GEF-bound systems is in the nucleotide-free state.} 
-%    \label{fig:CORRGEF}
-%\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Figcorr_gef.jpg}
+    \caption{Pearson Correlation for the volume fluctuations among different pockets and the effect of GEF binding. \textbf{A)} PREX1-bound Rac1; \textbf{B)} TIAM1-bound Rac1; \textbf{C)}  VAV1-bound Rac1; \textbf{D)} DOCK2-bound Rac1. Rac1 in all GEF-bound systems is in the nucleotide-free state.} 
+    \label{fig:CORRGEF}
+\end{figure}
+
 % \begin{enumerate}
  %   \item Region wise w/ and w/o nucleotides
  %   \item Region wise w/ and w/o GEFs
@@ -193,32 +200,13 @@ Transient pockets open in response to ligand binding suggesting an induced fit m
   %  \item Support with PCA plots for more detailed discussion (later this will support different pocket dynamics)
 %\end{enumerate}
 
-%\newpage
+\subsection{Energetic contribution of residues involved in GEF binding}
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\textwidth]{Fig_domain_RMSF.jpg}
-    \caption{Rac1 domains and dynamics of each region. \textbf{A)} A Cartoon representation of human Rac1 (\textbf{PDB id:1HE1}). The P-loop region is depicted in the magenta colour. The Switch I region is depicted in Orange Colour, and the Green coloured region is the Switch II region. The helical region is shown in yellow colour. \textbf{B)} Atomic fluctuations of the backbone atoms are measured as root-mean-squared fluctuations (RMSF) for the human Rac1 domain. \textbf{C)} Backbone atom RMSF is shown as the expansion of the P-loop region. \textbf{D)} Backbone atom RMSF is shown as the expansion of the Switch I region. \textbf{E)} Backbone atom RMSF is shown as the expansion of the Switch II region. \textbf{F)}. The normalised distribution of the root-mean-squared deviation of the backbone atoms of the P-loop. \textbf{G)} The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch I region. \textbf{H)}. The normalised distribution of the root-mean-squared deviation of the backbone atoms of the Switch II region. \textbf{delGDP} and \textbf{delGTP} are systems created by deleting the nucleotides from the Rac1 binding pocket to create corresponding \textit{apo} system.} 
-    \label{fig:MD}
+    \includegraphics[width=1\textwidth]{OLD_figs/Figure4.jpg}
+    \caption{Per Residue contribution from Rac1 protein towards GEF binding. } 
+   \label{fig:MMGBSA}
 \end{figure}
-
-%\newpage
-
-
-%\newpage
-%\begin{figure}[ht]
-%    \centering
-%    \includegraphics[width=1\textwidth]{Fig6.jpg}
-%    \caption{Effect of GEF binding on the essential dynamics of Rac1 protein } 
-%    \label{fig:PCA-2}
-%\end{figure}
-
-%\newpage
-%\begin{figure}[ht]
-%    \centering
-%    \includegraphics[width=1\textwidth]{Fig7.jpg}
-%    \caption{Per Residue contribution from Rac1 protein towards GEF binding. } 
-%    \label{fig:MMGBSA}
-%\end{figure}
 
 
 % \begin{enumerate}   
@@ -239,6 +227,6 @@ Transient pockets open in response to ligand binding suggesting an induced fit m
  %       \end{enumerate}
   %  \item Link MMGBSA per residue decomposition and contribution of residues surrounding these pockets vis-à-vis different GEFs.
 %\end{enumerate}   
-
+\newpage
 \bibliography{Draft_001} 
 \end{document}

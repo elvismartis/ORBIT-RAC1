@@ -85,6 +85,30 @@ Traut,~T.~W. Physiological concentrations of purines and pyrimidines. \emph{Mole
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Pettersen \latin{et~al.}(2004)Pettersen, Goddard, Huang, Couch, Greenblatt, Meng, and Ferrin]{pettersen2004ucsf}
+Pettersen,~E.~F.; Goddard,~T.~D.; Huang,~C.~C.; Couch,~G.~S.; Greenblatt,~D.~M.; Meng,~E.~C.; Ferrin,~T.~E. UCSF Chimera—a visualization system for exploratory research and analysis. \emph{Journal of computational chemistry} \textbf{2004}, \emph{25}, 1605--1612\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Fiser and {\v{S}}ali(2003)Fiser, and {\v{S}}ali]{fiser2003modeller}
+Fiser,~A.; {\v{S}}ali,~A. \emph{Methods in enzymology}; Elsevier, 2003; Vol. 374; pp 461--491\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Yang \latin{et~al.}(2012)Yang, Lasker, Schneidman-Duhovny, Webb, Huang, Pettersen, Goddard, Meng, Sali, and Ferrin]{yang2012ucsf}
+Yang,~Z.; Lasker,~K.; Schneidman-Duhovny,~D.; Webb,~B.; Huang,~C.~C.; Pettersen,~E.~F.; Goddard,~T.~D.; Meng,~E.~C.; Sali,~A.; Ferrin,~T.~E. UCSF Chimera, MODELLER, and IMP: an integrated modeling system. \emph{Journal of structural biology} \textbf{2012}, \emph{179}, 269--278\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Huang \latin{et~al.}(2014)Huang, Meng, Morris, Pettersen, and Ferrin]{huang2014enhancing}
+Huang,~C.~C.; Meng,~E.~C.; Morris,~J.~H.; Pettersen,~E.~F.; Ferrin,~T.~E. Enhancing UCSF Chimera through web services. \emph{Nucleic acids research} \textbf{2014}, \emph{42}, W478--W484\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[W{\"u}rtele \latin{et~al.}(2001)W{\"u}rtele, Wolf, Pederson, Buchwald, Ahmadian, Barbieri, and Wittinghofer]{gappdb}
 W{\"u}rtele,~M.; Wolf,~E.; Pederson,~K.~J.; Buchwald,~G.; Ahmadian,~M.~R.; Barbieri,~J.~T.; Wittinghofer,~A. How the Pseudomonas aeruginosa ExoS toxin downregulates Rac. \emph{Nature structural biology} \textbf{2001}, \emph{8}, 23--26\relax
 \mciteBstWouldAddEndPuncttrue
@@ -117,30 +141,6 @@ Rapley,~J.; Tybulewicz,~V.~L.; Rittinger,~K. Crucial structural role for the PH 
 \EndOfBibitem
 \bibitem[Kulkarni \latin{et~al.}(2011)Kulkarni, Yang, Zhang, and Barford]{dock2pdb}
 Kulkarni,~K.; Yang,~J.; Zhang,~Z.; Barford,~D. Multiple factors confer specific Cdc42 and Rac protein activation by dedicator of cytokinesis (DOCK) nucleotide exchange factors. \emph{Journal of Biological Chemistry} \textbf{2011}, \emph{286}, 25341--25351\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Pettersen \latin{et~al.}(2004)Pettersen, Goddard, Huang, Couch, Greenblatt, Meng, and Ferrin]{pettersen2004ucsf}
-Pettersen,~E.~F.; Goddard,~T.~D.; Huang,~C.~C.; Couch,~G.~S.; Greenblatt,~D.~M.; Meng,~E.~C.; Ferrin,~T.~E. UCSF Chimera—a visualization system for exploratory research and analysis. \emph{Journal of computational chemistry} \textbf{2004}, \emph{25}, 1605--1612\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Fiser and {\v{S}}ali(2003)Fiser, and {\v{S}}ali]{fiser2003modeller}
-Fiser,~A.; {\v{S}}ali,~A. \emph{Methods in enzymology}; Elsevier, 2003; Vol. 374; pp 461--491\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Yang \latin{et~al.}(2012)Yang, Lasker, Schneidman-Duhovny, Webb, Huang, Pettersen, Goddard, Meng, Sali, and Ferrin]{yang2012ucsf}
-Yang,~Z.; Lasker,~K.; Schneidman-Duhovny,~D.; Webb,~B.; Huang,~C.~C.; Pettersen,~E.~F.; Goddard,~T.~D.; Meng,~E.~C.; Sali,~A.; Ferrin,~T.~E. UCSF Chimera, MODELLER, and IMP: an integrated modeling system. \emph{Journal of structural biology} \textbf{2012}, \emph{179}, 269--278\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Huang \latin{et~al.}(2014)Huang, Meng, Morris, Pettersen, and Ferrin]{huang2014enhancing}
-Huang,~C.~C.; Meng,~E.~C.; Morris,~J.~H.; Pettersen,~E.~F.; Ferrin,~T.~E. Enhancing UCSF Chimera through web services. \emph{Nucleic acids research} \textbf{2014}, \emph{42}, W478--W484\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

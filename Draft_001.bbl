@@ -241,12 +241,6 @@ Roe,~D.~R.; Cheatham~III,~T.~E. PTRAJ and CPPTRAJ: software for processing and a
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Humphrey \latin{et~al.}(1996)Humphrey, Dalke, and Schulten]{humphrey1996vmd}
-Humphrey,~W.; Dalke,~A.; Schulten,~K. VMD: visual molecular dynamics. \emph{Journal of molecular graphics} \textbf{1996}, \emph{14}, 33--38\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Durrant \latin{et~al.}(2011)Durrant, de~Oliveira, and McCammon]{durrant2011povme}
 Durrant,~J.~D.; de~Oliveira,~C. A.~F.; McCammon,~J.~A. POVME: an algorithm for measuring binding-pocket volumes. \emph{Journal of Molecular Graphics and Modelling} \textbf{2011}, \emph{29}, 773--776\relax
 \mciteBstWouldAddEndPuncttrue
@@ -261,6 +255,12 @@ Durrant,~J.~D.; Votapka,~L.; S{\o}rensen,~J.; Amaro,~R.~E. POVME 2.0: an enhance
 \EndOfBibitem
 \bibitem[Mart{\'\i}nez \latin{et~al.}(2009)Mart{\'\i}nez, Andrade, Birgin, and Mart{\'\i}nez]{martinez2009packmol}
 Mart{\'\i}nez,~L.; Andrade,~R.; Birgin,~E.~G.; Mart{\'\i}nez,~J.~M. PACKMOL: A package for building initial configurations for molecular dynamics simulations. \emph{Journal of computational chemistry} \textbf{2009}, \emph{30}, 2157--2164\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Humphrey \latin{et~al.}(1996)Humphrey, Dalke, and Schulten]{humphrey1996vmd}
+Humphrey,~W.; Dalke,~A.; Schulten,~K. VMD: visual molecular dynamics. \emph{Journal of molecular graphics} \textbf{1996}, \emph{14}, 33--38\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

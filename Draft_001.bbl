@@ -91,36 +91,6 @@ Traut,~T.~W. Physiological concentrations of purines and pyrimidines. \emph{Mole
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[P{\'e}rot \latin{et~al.}(2010)P{\'e}rot, Sperandio, Miteva, Camproux, and Villoutreix]{perot2010druggable}
-P{\'e}rot,~S.; Sperandio,~O.; Miteva,~M.~A.; Camproux,~A.-C.; Villoutreix,~B.~O. Druggable pockets and binding site centric chemical space: a paradigm shift in drug discovery. \emph{Drug discovery today} \textbf{2010}, \emph{15}, 656--667\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Nayal and Honig(2006)Nayal, and Honig]{nayal2006nature}
-Nayal,~M.; Honig,~B. On the nature of cavities on protein surfaces: application to the identification of drug-binding sites. \emph{Proteins: Structure, Function, and Bioinformatics} \textbf{2006}, \emph{63}, 892--906\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[An \latin{et~al.}(2005)An, Totrov, and Abagyan]{an2005pocketome}
-An,~J.; Totrov,~M.; Abagyan,~R. Pocketome via comprehensive identification and classification of ligand binding envelopes. \emph{Molecular \& Cellular Proteomics} \textbf{2005}, \emph{4}, 752--761\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Sun \latin{et~al.}(2012)Sun, Burke, Phan, Burns, Olejniczak, Waterson, Lee, Rossanese, and Fesik]{sun2012discovery}
-Sun,~Q.; Burke,~J.~P.; Phan,~J.; Burns,~M.~C.; Olejniczak,~E.~T.; Waterson,~A.~G.; Lee,~T.; Rossanese,~O.~W.; Fesik,~S.~W. Discovery of small molecules that bind to {K}-{Ras} and inhibit {Sos}-mediated activation. \emph{Angewandte Chemie International Edition} \textbf{2012}, \emph{51}, 6140--6143, Publisher: Wiley Online Library\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Maurer \latin{et~al.}(2012)Maurer, Garrenton, Oh, Pitts, Anderson, Skelton, Fauber, Pan, Malek, Stokoe, and {others}]{maurer2012small}
-Maurer,~T.; Garrenton,~L.~S.; Oh,~A.; Pitts,~K.; Anderson,~D.~J.; Skelton,~N.~J.; Fauber,~B.~P.; Pan,~B.; Malek,~S.; Stokoe,~D.; {others} Small-molecule ligands bind to a distinct pocket in {Ras} and inhibit {SOS}-mediated nucleotide exchange activity. \emph{Proceedings of the National Academy of Sciences} \textbf{2012}, \emph{109}, 5299--5304, Publisher: National Academy of Sciences\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Pettersen \latin{et~al.}(2004)Pettersen, Goddard, Huang, Couch, Greenblatt, Meng, and Ferrin]{pettersen2004ucsf}
 Pettersen,~E.~F.; Goddard,~T.~D.; Huang,~C.~C.; Couch,~G.~S.; Greenblatt,~D.~M.; Meng,~E.~C.; Ferrin,~T.~E. UCSF Chimera—a visualization system for exploratory research and analysis. \emph{Journal of computational chemistry} \textbf{2004}, \emph{25}, 1605--1612\relax
 \mciteBstWouldAddEndPuncttrue
@@ -259,6 +229,24 @@ Durrant,~J.~D.; Votapka,~L.; S{\o}rensen,~J.; Amaro,~R.~E. POVME 2.0: an enhance
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[P{\'e}rot \latin{et~al.}(2010)P{\'e}rot, Sperandio, Miteva, Camproux, and Villoutreix]{perot2010druggable}
+P{\'e}rot,~S.; Sperandio,~O.; Miteva,~M.~A.; Camproux,~A.-C.; Villoutreix,~B.~O. Druggable pockets and binding site centric chemical space: a paradigm shift in drug discovery. \emph{Drug discovery today} \textbf{2010}, \emph{15}, 656--667\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Nayal and Honig(2006)Nayal, and Honig]{nayal2006nature}
+Nayal,~M.; Honig,~B. On the nature of cavities on protein surfaces: application to the identification of drug-binding sites. \emph{Proteins: Structure, Function, and Bioinformatics} \textbf{2006}, \emph{63}, 892--906\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[An \latin{et~al.}(2005)An, Totrov, and Abagyan]{an2005pocketome}
+An,~J.; Totrov,~M.; Abagyan,~R. Pocketome via comprehensive identification and classification of ligand binding envelopes. \emph{Molecular \& Cellular Proteomics} \textbf{2005}, \emph{4}, 752--761\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Mart{\'\i}nez \latin{et~al.}(2009)Mart{\'\i}nez, Andrade, Birgin, and Mart{\'\i}nez]{martinez2009packmol}
 Mart{\'\i}nez,~L.; Andrade,~R.; Birgin,~E.~G.; Mart{\'\i}nez,~J.~M. PACKMOL: A package for building initial configurations for molecular dynamics simulations. \emph{Journal of computational chemistry} \textbf{2009}, \emph{30}, 2157--2164\relax
 \mciteBstWouldAddEndPuncttrue
@@ -285,6 +273,18 @@ Onufriev,~A.; Bashford,~D.; Case,~D.~A. Exploring protein native states and larg
 \EndOfBibitem
 \bibitem[Weiser \latin{et~al.}(1999)Weiser, Shenkin, and Still]{lcpo}
 Weiser,~J.; Shenkin,~P.~S.; Still,~W.~C. Approximate atomic surfaces from linear combinations of pairwise overlaps (LCPO). \emph{Journal of Computational Chemistry} \textbf{1999}, \emph{20}, 217--230\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Sun \latin{et~al.}(2012)Sun, Burke, Phan, Burns, Olejniczak, Waterson, Lee, Rossanese, and Fesik]{sun2012discovery}
+Sun,~Q.; Burke,~J.~P.; Phan,~J.; Burns,~M.~C.; Olejniczak,~E.~T.; Waterson,~A.~G.; Lee,~T.; Rossanese,~O.~W.; Fesik,~S.~W. Discovery of small molecules that bind to {K}-{Ras} and inhibit {Sos}-mediated activation. \emph{Angewandte Chemie International Edition} \textbf{2012}, \emph{51}, 6140--6143, Publisher: Wiley Online Library\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Maurer \latin{et~al.}(2012)Maurer, Garrenton, Oh, Pitts, Anderson, Skelton, Fauber, Pan, Malek, Stokoe, and {others}]{maurer2012small}
+Maurer,~T.; Garrenton,~L.~S.; Oh,~A.; Pitts,~K.; Anderson,~D.~J.; Skelton,~N.~J.; Fauber,~B.~P.; Pan,~B.; Malek,~S.; Stokoe,~D.; {others} Small-molecule ligands bind to a distinct pocket in {Ras} and inhibit {SOS}-mediated nucleotide exchange activity. \emph{Proceedings of the National Academy of Sciences} \textbf{2012}, \emph{109}, 5299--5304, Publisher: National Academy of Sciences\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

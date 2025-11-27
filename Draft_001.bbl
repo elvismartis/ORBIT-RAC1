@@ -7,7 +7,7 @@
 \makeatother
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}  {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{44}
+\begin{mcitethebibliography}{45}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -25,6 +25,12 @@
   {\relax}
   {\relax}
 
+\bibitem[Toma-Fukai and Shimizu(2019)Toma-Fukai, and Shimizu]{toma2019structural}
+Toma-Fukai,~S.; Shimizu,~T. Structural insights into the regulation mechanism of small GTPases by GEFs. \emph{Molecules} \textbf{2019}, \emph{24}, 3308\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Cherfils and Zeghouf(2013)Cherfils, and Zeghouf]{cherfils2013regulation}
 Cherfils,~J.; Zeghouf,~M. Regulation of small GTPases by GEFs, GAPs, and GDIs. \emph{Physiological reviews} \textbf{2013}, \emph{93}, 269--309\relax
 \mciteBstWouldAddEndPuncttrue
@@ -33,12 +39,6 @@ Cherfils,~J.; Zeghouf,~M. Regulation of small GTPases by GEFs, GAPs, and GDIs. \
 \EndOfBibitem
 \bibitem[Loirand \latin{et~al.}(2013)Loirand, Sauzeau, and Pacaud]{loirand2013small}
 Loirand,~G.; Sauzeau,~V.; Pacaud,~P. Small G proteins in the cardiovascular system: physiological and pathological aspects. \emph{Physiological reviews} \textbf{2013}, \emph{93}, 1659--1720\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Toma-Fukai and Shimizu(2019)Toma-Fukai, and Shimizu]{toma2019structural}
-Toma-Fukai,~S.; Shimizu,~T. Structural insights into the regulation mechanism of small GTPases by GEFs. \emph{Molecules} \textbf{2019}, \emph{24}, 3308\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -69,6 +69,12 @@ DerMardirossian,~C.; Bokoch,~G.~M. GDIs: central regulatory molecules in Rho GTP
 \EndOfBibitem
 \bibitem[Maruta(1998)]{maruta1998gtpase}
 Maruta,~H. In \emph{G Proteins, Cytoskeleton and Cancer}; Maruta,~H., Kohama,~K., Eds.; R.G. LANDES COMPANY: Austin, Texas, USA, 1998; pp 151--170\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Acuner \latin{et~al.}(2021)Acuner, Sumbul, Torun, and Haliloglu]{rac1muts}
+Acuner,~S.~E.; Sumbul,~F.; Torun,~H.; Haliloglu,~T. Oncogenic mutations on Rac1 affect global intrinsic dynamics underlying GTP and PAK1 binding. \emph{Biophysical journal} \textbf{2021}, \emph{120}, 866--876\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

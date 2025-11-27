@@ -7,7 +7,7 @@
 \makeatother
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}  {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{45}
+\begin{mcitethebibliography}{46}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -285,6 +285,12 @@ Sun,~Q.; Burke,~J.~P.; Phan,~J.; Burns,~M.~C.; Olejniczak,~E.~T.; Waterson,~A.~G
 \EndOfBibitem
 \bibitem[Maurer \latin{et~al.}(2012)Maurer, Garrenton, Oh, Pitts, Anderson, Skelton, Fauber, Pan, Malek, Stokoe, and {others}]{maurer2012small}
 Maurer,~T.; Garrenton,~L.~S.; Oh,~A.; Pitts,~K.; Anderson,~D.~J.; Skelton,~N.~J.; Fauber,~B.~P.; Pan,~B.; Malek,~S.; Stokoe,~D.; {others} Small-molecule ligands bind to a distinct pocket in {Ras} and inhibit {SOS}-mediated nucleotide exchange activity. \emph{Proceedings of the National Academy of Sciences} \textbf{2012}, \emph{109}, 5299--5304, Publisher: National Academy of Sciences\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kukimoto-Niino \latin{et~al.}(2021)Kukimoto-Niino, Katsura, Kaushik, Ehara, Yokoyama, Uchikubo-Kamo, Nakagawa, Mishima-Tsumagari, Yonemochi, Ikeda, \latin{et~al.} others]{DOCK5_EMLO1}
+Kukimoto-Niino,~M.; Katsura,~K.; Kaushik,~R.; Ehara,~H.; Yokoyama,~T.; Uchikubo-Kamo,~T.; Nakagawa,~R.; Mishima-Tsumagari,~C.; Yonemochi,~M.; Ikeda,~M.; others Cryo-EM structure of the human ELMO1-DOCK5-Rac1 complex. \emph{Science advances} \textbf{2021}, \emph{7}, eabg3147\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

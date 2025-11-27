@@ -265,8 +265,8 @@ Mart{\'\i}nez,~L.; Andrade,~R.; Birgin,~E.~G.; Mart{\'\i}nez,~J.~M. PACKMOL: A p
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Humphrey \latin{et~al.}(1996)Humphrey, Dalke, and Schulten]{humphrey1996vmd}
-Humphrey,~W.; Dalke,~A.; Schulten,~K. VMD: visual molecular dynamics. \emph{Journal of molecular graphics} \textbf{1996}, \emph{14}, 33--38\relax
+\bibitem[Grant \latin{et~al.}(2006)Grant, Rodrigues, ElSawy, McCammon, and Caves]{bio3d}
+Grant,~B.~J.; Rodrigues,~A.~P.; ElSawy,~K.~M.; McCammon,~J.~A.; Caves,~L.~S. Bio3d: an R package for the comparative analysis of protein structures. \emph{Bioinformatics} \textbf{2006}, \emph{22}, 2695--2696\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

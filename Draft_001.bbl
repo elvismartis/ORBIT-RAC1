@@ -7,7 +7,7 @@
 \makeatother
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}  {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{46}
+\begin{mcitethebibliography}{47}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -291,6 +291,12 @@ Maurer,~T.; Garrenton,~L.~S.; Oh,~A.; Pitts,~K.; Anderson,~D.~J.; Skelton,~N.~J.
 \EndOfBibitem
 \bibitem[Kukimoto-Niino \latin{et~al.}(2021)Kukimoto-Niino, Katsura, Kaushik, Ehara, Yokoyama, Uchikubo-Kamo, Nakagawa, Mishima-Tsumagari, Yonemochi, Ikeda, \latin{et~al.} others]{DOCK5_EMLO1}
 Kukimoto-Niino,~M.; Katsura,~K.; Kaushik,~R.; Ehara,~H.; Yokoyama,~T.; Uchikubo-Kamo,~T.; Nakagawa,~R.; Mishima-Tsumagari,~C.; Yonemochi,~M.; Ikeda,~M.; others Cryo-EM structure of the human ELMO1-DOCK5-Rac1 complex. \emph{Science advances} \textbf{2021}, \emph{7}, eabg3147\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Bruciaferri \latin{et~al.}(2024)Bruciaferri, Eberhardt, Llanos, Loeffler, Holcomb, Fernandez-Quintero, Santos-Martins, Ward, and Forli]{cosolvkit}
+Bruciaferri,~N.; Eberhardt,~J.; Llanos,~M.~A.; Loeffler,~J.~R.; Holcomb,~M.; Fernandez-Quintero,~M.~L.; Santos-Martins,~D.; Ward,~A.~B.; Forli,~S. CosolvKit: a versatile tool for cosolvent MD preparation and analysis. \emph{Journal of Chemical Information and Modeling} \textbf{2024}, \emph{64}, 8227--8235\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

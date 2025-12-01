@@ -98,7 +98,7 @@ Pettersen,~E.~F.; Goddard,~T.~D.; Huang,~C.~C.; Couch,~G.~S.; Greenblatt,~D.~M.;
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Fiser and {\v{S}}ali(2003)Fiser, and {\v{S}}ali]{fiser2003modeller}
-Fiser,~A.; {\v{S}}ali,~A. \emph{Methods in enzymology}; Elsevier, 2003; Vol. 374; pp 461--491\relax
+Fiser,~A.; {\v{S}}ali,~A. \emph{Methods in enzymology}; 2003; Vol. 374; pp 461--491\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -278,7 +278,7 @@ Weiser,~J.; Shenkin,~P.~S.; Still,~W.~C. Approximate atomic surfaces from linear
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Sun \latin{et~al.}(2012)Sun, Burke, Phan, Burns, Olejniczak, Waterson, Lee, Rossanese, and Fesik]{sun2012discovery}
-Sun,~Q.; Burke,~J.~P.; Phan,~J.; Burns,~M.~C.; Olejniczak,~E.~T.; Waterson,~A.~G.; Lee,~T.; Rossanese,~O.~W.; Fesik,~S.~W. Discovery of small molecules that bind to {K}-{Ras} and inhibit {Sos}-mediated activation. \emph{Angewandte Chemie International Edition} \textbf{2012}, \emph{51}, 6140--6143, Publisher: Wiley Online Library\relax
+Sun,~Q.; Burke,~J.~P.; Phan,~J.; Burns,~M.~C.; Olejniczak,~E.~T.; Waterson,~A.~G.; Lee,~T.; Rossanese,~O.~W.; Fesik,~S.~W. Discovery of small molecules that bind to {K}-{Ras} and inhibit {Sos}-mediated activation. \emph{Angewandte Chemie International Edition} \textbf{2012}, \emph{51}, 6140--6143\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

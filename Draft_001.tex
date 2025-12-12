@@ -42,7 +42,7 @@ In some classes of small G proteins, the active and inactive states are conjugat
 
 Amongst all small G proteins, Rac1 plays a crucial role in regulating cellular processes owing to its switching mechanism that recruits several proteins upstream and downstream. PREX1, TIAM1, VAV1 and DOCK2 are Rac1-specific GEFs that regulate many cellular processes and, therefore, are implicated in many Rac-dependent pathologies such as asthma and cancer.  Structurally, PREX1, TIAM1 and VAV1 are DH/PH domain-containing proteins, while DOCK2 contains a DHR domain. Irrespective of their structural diversity, GEFs interact with the switch I and/or II region residues.  Since the nucleotide-binding site is well conserved among the small G protein family, this poses a significant challenge to selectively target Rac1 by targeting the nucleotide-binding site. Furthermore, the molar concentration with picomolar binding affinity of GTP makes it more difficult for small molecules to competitively inhibit Rac1. The binding of GEFs with Rac1 shows the possibility of alternative binding sites that transiently open to allow this protein-protein interaction, opening the way to allosteric inhibitors. Therefore, the switching mechanism offers a conformational landscape that must be studied in depth to locate other binding sites on the Rac1 surface. Therefore, we embarked to understand the complete dynamical landscape of Rac1 protein bound to either nucleotides (GDP or GTP) or GEFs (PREX1, TIAM1, VAV1 or DOCK2). In this study, we determined the evolution of Rac1 binding pockets in its nucleotide-bound conformation and bound with its partners (holo). Following molecular dynamics simulations, we identified and measured the pocket volume changes for the transient pockets. We also monitored the effect of binding of various GEFs and nucleotide on the changes in the pocket volume. Lastly, using Pearson's correlation coefficient, we evaluated the possibility of correlation between changes in all four transient pockets among each other. Our study reveals cryptic pockets opening new possibilities for drug design.
 
-\section{Methods}
+\section{Methods}\label{methods}
 \subsection{Preparation of systems for molecular dynamics simulation} 
 The coordinates for all complexes were retrieved from the Protein Data Bank (PDB); the PDB entries used in this study are listed in \textbf{Table \ref{tbl:pdbs}}. The X-ray structures were imported and processed in the UCSF Chimera v1.17 \cite{pettersen2004ucsf}. Any missing loops were built using Modeller \cite{fiser2003modeller} with  UCSF Chimera v1.17 as the GUI \cite{yang2012ucsf, huang2014enhancing}. 
 
@@ -235,14 +235,16 @@ Site P1 is located in the cavity that forms between switch I and II, which is th
 \section{Conclusion}
 The computer simulations reported in this work reveal that Rac1 harbours four transient, GEF-sensitive pockets whose opening is tightly coupled to switch-region dynamics. We tested the opening of these transient pockets using cosolvent probes that suggest an induced-fit mechanism, revealing cryptic pockets. Sites P1 and P2 are located in the regions that form the GEF docking interface, while sites P3 and P4 map to regions engaged by the DOCK-family of GEFs and the ELMO1 cofactor. Pocket-volume fluctuations across nucleotide- and GEF-bound states, measured by microsecond-scale cosolvent MD, demonstrate that several of these pockets cross the druggability threshold, and collapse to undruggable sizes in the absence of regulatory partners. This behaviour confirms their transient nature and warrants an induced-fit mechanism that triggers the opening of the pockets. Taken together, these findings suggest that Rac1, which was considered undruggable, can in fact be modulated using small molecules that target the transient pocket we identified in this work. We strongly believe that this work offers new opportunities to target specific Rac1–GEF complexes with small molecules to modulate GEF-specific pathways. 
 
-\newpage
+%\newpage
 \begin{acknowledgement}
 This research was supported a grant from Agence Nationale de la Recherche (ANR), grant number ANR-22-CE18-0015-03. This research used resources of the GLiCID Computing Facility (Ligerien Group for Intensive Distributed Computing, Pays de la Loire, France, https://doi.org/10.60487/glicid.). EM and ST extend their gratitude to Yves-Henri SANEJOUAND and Bernard OFFMANN (US2B, Nantes Université) for their suggestions to improve this work. 
 \end{acknowledgement}
 
+\section{Data Availability}
+All software tools used for this work are mentioned in the methods and listed in the references. All the software mentioned and used for this work can be obtained from the respective references. The files associated with this project can be downloaded freely from  \url{https://gitlab.univ-nantes.fr/martis-e/orbit_ambermd.git}
 
 \begin{suppinfo}
-The files associated with this project can be downloaded from  \href{https://gitlab.univ-nantes.fr/martis-e/orbit_ambermd.git}{\textbf{GitLab orbitMD}}. 
+
 List of supplementary figures
 \begin{itemize}
     \item \textbf{Figure \ref{SI-fig:SI_CORRNUC}}: Pearson's Correlation for the volume fluctuations among different pockets and the effect of nucleotide binding.
@@ -254,9 +256,7 @@ List of supplementary figures
     \item \textbf{Figure \ref{SI-fig:SI_RMSD_S1}}: Time-evolution of RMSD of backbone atoms from the switch I region.
     \item \textbf{Figure \ref{SI-fig:SI_RMSD_S2}}: Time-evolution of RMSD of backbone atoms from the switch II region.
 \end{itemize}
-
 \end{suppinfo}
 
-\newpage
 \bibliography{Draft_001} 
 \end{document}

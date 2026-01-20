@@ -1,0 +1,84 @@
+\documentclass[11pt]{article}
+
+\begin{document}
+\section{Reviewer: 1}
+
+\subsection{Comments:}
+This manuscript reports MD-based identification of four transient pockets on Rac1, explores their modulation by GEFs and nucleotides, and evaluates their potential druggability using cosolvent simulations and PCA. The problem is timely and important, and the study is conceptually interesting. However, several aspects of the methodology, interpretation, and presentation require substantial revision before the conclusions can be supported. My detailed comments follow.
+
+\subsection{Major concerns:}
+\begin{enumerate}
+    \item The manuscript relies heavily on a single pocket-volume heuristic (610–930$\r{A}^3$  ) to infer druggability. However, neither the metric (pocket volume alone) nor the threshold is comprehensive or sufficient for defining a cryptic pocket (it may apply to static pockets bound by ligands, but not necessarily to transient pockets observed in MD). Please consider incorporating additional druggability measurements, such as per-residue SASA, hydrophobicity, pocket depth, etc., or using established druggability scoring functions (e.g., the Fpocket druggability score).
+
+    \item The data/results are not comprehensive enough to support the conclusions. For example, the authors claim that “…systems (GTP and delGTP) without cosolvent probes remain below the threshold (Figure 4) value, confirming their transient nature. This warrants an induced-fit mechanism that is involved in the opening of these pockets.” However, the data shown are not conclusive or analyzed rigorously enough to support this claim. Didn’t the delGTP system for site P3 also “cross” the threshold? Additionally, what would the plot look like if the authors separated the three technical repeats into individual violin plots? The “crossing” of the threshold (or the lack thereof) can easily be a sporadic event due to the stochastic nature of MD simulations. Combined with the fact that the 600$\r{A}^3$ threshold is arbitrarily chosen, the results presented in Figure 4 appear weak and inconclusive.
+
+    \item The computation of binding free energy is conceptually incorrect. The authors state that “...the entropic component of binding T$\Delta$S was not computed due to the huge computation cost.” If this is the case, then what the authors computed is only the potential energy of binding, not the free energy. Entropy is a major contributor to the free energy (admittedly, the hardest term to compute due to the conformational diversity of both the protein and the solvent), and it cannot be omitted. Otherwise, what is the point of calculating free energies? They are meaningful precisely because of the entropic contributions.
+
+    \item The results in Figure 5B are interesting, although the statement “...in which the PCA-based clustering (Figure 5B) using the first two principal components shows distinguishable conformations between open and closed states” may not be accurate, as it could very well be an artifact resulting from differences across technical repeats. This will become clear if the data points are colored by replicate and if the three repeats for the cosolvent and non-cosolvent conditions mix (or not).
+\end{enumerate}
+
+\section{Reviewer: 2}
+
+Comments:
+In their publication entitled “Guanine Exchange Factors Show Existence of Transient Pockets on Rac1 Surface”, Martis et al. deal with a subject of therapeutic interest through a molecular modeling approach. Small G proteins act as molecular switches that regulate essential cellular processes by cycling between inactive GDP-bound and active GTP-bound states, controlled by GEFs, GAPs, and GDIs. Dysregulation of this system, often due to mutations, is linked to diseases such as cancer. Because the nucleotide-binding site is highly conserved and difficult to target, alternative strategies focus on protein–protein interactions. This study explores the conformational dynamics of Rac1 and identifies transient, cryptic pockets that may enable the design of drugs capable of modulating these protein interactions.
+Despite the major interest of this subject, the relevance of the hypothesis involved in this approach, and the fact that this work was carried out without methodological error, some points not detailed enough and some questions whose answers are not mentioned in this manuscript preclude its publication without considering major changes.
+
+\subsection{Major recommendations}
+\begin{enumerate}
+    \item Probes
+    The use of the term "cosolvent" is not necessarily the most appropriate here, and the use of the term "probe cosolvent" contributes to the confusion, as molecular mechanics cannot intrinsically reflect changes in the polarity of the medium. It would be more suitable to consistently use the term "molecular probe," as the authors use it several times in the publication. Adding a table, in the Supplementary Information for instance, indicating for each simulation the number of water molecules, molecular probes, the volume of the simulation box, and also the \%v/v ratio, would allow for a better contextualization of the simulations performed.
+    The interactions of these molecular probes with the four identified pockets are not described in sufficient details while it is they constitute the central point of this work. The authors should consider providing density maps of interaction for each of these probes on the Rac1 surface along the trajectories. Residence time of each probe at the vicinity of the pockets (or better, within the pockets), interaction schemes and estimation of the $\Delta$G of binding in these situations could be of great importance for the readers. Moreover, it could provide a general pattern of interaction, particularly interesting in the area of P1-P2 pockets.
+    Further details on the non-aggregation or aggregation of the molecular probes would also be helpful. This point has been mentioned once in the text without systematic analysis. Could this play a role in the search for identifying these pocket?
+
+    \item Pockets
+    As indicated in the text, the volume of these pockets appears very small. To put their choice of probes into perspective with the possibility of using these pockets as potential targets, the molecular volume of the probes used could be compared to the volumes of the pockets. The distance between pockets P1 and P2 should be provided to support the proposal to design a drug capable of interacting with these two pockets. It could even be very interesting for the authors to prepare such a molecular probe, based on the interactions described in point 1 above, and test it according to the protocol of their choice (docking, molecular dynamics, etc.). This point is not mandatory.
+    Violin plots provide a good overview of the general statistics of pocket volume but do not allow us to define their dynamic characteristics. It would be interesting to know if their opening lasts for a certain duration, consistent with the possibility for a drug to come and interact, or if it is a phenomenon of opening/closing at a high frequency. Furthermore, it would be interesting to know if the openings of these pockets are correlated or uncorrelated over time.
+    The authors mention a strong correlation between volume fluctuations in pockets P2 and P3. Aside from the fact that a correlation of 0.70 corresponds to the lower limit of a strong correlation (or should rather be considered the upper limit of a medium correlation), no explanation is provided for this correlation. Further details on this point would be helpful to the reader.
+    Would it be interesting trying to find the correlation of the volumes of these pocket from P1 to P4 with the volume of the nucleotide binding site (Figure 1)?
+
+    \item PCA
+    The PCA analysis is not presented in sufficient detail. The first point concerns a clear description of the principal component eigenvectors (at least PC1 and PC2). Indeed, it is unclear what they represent, and in particular what they would allow us to analyze in Figure 5. Furthermore, since these principal components are intrinsically dependent on the initial dataset, they are not necessarily representative of the same events (Figure 5B) from one system to the other. Clarification is needed on this point.
+    PCA is not in itself a clustering method. The authors indicate having used a PCA-based clustering method. This point deserves clarification, at least in the methodological section, and/or commented in the text. Then more details about the clusters obtained should be given (what do they represent?).
+    The Scree plots stop at the 20th eigenvalue, whereas there should be a much larger number of initial variables (i.e., a greater number of C$\alpha$). Furthermore, these Scree plots show very low percentages of explained variance. Would it be beneficial to restrict the initial dataset, perhaps by setting a threshold for variance values to be treated or by excluding C$\alpha$ alphas based on the covariance analysis? This would limit the noise introduced by some less significant variables in the generation of the initial principal components.
+\end{enumerate}
+
+\textbf{Addressing these three points is mandatory.}
+
+\subsection{Minor recommendations}
+\begin{itemize}
+    \item In general, it might be useful to have a general diagram of the sequence showing both the previously identified areas (switches I and II, P-loop, Helical insert) with the positioning of the amino acids defining the pockets from P1 to P4 (Supplementary Information section?).
+    \item Figure 6A should be presented in the form of histograms - Figure 7 is referred to before Figure 6 in the text
+\end{itemize}
+
+
+\section{Reviewer: 3}
+
+Comments:
+This work explores cryptic pockets in Rac1 under different conditions and attempts to explain the role of switch dynamics in cryptic pocket formation. While these questions are important, conclusions are weakly supported by the analyses provided in this paper. I suggest major revision before this work can be published. I recommend that the authors address following comments to update the manuscript.
+
+\subsection{Major comments:}
+ \begin{enumerate}   
+    \item Figure 2C shows backbone RMSFs and the entire discussion of pocket volume expansion revolves around backbone flexibility of the Switch regions and the P-loop. However, only VAV1 shows noticeable differences in the backbone motions of the switch regions. Besides, the RMSF differences of Switch-I region do not correlate with the P1 pocket volumes distributions shown in Figure 3. Authors have not discussed differences in the side-chain fluctuations in these regions. Is the pocket expansion correlated with side-chain motions rather than backbone motion? Authors need to provide this analysis to explain the differences in pocket volumes induced by different GEFs.
+
+    \item Authors attribute differences in pocket volumes by different GEFs to the differences in the state captured by X-ray structure (i.e. GDP dissociation vs pre-organized state for GTP association). To support this argument, authors should report the pocket volumes in the X-ray structure for all 4 Rac1-GEF complexes.
+    
+    \item “As we have already established that pocket volume changes in the nucleotide can be attributed to the P-loop and switch region dynamics” - This is a strong statement given weak evidence provided by the RMSF differences reported in Figure 2: Only VAV1 shows higher backbone fluctuations of Switch regions. P-loop dynamics in the presence of PREX1 appears comparable to nucleotide-bound states. In the absence of statistically significant differences, authors should refrain from a claim that the P-loop and switch region dynamics establishes difference in the pocket volume.
+
+    \item This statement is incorrect: “Site P1 in Rac1 is similar to the one in K-RAS and H-RAS that is occupied by the covalent inhibitors in the G12C Ras mutant”. The P1 site appears to overlap with the second cryptic pocket in K-RAS which is not targeted by the covalent inhibitors. The covalent inhibitor binding pocket in K-RAS is on the other side of the Switch-II. Please provide a structural overlap of K-RAS: inhibitor complexes with equivalent pocket identified in Rac1 in this study.
+    
+    \item Authors suggest that phenol and toluene induce pocket volumes expansion. Was it confirmed by computing occupancy of these probes at the binding sites? Given the risk of self-aggregation of these probes, it is possible that probes did not bind to the sites.
+    
+    \item Additional details are required on PCA-based clustering shown in Figure 5. Clustering shown in the figure appears suboptimal and arbitrary. While authors claim that these clusters show distinguishable states for pocket open and close states, there is insufficient data provide to support this argument. Which cluster specifically represents open state and what criteria were used to define open and closed states?
+
+    \item Why was PCA performed only for mixed-cosolvent simulation data and not for the simulations of Rac1 and GEF complexes? It is not obvious that the authors decided to perform RMSF analysis on Rac1-GEF complex simulations while PCA for the cosolvent simulations performed in the absence of GEFs.
+
+    \item Authors propose that the transient pockets identified in this work can be used to target Rac1–GEF complexes. Among these pockets, P1 and P3 appear to be at GEF-binding interface. Targeting these pockets in a Rac1-GEF complex would require pocket formation at the protein-protein interface. Since the volume distributions were computed by ignoring GEF from the simulation data, it is unclear if these pockets are large enough to accommodate ligand molecules in the presence of GEF. Unless this data is shown, authors should be cautious about claiming the utility of these pockets for targeting the Rac1-GEF complexes.
+\end{enumerate}
+
+\subsection{Minor comments:}
+\begin{enumerate}
+    \item Caption for Figure 3 “Site P3 is located at the site from where the switch I region.” Is incomplete and incomprehensible.
+    \item What are the structural/functional differences between DH/PH domain-containing GEFs compared to DHR domain-containing GEFs? Authors are recommended to mention them and make connections with their results if there are any.
+\end{enumerate}
+
+\end{document}

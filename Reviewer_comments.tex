@@ -1,4 +1,5 @@
 \documentclass[11pt]{article}
+\usepackage{xcolor}
 
 \begin{document}
 \section{Reviewer: 1}
@@ -9,6 +10,18 @@ This manuscript reports MD-based identification of four transient pockets on Rac
 \subsection{Major concerns:}
 \begin{enumerate}
     \item The manuscript relies heavily on a single pocket-volume heuristic (610–930$\r{A}^3$  ) to infer druggability. However, neither the metric (pocket volume alone) nor the threshold is comprehensive or sufficient for defining a cryptic pocket (it may apply to static pockets bound by ligands, but not necessarily to transient pockets observed in MD). Please consider incorporating additional druggability measurements, such as per-residue SASA, hydrophobicity, pocket depth, etc., or using established druggability scoring functions (e.g., the Fpocket druggability score).
+
+\textcolor{blue}{We have updated our definition of a cryptic pocket, including pocket size, and residence time in our simulations, to be clearer. The definitions are coming from }
+\textcolor{red}{refXX}. 
+
+\textcolor{blue}{FPocket allows a static analysis of a structure pocket and used MDpocket to analyse the simulations using the advanced criteria indicated by the reviewer. This analysis allows a more in-depth understanding of the druggability of the pockets, we thank the reviewer for this remark. This is indicated in the text as }
+\begin{verbatim}
+Give the exact sentence in the text, and the figure or table ref
+\end{verbatim}
+\textcolor{blue}{and added in table} \textcolor{red}{ZZ.}
+
+
+
 
     \item The data/results are not comprehensive enough to support the conclusions. For example, the authors claim that “…systems (GTP and delGTP) without cosolvent probes remain below the threshold (Figure 4) value, confirming their transient nature. This warrants an induced-fit mechanism that is involved in the opening of these pockets.” However, the data shown are not conclusive or analyzed rigorously enough to support this claim. Didn’t the delGTP system for site P3 also “cross” the threshold? Additionally, what would the plot look like if the authors separated the three technical repeats into individual violin plots? The “crossing” of the threshold (or the lack thereof) can easily be a sporadic event due to the stochastic nature of MD simulations. Combined with the fact that the 600$\r{A}^3$ threshold is arbitrarily chosen, the results presented in Figure 4 appear weak and inconclusive.
 

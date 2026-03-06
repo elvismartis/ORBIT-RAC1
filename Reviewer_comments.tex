@@ -1,5 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage{xcolor}
+\usepackage{siunitx}
+
 
 \begin{document}
 \section{Reviewer: 1}
@@ -9,25 +11,27 @@ This manuscript reports MD-based identification of four transient pockets on Rac
 
 \subsection{Major concerns:}
 \begin{enumerate}
-    \item The manuscript relies heavily on a single pocket-volume heuristic (610–930$\r{A}^3$  ) to infer druggability. However, neither the metric (pocket volume alone) nor the threshold is comprehensive or sufficient for defining a cryptic pocket (it may apply to static pockets bound by ligands, but not necessarily to transient pockets observed in MD). Please consider incorporating additional druggability measurements, such as per-residue SASA, hydrophobicity, pocket depth, etc., or using established druggability scoring functions (e.g., the Fpocket druggability score).
+    \item The manuscript relies heavily on a single pocket-volume heuristic (610–-930 $\r{A}^3$  ) to infer druggability. However, neither the metric (pocket volume alone) nor the threshold is comprehensive or sufficient for defining a cryptic pocket (it may apply to static pockets bound by ligands, but not necessarily to transient pockets observed in MD). Please consider incorporating additional druggability measurements, such as per-residue SASA, hydrophobicity, pocket depth, etc., or using established druggability scoring functions (e.g., the Fpocket druggability score).
 
-\textcolor{blue}{We have updated our definition of a cryptic pocket, including pocket size, and residence time in our simulations, to be clearer. The definitions are coming from }
-\textcolor{red}{refXX}. 
-
-\textcolor{blue}{FPocket allows a static analysis of a structure pocket and used MDpocket to analyse the simulations using the advanced criteria indicated by the reviewer. This analysis allows a more in-depth understanding of the druggability of the pockets, we thank the reviewer for this remark. This is indicated in the text as }
-\begin{verbatim}
-Give the exact sentence in the text, and the figure or table ref
-\end{verbatim}
-\textcolor{blue}{and added in table} \textcolor{red}{ZZ.}
-
+\textbf{Author Response}: We are very grateful to the reviewer for suggesting additional metric to confirm the druggability of the new sites identified in this work. We added fpocket analysis, tabulated in the supplementary information, to compute the composite score, druggability score and the hydrophobicity score. Furthermore, we have also computed the solvent-accessible surface area of the residues that make up the new sites, and the figures are added in supplementary information and discussed in the results and discussion. As far as the threshold value for pockets volumes is concerned, we identified the following references, also cited in the main text, which have mentioned minimal volume for any pocket to identified as druggable by small molecules. The threshold value of 930 $\r{A}^3$ was set by methods employing the geometry-based approach, while 610 $\r{A}^3$ was employed by methods using the energy-based approach.
+\textcolor{blue}{1. 10.1016/j.drudis.2010.05.015. 2.  10.1074/mcp.M400159-MCP200 and 3. 10.1002/prot.20897Digital }
 
 
 
     \item The data/results are not comprehensive enough to support the conclusions. For example, the authors claim that “…systems (GTP and delGTP) without cosolvent probes remain below the threshold (Figure 4) value, confirming their transient nature. This warrants an induced-fit mechanism that is involved in the opening of these pockets.” However, the data shown are not conclusive or analyzed rigorously enough to support this claim. Didn’t the delGTP system for site P3 also “cross” the threshold? Additionally, what would the plot look like if the authors separated the three technical repeats into individual violin plots? The “crossing” of the threshold (or the lack thereof) can easily be a sporadic event due to the stochastic nature of MD simulations. Combined with the fact that the 600$\r{A}^3$ threshold is arbitrarily chosen, the results presented in Figure 4 appear weak and inconclusive.
 
+\textbf{Author Response}: Indeed. We do agree with this concern that there is a lack of direct casual link. We have rephrased the discussion on this part to also indicate to the readers that the microsecond time scale could be a limitation that no spontaneous pocket openings were sampled in the systems without cosolven probes.
+
+The threshold value of 600 $\r{A}^3$ is not entirely arbitary. The following work \textcolor{blue}{1. 10.1016/j.drudis.2010.05.015. 2.  10.1074/mcp.M400159-MCP200 and 3. 10.1002/prot.20897Digital}, do suggest values close to the threshold used in this work. However, we also accept that to best of out knowledge we did not find published reports that report vastly different pocket volumes to classfify them as "druggable" or "undruggable"
+
     \item The computation of binding free energy is conceptually incorrect. The authors state that “...the entropic component of binding T$\Delta$S was not computed due to the huge computation cost.” If this is the case, then what the authors computed is only the potential energy of binding, not the free energy. Entropy is a major contributor to the free energy (admittedly, the hardest term to compute due to the conformational diversity of both the protein and the solvent), and it cannot be omitted. Otherwise, what is the point of calculating free energies? They are meaningful precisely because of the entropic contributions.
+    
+\textbf{Author Response}: We totally agree with reviewer that entropic contribution are important component of the free energy of binding. In this work, out intension was not to compute the free energy of binding between RAC1 and GEFs. We employed the MMGBSA methods to docompose the binding affinity value to identify residues on the RAC1 surface that show direct interactions with the residues on the GEF surface. While in the GBSA method is enthalpy component is amenable to residuewise decomposition, we are skeptical about the amenability of residue wise decomposition of the entropy component. Therefore, we did not compute the entropy component altogether. We have modified the methods section to indicate the same. 
 
     \item The results in Figure 5B are interesting, although the statement “...in which the PCA-based clustering (Figure 5B) using the first two principal components shows distinguishable conformations between open and closed states” may not be accurate, as it could very well be an artifact resulting from differences across technical repeats. This will become clear if the data points are colored by replicate and if the three repeats for the cosolvent and non-cosolvent conditions mix (or not).
+
+\textbf{Author Response}: We are grateful to the reviewer to point the drawbacks of the PCA in this work. Upon in depth analysis, we oberved that PCA alone is unable to establish a direct causal link between switch region dynamics and pocket opening. We have modified the discussion address the concerns of the reviewer. We have also modified the PCA-based clustering and identified the data points based on the replicate trajectories. 
+
 \end{enumerate}
 
 \section{Reviewer: 2}
@@ -43,16 +47,34 @@ Despite the major interest of this subject, the relevance of the hypothesis invo
     The interactions of these molecular probes with the four identified pockets are not described in sufficient details while it is they constitute the central point of this work. The authors should consider providing density maps of interaction for each of these probes on the Rac1 surface along the trajectories. Residence time of each probe at the vicinity of the pockets (or better, within the pockets), interaction schemes and estimation of the $\Delta$G of binding in these situations could be of great importance for the readers. Moreover, it could provide a general pattern of interaction, particularly interesting in the area of P1-P2 pockets.
     Further details on the non-aggregation or aggregation of the molecular probes would also be helpful. This point has been mentioned once in the text without systematic analysis. Could this play a role in the search for identifying these pocket?
 
+    \textbf{Author Response}: We are grateful to the reviewer for this suggestion, we have replaced "cosolvent" with "cosolvent molecular probes" in the enter text. 
+
+    In order understand the proximity of the cosolvent molecular probes to the transient sites, we computed radial distribution function of the probes with the center of mass of the residues that form the transient site. The figure is added in the supplementary figure and appropriate dicussion in the main text. 
+
+    We observed that only Toluene system observed aggregation of the molecular probes. Since Toluene is the most hydrophobic in nature amongst the probes we employed in this system. However, we hesitated from adding repulsive potentials to probe molecules as it would perturb the Boltzmann distribution of the entire system,
+
+
     \item Pockets
     As indicated in the text, the volume of these pockets appears very small. To put their choice of probes into perspective with the possibility of using these pockets as potential targets, the molecular volume of the probes used could be compared to the volumes of the pockets. The distance between pockets P1 and P2 should be provided to support the proposal to design a drug capable of interacting with these two pockets. It could even be very interesting for the authors to prepare such a molecular probe, based on the interactions described in point 1 above, and test it according to the protocol of their choice (docking, molecular dynamics, etc.). This point is not mandatory.
     Violin plots provide a good overview of the general statistics of pocket volume but do not allow us to define their dynamic characteristics. It would be interesting to know if their opening lasts for a certain duration, consistent with the possibility for a drug to come and interact, or if it is a phenomenon of opening/closing at a high frequency. Furthermore, it would be interesting to know if the openings of these pockets are correlated or uncorrelated over time.
     The authors mention a strong correlation between volume fluctuations in pockets P2 and P3. Aside from the fact that a correlation of 0.70 corresponds to the lower limit of a strong correlation (or should rather be considered the upper limit of a medium correlation), no explanation is provided for this correlation. Further details on this point would be helpful to the reader.
     Would it be interesting trying to find the correlation of the volumes of these pocket from P1 to P4 with the volume of the nucleotide binding site (Figure 1)?
 
+    \textbf{Author Response}: We agree with the reviewers that violin plots do not allow to vislualise the time dependent behaviour of pocket volume changes vis-a-vis the transitions above the threshold value. We have include the time-evolution plots for pocket volume changes for each of the system in the supplementary information (See Figure S9 to S12). 
+    
+    We did observe correlation in the pocket volumes on 3 occassions, which according to the reviewers are moderate correlation, and we agree with the reviewer. Since in large majority of cases there was no such correlation observed, we decided no to probe further to understand time-dependent correlation. 
+    As a matter of fact we did try to understand  the correlation of the volumes of pocket from P1 to P4 with the volume of the nucleotide binding site (see supplementary figure S1 and S2). However,there was no correlation whatsoever.
+
+
+
     \item PCA
     The PCA analysis is not presented in sufficient detail. The first point concerns a clear description of the principal component eigenvectors (at least PC1 and PC2). Indeed, it is unclear what they represent, and in particular what they would allow us to analyze in Figure 5. Furthermore, since these principal components are intrinsically dependent on the initial dataset, they are not necessarily representative of the same events (Figure 5B) from one system to the other. Clarification is needed on this point.
     PCA is not in itself a clustering method. The authors indicate having used a PCA-based clustering method. This point deserves clarification, at least in the methodological section, and/or commented in the text. Then more details about the clusters obtained should be given (what do they represent?).
     The Scree plots stop at the 20th eigenvalue, whereas there should be a much larger number of initial variables (i.e., a greater number of C$\alpha$). Furthermore, these Scree plots show very low percentages of explained variance. Would it be beneficial to restrict the initial dataset, perhaps by setting a threshold for variance values to be treated or by excluding C$\alpha$ alphas based on the covariance analysis? This would limit the noise introduced by some less significant variables in the generation of the initial principal components.
+ 
+\textbf{Author Response}: We are grateful to the reviewer to point the drawbacks of the PCA in this work. Upon in depth analysis, we oberved that PCA alone is unable to establish a direct causal link between switch region dynamics and pocket opening. We have modified the discussion address the concerns of the reviewer. We have also modified the PCA-based clustering and identified the data points based on the replicate trajectories. 
+We followed the recommendations by David and Jacob on PCA analysis to extract essential dynamics of proteins (See: Methods Mol Biol. 2014 ; 1084: 193–226. $10.1007/978-1-62703-658-0\_11$.), 20 eigenvalues are more than sufficient. Also, in this case, the proporation of variance of Eigenvalues beyond 7 sharply falls below 5\% and decays close to 1\% for those above 10. It suggests that higher ranked eigenvalues contribute far less to the over variance than do the first few eigenvalues.
+
 \end{enumerate}
 
 \textbf{Addressing these three points is mandatory.}

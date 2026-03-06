@@ -8,6 +8,19 @@
 \usepackage{lineno}
 \usepackage{pdflscape}
 \usepackage{xr}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{S\thepage}
+
+
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
 \externaldocument{Revision_1}
 
 \author{Elvis A. F. Martis}
@@ -27,17 +40,71 @@
 
 \begin{document}
 
+\beginsupplement
 \section{Supplementary Information}
 
+\begin{table}
+  \caption{Details of stages of Heating using NVT Ensemble}
+  \label{tbl:SI-Heating using NVT Ensemble}
+    \renewcommand{\thetable}{S1}
+  \begin{tabular}{lcccc}
+    \hline
+   \textbf{Stage}  & \textbf{Temperature range (K)} & \textbf{Time (ns)} \\
+    \hline
+    Stage 1 & 0 to 100 & 0 to 2.5 \\
+    Stage 2 & 100 to 200 & 2.5 to 5 \\
+    Stage 3 & 200 to 300 & 5 to 7.5 \\
+    Stage 4 & 300 to 300 & 7.5 to 10 \\ 
+    \hline
+  \end{tabular}
+\end{table}
 
+
+  \begin{table}
+  \caption{Parameters used for pocket identification in POVME2}
+  \label{tbl:SI-pocketParameters}
+  \renewcommand{\thetable}{S2}
+  \begin{tabular}{lc}
+    \hline
+   \textbf{Parameter}  & \textbf{Value} \\
+    \hline
+    pocket detection resolution	 & 4.0 \r{A}  \\
+    pocket measuring resolution & 1.0 \r{A} \\
+    clashing cutoff & 3.5 \r{A}  \\
+    number of neighbors & 4  \\ 
+    number of spheres & 5  \\
+    sphere padding & 5.0 \r{A}  \\ 
+    \hline
+  \end{tabular}
+\end{table}
+
+
+\newpage
+  \begin{table}
+  \caption{Results of Pocket Detection using Fpocket}
+  \label{tbl:SI-Fpocket}
+    \renewcommand{\thetable}{S3}
+  \begin{tabular}{cccc}
+    \hline
+   \textbf{Pocket}  & \textbf{Fpocket Score}& \textbf{Druggability Score} & \textbf{Hydrophobicity Score} \\
+    \hline
+    Site P1 & 0.13 & 0.001 & 46.38 \\
+    Site P2 & 0.051 & 0.002 & 10.89  \\
+    Site P3 & 0.076 & 0.02 & 27.5  \\
+    Site P4 & 0.11 & 0.005 & 37.33  \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\newpage
 \begin{figure}[ht!]
     \centering
      \renewcommand{\thefigure}{S1}
     \includegraphics[width=1\textwidth]{Figcorr_nucleotide.jpg}
     \caption{Pearson's Correlation for the volume fluctuations among different pockets and the effect of nucleotide binding. \textbf{(A)} GDP-bound Rac1; \textbf{(B)} GTP-bound Rac1; \textbf{(C)} Nucleotide-free state created by deleting GDP from Rac1; \textbf{(D)} Nucleotide-free state created by deleting GTP from Rac1.} 
-    
     \label{fig:SI_CORRNUC}
 \end{figure}
+
 
 \begin{figure}[ht!]
     \centering
@@ -47,6 +114,7 @@
     \label{fig:SI_CORRGEF}
 \end{figure}
 
+\newpage
 \begin{figure}[ht!]
     \centering
      \renewcommand{\thefigure}{S3}
@@ -55,6 +123,7 @@
     \label{fig:SI_screeplot}
 \end{figure}
 
+\newpage
 \begin{figure}[ht!]
     \centering
      \renewcommand{\thefigure}{S4}

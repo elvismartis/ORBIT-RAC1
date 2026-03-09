@@ -18,10 +18,9 @@ This manuscript reports MD-based identification of four transient pockets on Rac
 \textcolor{blue}{1. 10.1016/j.drudis.2010.05.015. 2.  10.1074/mcp.M400159-MCP200 and 3. 10.1002/prot.20897Digital }. It is therefore common to consider 600  $\r{A}^3$ but to not put too much emphasis on the value itself, we have removed the background color of figures, to only keep a straight line as a visual indicator of starting to be drug-like pocket.
 
 
-
     \item The data/results are not comprehensive enough to support the conclusions. For example, the authors claim that “…systems (GTP and delGTP) without cosolvent probes remain below the threshold (Figure 4) value, confirming their transient nature. This warrants an induced-fit mechanism that is involved in the opening of these pockets.” However, the data shown are not conclusive or analyzed rigorously enough to support this claim. Didn’t the delGTP system for site P3 also “cross” the threshold? Additionally, what would the plot look like if the authors separated the three technical repeats into individual violin plots? The “crossing” of the threshold (or the lack thereof) can easily be a sporadic event due to the stochastic nature of MD simulations. Combined with the fact that the 600$\r{A}^3$ threshold is arbitrarily chosen, the results presented in Figure 4 appear weak and inconclusive.
 
-\textbf{Author Response}: The exact definition of cryptic pocket can be debatable since by definition these pockets are transient, and even if our simulation time is long enough for results presented, it is important to be cautious about their existence. We considered that a pocket could be defined as crytpic, not only if its volume was about the threshold as described above, but also if the pockets was detectable for more few ns. We also took into account the presence of the pockets during simulation replicates, and show the split values in Supplementary Material \textcolor{red}{S9-S12}. To moderate this analysis, We have rephrased the discussion on this part to also indicate to the readers that the microsecond time scale could be a limitation since no spontaneous pocket openings were sampled in some systems without cosolvent probes.
+\textbf{Author Response}: The exact definition of cryptic pocket can be debatable since by definition these pockets are transient, and even if our simulation time is long enough for results presented, it is important to be cautious about their existence. We considered that a pocket could be defined as crytpic, not only if its volume was about the threshold as described above, but also if the pockets was detectable for more few ns. We also took into account the presence of the pockets during simulation replicates, and show the split values in Supplementary Figures \textcolor{red}{S9-S12}. To moderate this analysis, We have rephrased the discussion on this part to also indicate to the readers that the microsecond time scale could be a limitation since no spontaneous pocket openings were sampled in some systems without cosolvent probes.
 
 
     \item The computation of binding free energy is conceptually incorrect. The authors state that “...the entropic component of binding T$\Delta$S was not computed due to the huge computation cost.” If this is the case, then what the authors computed is only the potential energy of binding, not the free energy. Entropy is a major contributor to the free energy (admittedly, the hardest term to compute due to the conformational diversity of both the protein and the solvent), and it cannot be omitted. Otherwise, what is the point of calculating free energies? They are meaningful precisely because of the entropic contributions.
@@ -49,7 +48,7 @@ Despite the major interest of this subject, the relevance of the hypothesis invo
 
     \textbf{Author Response}: We are grateful to the reviewer for this suggestion, we have replaced "cosolvent" with "cosolvent molecular probes" in the entire text. 
 
-    In order understand the proximity of the cosolvent molecular probes to the transient sites, we computed radial distribution function of the probes with the center of mass of the residues that form the transient site. The resulting figure is Supplementary Figure S13, and we updated the discussion in the main text to addresss this interesting comment. 
+    In order understand the proximity of the cosolvent molecular probes to the transient sites, we computed radial distribution function of the probes with the center of mass of the residues that form the transient site. The resulting figure is Supplementary Figure \textcolor{red}{S13}, and we updated the discussion in the main text to addresss this interesting comment. 
 
     We observed that only Toluene system observed aggregation of the molecular probes. Since Toluene is the most hydrophobic in nature amongst the probes we employed in this system. However, we hesitated from adding repulsive potentials to probe molecules as it would perturb the Boltzmann distribution of the entire system. To illustrate these motions, we have also provided video rendering of the trajectories in the companion repositories.
 
@@ -101,7 +100,7 @@ This work explores cryptic pockets in Rac1 under different conditions and attemp
  \begin{enumerate}   
     \item Figure 2C shows backbone RMSFs and the entire discussion of pocket volume expansion revolves around backbone flexibility of the Switch regions and the P-loop. However, only VAV1 shows noticeable differences in the backbone motions of the switch regions. Besides, the RMSF differences of Switch-I region do not correlate with the P1 pocket volumes distributions shown in Figure 3. Authors have not discussed differences in the side-chain fluctuations in these regions. Is the pocket expansion correlated with side-chain motions rather than backbone motion? Authors need to provide this analysis to explain the differences in pocket volumes induced by different GEFs.
 
-\textbf{Author Response}: we have updated Figure 2B to get RMSF values for all atoms, this does not change the overall results but also to get a finer-grained overview of the movements. Indeed, we observed that residue \textcolor{red}{F15} will fluctuate more in these new RMSF plot, but no correlation could be found with pockets volumes, and/or pocket evolution.
+\textbf{Author Response}: we have updated Figure 2B to 2D to get RMSF values for all atoms, this does not change the overall results but also to get a finer-grained overview of the movements. Indeed, we observed that residue \textcolor{red}{F15} will fluctuate more in these new RMSF plot, but no correlation could be found with pockets volumes, and/or pocket evolution.
 
     \item Authors attribute differences in pocket volumes by different GEFs to the differences in the state captured by X-ray structure (i.e. GDP dissociation vs pre-organized state for GTP association). To support this argument, authors should report the pocket volumes in the X-ray structure for all 4 Rac1-GEF complexes.
 
@@ -109,11 +108,11 @@ This work explores cryptic pockets in Rac1 under different conditions and attemp
 
     \item “As we have already established that pocket volume changes in the nucleotide can be attributed to the P-loop and switch region dynamics” - This is a strong statement given weak evidence provided by the RMSF differences reported in Figure 2: Only VAV1 shows higher backbone fluctuations of Switch regions. P-loop dynamics in the presence of PREX1 appears comparable to nucleotide-bound states. In the absence of statistically significant differences, authors should refrain from a claim that the P-loop and switch region dynamics establishes difference in the pocket volume.
 
-\textbf{Author Response}: Is it better with backbone RMSF? Otherwise, lighten the text : use "seems to be linked", instead of "As we have already established".
+\textbf{Author Response}: We agree with the review, and have rephrases appropriately in the main text. Furthermore, we have included all-atom RMSF in Figure, which is more informative than the backbone RMSF. We believe that oftentimes, pocket opening can observed as a result side-chain rotations with minimal moment in the backbone. 
 
     \item This statement is incorrect: “Site P1 in Rac1 is similar to the one in K-RAS and H-RAS that is occupied by the covalent inhibitors in the G12C Ras mutant”. The P1 site appears to overlap with the second cryptic pocket in K-RAS which is not targeted by the covalent inhibitors. The covalent inhibitor binding pocket in K-RAS is on the other side of the Switch-II. Please provide a structural overlap of K-RAS: inhibitor complexes with equivalent pocket identified in Rac1 in this study.
 
-\textbf{Author Response}: We thank the reviewer for the pointing this out. We admit this error and have corrected in the manuscript.
+\textbf{Author Response}: We thank the reviewer for the pointing this out. We admit this confusion and have rectified it in the manuscript.
     
     \item Authors suggest that phenol and toluene induce pocket volumes expansion. Was it confirmed by computing occupancy of these probes at the binding sites? Given the risk of self-aggregation of these probes, it is possible that probes did not bind to the sites.
 
@@ -121,7 +120,7 @@ This work explores cryptic pockets in Rac1 under different conditions and attemp
 
     \item Additional details are required on PCA-based clustering shown in Figure 5. Clustering shown in the figure appears suboptimal and arbitrary. While authors claim that these clusters show distinguishable states for pocket open and close states, there is insufficient data provide to support this argument. Which cluster specifically represents open state and what criteria were used to define open and closed states?
 
-\textbf{Author Response}: we have updated the methods section to specify the reference system for PCA analysis and updated Figure 5 and the text related to these results to be more precise and not confuse readers.
+\textbf{Author Response}: We have updated the methods section to specify the reference system for PCA analysis and updated Figure 5 and the text related to these results to be more precise and not confuse readers.
 
     \item Why was PCA performed only for mixed-cosolvent simulation data and not for the simulations of Rac1 and GEF complexes? It is not obvious that the authors decided to perform RMSF analysis on Rac1-GEF complex simulations while PCA for the cosolvent simulations performed in the absence of GEFs.
 

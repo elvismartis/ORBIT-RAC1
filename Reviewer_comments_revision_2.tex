@@ -2,5 +2,86 @@
 \usepackage{xcolor}
 \usepackage{siunitx}
 \usepackage{geometry}
+\usepackage{url}
 \newgeometry{left=1.5cm, right=1.5cm}
 
+\begin{document}
+\section{Technical Corrections}
+\begin{enumerate}
+
+    \item Copyright permissions are required for any graphic that is reproduced or adapted from a source that is not published by the American Chemical Society. See, for example, Figure 3. Please make sure that all graphics reproduced or adapted from another journal have the proper permission forms and credit lines in your revision.
+    
+    \textbf{Author's Response}: There are not figures or illustrations in the manuscript that have been reproduced from other sources. We confirm that all the figures, and tables reported in the manuscript are \emph{orginal}.
+
+    
+    \item \textbf{Funding Sources}: Authors are required to report ALL funding sources and grant/award numbers relevant to this manuscript. Confirm all sources of funding for ALL authors relevant to this manuscript are included in BOTH the submission form and in the manuscript file to meet this requirement.
+ 
+    \textbf{Author's Response}: We have reported all the sources of funding for this work. Nevertherless, we report here once again here, \emph{Agence Nationale de la Recherche with Grant ID: ANR-22-CE18-0015-03}. 
+
+    \item ORCID: Authors submitting manuscript revisions are required to provide their own validated ORCID iDs before completing the submission, if an ORCID iD is not already associated with their user profiles. This iD may be provided during original manuscript submission or when submitting the manuscript revision. You can provide only your own ORCID iD, a unique researcher identifier. If your ORCID iD is not already validated and associated with your user profile, you may do so by following the ORCID-related links in the Email/Name section of your user account. All authors are encouraged to register for and associate their own ORCID iDs with their user profiles. The ORCID iD will be displayed in the published article for any author on a manuscript who has a validated ORCID iD associated with their user account when the manuscript is accepted. 
+    
+     
+    \textbf{Author's Response}: The corresponding author, Stéphane Téletchéa, has already linked his ORCID (0000-0002-2402-028X). Here are the ORCIDs of the remaining authors:
+    \begin{itemize}
+    \item \textbf{Elvis A. F. Martis}: 0000-0002-4919-6847. 
+    \item \textbf{Vincent Sauzeau}: 0000-0002-6187-0312.
+    \item \textbf{Morgane Rousselle}: Not Available.
+    \end{itemize}
+
+\end{enumerate}
+
+\section{Reviewer(s)' Comments to Author}
+
+\subsection{Reviewer 1}
+\emph{Comments}:
+I appreciate the efforts made by the authors to address my previous concerns. Here are some additional comments:
+
+\begin{enumerate}
+ 
+    \item "Where $\Delta G_{Complex}$, $\Delta G_{Receptor}$ and $\Delta G_{Ligand}$ are binding enthalpy contributions calculates using Generalised-Born Surface Area (GBSA) method for the complex, receptor and ligand components respectively."
+    Again, enthalpy and free energy are conceptually distinct quantities. If these terms are truly enthalpic, as the authors claim, then the current annotation is misleading. In standard MM/GBSA, even without an explicit configurational entropy calculation, the reported quantities are still free energies, not pure enthalpies. What is omitted is the solute configurational entropy contribution. The solvation-related entropy contributions are already incorporated into $\Delta G_{Complex}$, $\Delta G_{Receptor}$, and $\Delta G_{Ligand}$, which is why these terms are indeed free energies. Section 2.3 "Entropy Calculations" in "{MMPBSA.py}: An Efficient Program for End-State Free Energy Calculations" states that MM/GBSA uses an implicit solvent model to calculate binding \textbf{free energies}, and what it neglects are some contributions from the \textbf{solute} entropy.
+
+    \textbf{Author's Response}: We are grateful to the reviewer for such an in-depth explanation. We have corrected this in the manuscript.
+
+    \item The PCA results (with each repeat color-coded) are quite interesting. The apo Rac1 systems with cosolvents indeed appear to undergo structural transitions from the initial state to alternative "states". The issue is that the PCs resolved for different setups are not directly comparable, even though they may correspond to similar modes of motions, as illustrated by the structures in the top panels. Have the authors considered performing PCA on a combined ensemble (apo without cosolvent, +GTP, and apo with cosolvents)? This approach may provide a more direct comparison across these setups since you now have a single set of PCs. This may provide a clearer picture of the enhanced flexibility of the switch I and II regions in the presence of cosolvents.
+
+ 
+    \textbf{Author's Response}: We are yet again thankful to the reviewer for suggesting significant changes in the PCA analysis during the first round of revision. And as aptly, pointed out by the reviewer, using PCA analysis, we could not find a direct causal relationship between high flexibility in the switch regions with opening of the cryptic pockets. Therefore, we did not perform any further combined PCA analysis. 
+
+\end{enumerate}
+
+\subsection{Reviewer 1}
+\emph{Comments}:
+First, it is important to acknowledge the authors' efforts in providing additional information on the points raised during the initial review process.
+Regarding the points I raised, here are my thoughts following their responses:
+
+\begin{enumerate}
+
+    \item On the first major recommendation concerning the probes is that the authors are now using the term "cosolvent molecular probe," as proposed. No values were given for the number of molecules or ratios, but the additional data provided on GitHub allows us, with some effort, to obtain this information. The authors also chose to present the possible interactions of the probes near the pockets using radial distributions (which is far from ideal, as these probes could very well be located in the solvent and not on the protein surface). This allows, with some effort, the determination of the average number of interacting molecules at the pockets (which should be low, given a diameter of approximately 10 \r{A} for a pocket of 600 \r{A}$^3$). A density map near each pocket would have provided more information. The authors also provided their answer regarding the self-aggregation of these probes.
+    
+    \textbf{Author's Response}: We are thankful to the reviewer for suggesting changes that we feel have significantly improved the work. 
+    
+    \item On the second major recommendation concerning pockets, the authors have added further information in the Supplementary Materials regarding the evolution of these volumes along the trajectories (which provides more information than simple Violin plots) and conclude, based on some additional statistical analyses, that there are weak correlations.
+    
+    \textbf{Author's Response}: We appreciate the reviewer's suggestions, which we believe has added more value to the work. 
+
+
+
+    \item On the third major recommendation concerning PCA approaches, we agree with the arguments presented in their response that they followed the protocols classically used for PCA analyses within the framework of Essential Dynamics protocols. However, the presentation of their results could have benefited from a more in-depth discussion, allowing readers a differentiated analysis of the effects for each case, particularly when PC1 is used for projection onto protein movement (Figure 5A). Nevertheless, the text as it stands, combined with Figure 5, allows the reader to draw conclusions.
+    
+    \textbf{Author's Response}:  We are yet again thankful to the reviewer for finding our changes as an improvement that we could do to the best of our abilities. 
+    
+ 
+    \item Minor points should be noted: - The Figure Caption for Figure 5 is confusing because, while it mixes several colors between Figures A and B, the explanations for these colors are not very clear. - The page numbering in the Supplementary Materials does not correspond to the figure numbers. 
+    
+      \textbf{Author's Response}: We are grateful to the reviewer for pointing this out. We have improved the caption for figure 5 to eliminate confusion. Furthermore, supplementary information has been corrected.
+
+    
+    \item In summary, the authors have provided sufficient answers to the points raised for this article to be published.
+    
+    \textbf{Author's Response}:  We are yet again thankful to the reviewer for their efforts to suggest changes that we believe has significantly improved the work. 
+    
+
+\end{enumerate}
+
+\end{document}
